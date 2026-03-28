@@ -45,6 +45,7 @@ def _to_user_manage_out(current_user: User, target_user: User) -> UserManageOut:
         created_at=target_user.created_at,
         can_delete=_can_delete_user(current_user, target_user),
         can_copy_mx_key=target_user.id == current_user.id and target_user.has_mx_api_key,
+        can_delete_mx_key=target_user.id == current_user.id and target_user.has_mx_api_key,
     )
 
 

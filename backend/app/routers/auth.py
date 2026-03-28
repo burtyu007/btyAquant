@@ -44,3 +44,12 @@ def reveal_mx_key(payload: MXKeyRevealRequest, current_user=Depends(get_current_
     from ..services.crypto import decrypt_text
 
     return MXKeyRevealResponse(api_key=decrypt_text(current_user.mx_api_key_encrypted))
+
+
+@router.delete("/mx-key", response_model=UserOut)
+def delete_mx_key(db: Session = Depends(get_db), current_user=Depends(get_current_user)):
+    current_user.mx_api_key_encrypted = None
+    db.add(current_user)
+    db.commit()
+    db.refresh(current_user)
+    return UserOut.model_validate(current_user)

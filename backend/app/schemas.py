@@ -41,6 +41,7 @@ class UserOut(UserBase):
 class UserManageOut(UserOut):
     can_delete: bool = False
     can_copy_mx_key: bool = False
+    can_delete_mx_key: bool = False
 
 
 class MessageResponse(BaseModel):

@@ -247,6 +247,20 @@ select {
   background: white;
 }
 
+.input-alert {
+  border-color: rgba(181, 71, 56, 0.62);
+  background: rgba(181, 71, 56, 0.06);
+  box-shadow: 0 0 0 3px rgba(181, 71, 56, 0.08);
+}
+
+.input-helper-danger {
+  display: block;
+  margin-top: 2px;
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .primary-btn,
 .ghost-btn {
   border: none;

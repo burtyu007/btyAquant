@@ -15,10 +15,12 @@
           <span>MX Key</span>
           <input
             v-model="mxKeyForm.api_key"
+            :class="{ 'input-alert': !!mxKeyNotice }"
             :disabled="currentUser?.has_mx_api_key && !editingMxKey"
             type="password"
             :placeholder="currentUser?.has_mx_api_key ? (editingMxKey ? '请输入新的 MX API Key' : currentUser?.masked_mx_api_key || '已配置') : '请输入当前用户自己的 MX API Key'"
           />
+          <small v-if="mxKeyNotice" class="input-helper-danger">使用东财智选需要保存您的 MX Key</small>
         </label>
         <button class="primary-btn" :disabled="savingMxKey">
           {{ savingMxKey ? "处理中..." : currentUser?.has_mx_api_key ? (editingMxKey ? "更新" : "编辑") : "保存" }}
@@ -87,6 +89,7 @@
             <td>{{ item.created_at.slice(0, 19).replace('T', ' ') }}</td>
             <td class="table-actions">
               <button class="ghost-btn small" :disabled="!item.can_copy_mx_key" @click="copyOwnMxKey(item)">复制 Key</button>
+              <button class="ghost-btn small" :disabled="!item.can_delete_mx_key" @click="deleteOwnMxKey(item)">删除 Key</button>
               <button class="ghost-btn small danger" :disabled="!item.can_delete" @click="deleteUser(item.id)">删除</button>
             </td>
           </tr>
@@ -214,6 +217,25 @@ async function copyOwnMxKey(item) {
   copyForm.password = "";
   copyModalError.value = "";
   copyModalOpen.value = true;
+}
+
+async function deleteOwnMxKey(item) {
+  copyMessage.value = "";
+  copyError.value = "";
+  if (!item.can_delete_mx_key) {
+    copyError.value = "只能删除当前登录用户自己的 MX Key。";
+    return;
+  }
+  try {
+    const { data } = await api.delete("/auth/mx-key");
+    saveSession(getToken(), data);
+    mxKeyMessage.value = "MX Key 已删除。";
+    mxKeyForm.api_key = "";
+    editingMxKey.value = false;
+    await fetchUsers();
+  } catch (err) {
+    copyError.value = err.response?.data?.detail || "删除 MX Key 失败";
+  }
 }
 
 function closeCopyModal() {
