@@ -13,14 +13,7 @@
 - `frontend/`：Vue 3 前端
 
 ## 数据库
-
-默认连接：
-
-- Host: `127.0.0.1`
-- Port: `3380`
-- User: `root`
-- Password: `Burtyu1989`
-- Database: `quant`
+数据待补充……
 
 系统启动后会自动建表，并创建默认管理员：
 
