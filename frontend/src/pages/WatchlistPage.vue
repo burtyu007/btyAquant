@@ -15,7 +15,7 @@
 
       <div v-if="recommendationCollapsed" class="collapsed-tip">MX 东财智选已收起，点击右上角“展开”查看。</div>
       <template v-else>
-        <form class="analysis-form" @submit.prevent="fetchRecommendations(1)">
+        <form class="analysis-form recommendation-inline-form" @submit.prevent="fetchRecommendations(1)">
           <label class="analysis-span-2">
             <span>推荐条件</span>
             <input v-model="recommendationKeyword" type="text" placeholder="例如 东财智选 推荐" />

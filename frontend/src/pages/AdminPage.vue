@@ -1,5 +1,5 @@
 <template>
-  <AppShell title="用户管理" subtitle="每个人都在这里维护自己的 MX Key；账号管理权限按普通用户、管理员、超级管理员分层控制。">
+  <AppShell title="用户管理" subtitle="每个人都在这里维护自己的 MX Key。">
     <section class="panel hero-panel">
       <div class="panel-head">
         <div>
@@ -10,7 +10,7 @@
         <div class="badge">{{ currentUser?.has_mx_api_key ? "已配置" : "未配置" }}</div>
       </div>
 
-      <form class="analysis-form" @submit.prevent="handleMxKeyAction">
+      <form class="analysis-form key-inline-form" @submit.prevent="handleMxKeyAction">
         <label class="analysis-span-2">
           <span>MX Key</span>
           <input

@@ -25,12 +25,12 @@
           <div class="user-glance">
             <div class="user-glance-label">用户身份</div>
             <div class="user-glance-value">{{ user?.role_label || (user?.is_admin ? "管理员" : "普通用户") }}</div>
-            <div class="user-glance-note">{{ user?.is_super_admin ? "全局最高权限" : user?.is_admin ? "负责账号维护" : "仅查看个人内容" }}</div>
+            <div class="user-glance-note">{{ user?.is_super_admin ? "全局最高权限" : user?.is_admin ? "负责账号维护" : "查看个人内容" }}</div>
           </div>
           <div class="user-glance">
             <div class="user-glance-label">工作状态</div>
             <div class="user-glance-value">{{ user?.has_mx_api_key ? "已接入 MX" : "待配置 MX" }}</div>
-            <div class="user-glance-note">{{ user?.is_super_admin ? "账号与策略全局可用" : user?.is_admin ? "可管理账号" : "仅管理自己" }}</div>
+            <div class="user-glance-note">{{ user?.is_super_admin ? "超级管理员" : user?.is_admin ? "管理员账号" : "工作台用户" }}</div>
           </div>
         </div>
       </div>

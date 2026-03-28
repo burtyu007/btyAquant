@@ -99,6 +99,24 @@ button, input, select { font: inherit; }
   min-height: 40px;
 }
 
+.key-inline-form {
+  grid-template-columns: minmax(0, 1fr) 136px;
+  align-items: end;
+}
+
+.key-inline-form .analysis-span-2 {
+  grid-column: auto;
+}
+
+.recommendation-inline-form {
+  grid-template-columns: minmax(0, 1fr) 136px;
+  align-items: end;
+}
+
+.recommendation-inline-form .analysis-span-2 {
+  grid-column: auto;
+}
+
 .strategy-presets {
   margin-bottom: 18px;
   padding: 16px;
