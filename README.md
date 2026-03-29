@@ -4,8 +4,8 @@
 
 - 后端：FastAPI + SQLAlchemy + MySQL 8
 - 前端：Vue 3 + Vite
-- 数据：mx skills（东方财富妙想 API）
-- 当前策略：布林带均值回归
+- 数据：akShare, mx skills（东方财富妙想 API）
+- 现有策略：布林带均值回归, 东财智能荐股
 
 ## 目录
 
