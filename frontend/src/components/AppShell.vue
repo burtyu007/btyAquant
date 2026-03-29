@@ -9,6 +9,7 @@
 
       <nav class="nav-list">
         <RouterLink to="/" class="nav-link">量化分析</RouterLink>
+        <RouterLink to="/strategy-picker" class="nav-link">策略选股</RouterLink>
         <RouterLink to="/watchlist" class="nav-link">东财智选</RouterLink>
         <RouterLink to="/users" class="nav-link">用户管理</RouterLink>
       </nav>

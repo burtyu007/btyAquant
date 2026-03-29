@@ -13,7 +13,16 @@
 - `frontend/`：Vue 3 前端
 
 ## 数据库
-数据待补充……
+数据库结构 SQL 文件已放在：
+
+- `backend/quant_schema.sql`
+
+当前项目使用 MySQL 8，默认库名是 `quant`。初始化方式有两种：
+
+- 启动后端后由程序自动建表
+- 手动执行 `backend/quant_schema.sql` 建库建表
+
+这份 SQL 文件只保留表结构和默认 `admin` 一条初始化数据，不包含其他业务数据。
 
 系统启动后会自动建表，并创建默认管理员：
 

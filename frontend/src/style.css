@@ -734,6 +734,55 @@ select {
   border-top: 1px solid var(--line);
 }
 
+.strategy-placeholder-panel {
+  min-height: 560px;
+}
+
+.strategy-placeholder-stage {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  border: 1px dashed rgba(11, 122, 117, 0.2);
+  background:
+    radial-gradient(circle at top left, rgba(11, 122, 117, 0.08), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(209, 122, 52, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(247, 243, 234, 0.96));
+}
+
+.strategy-placeholder-copy {
+  max-width: 520px;
+  padding: 32px;
+  text-align: center;
+}
+
+.strategy-placeholder-copy strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.strategy-placeholder-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.strategy-placeholder-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(11, 122, 117, 0.12);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .admin-note {
   align-self: center;
 }
