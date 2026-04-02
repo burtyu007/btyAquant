@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from .config import settings
 from .db import Base, SessionLocal, engine
 from .models import User
-from .routers import admin, analysis, auth, market, watchlist
+from .routers import admin, analysis, auth, market, policy, watchlist
 from .security import get_password_hash
 from .services.crypto import ensure_rsa_keys
 
@@ -18,6 +18,7 @@ TABLE_COMMENT_DDLS = {
     "quant_regression_history": "ALTER TABLE quant_regression_history COMMENT = '量化回归历史表，保存基于历史数据的策略回测结果，使用 JSON 结果兼容多种量化算法扩展'",
     "watchlist_items": "ALTER TABLE watchlist_items COMMENT = '用户本地自选股表，保存每个用户维护的股票及最近一次刷新行情'",
     "market_news": "ALTER TABLE market_news COMMENT = '财经热点消息表，聚合 AKShare 与 MX 抓取的各平台财经资讯，供站内热点新闻流展示'",
+    "policy_files": "ALTER TABLE policy_files COMMENT = '量化策略文件表'",
 }
 
 COLUMN_COMMENT_DDLS = {
@@ -84,6 +85,18 @@ COLUMN_COMMENT_DDLS = {
         "content_hash": "ALTER TABLE market_news MODIFY COLUMN content_hash VARCHAR(64) NOT NULL COMMENT '基于平台、标题、内容和发布时间生成的去重哈希'",
         "raw_payload": "ALTER TABLE market_news MODIFY COLUMN raw_payload TEXT NULL COMMENT '原始消息 JSON 快照，便于排查与回溯'",
         "created_at": "ALTER TABLE market_news MODIFY COLUMN created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '消息入库时间'",
+    },
+    "policy_files": {
+        "id": "ALTER TABLE policy_files MODIFY COLUMN id INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增id'",
+        "name": "ALTER TABLE policy_files MODIFY COLUMN name VARCHAR(128) NOT NULL DEFAULT '' COMMENT '策略名称'",
+        "folder": "ALTER TABLE policy_files MODIFY COLUMN folder VARCHAR(255) NULL COMMENT '策略目录'",
+        "readme": "ALTER TABLE policy_files MODIFY COLUMN readme VARCHAR(255) NOT NULL DEFAULT '' COMMENT '策略脚本使用文档'",
+        "path": "ALTER TABLE policy_files MODIFY COLUMN path VARCHAR(255) NOT NULL DEFAULT '' COMMENT '文件路径'",
+        "results": "ALTER TABLE policy_files MODIFY COLUMN results VARCHAR(255) NULL COMMENT '结果文件'",
+        "list_show_fields": "ALTER TABLE policy_files MODIFY COLUMN list_show_fields VARCHAR(500) NOT NULL DEFAULT '' COMMENT '列表展示字段，不超过5个'",
+        "created_user_id": "ALTER TABLE policy_files MODIFY COLUMN created_user_id INT UNSIGNED NOT NULL COMMENT '策略创建人'",
+        "created_at": "ALTER TABLE policy_files MODIFY COLUMN created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'",
+        "updated_at": "ALTER TABLE policy_files MODIFY COLUMN updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'",
     },
 }
 
@@ -200,4 +213,5 @@ app.include_router(auth.router, prefix=settings.api_prefix)
 app.include_router(admin.router, prefix=settings.api_prefix)
 app.include_router(market.router, prefix=settings.api_prefix)
 app.include_router(analysis.router, prefix=settings.api_prefix)
+app.include_router(policy.router, prefix=settings.api_prefix)
 app.include_router(watchlist.router, prefix=settings.api_prefix)

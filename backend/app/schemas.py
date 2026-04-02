@@ -201,4 +201,54 @@ class AnalysisHistoryItem(BaseModel):
     created_at: datetime
 
 
+class PolicyDisplayColumn(BaseModel):
+    key: str
+    label: str
+
+
+class PolicyResultsOut(BaseModel):
+    fields: dict[str, str]
+    lists: list[dict[str, Any]]
+
+
+class PolicyFileListItem(BaseModel):
+    id: int
+    name: str
+    folder: str | None = None
+    readme: str
+    path: str
+    results: str | None = None
+    list_show_fields: list[str] = Field(default_factory=list)
+    script_language: str
+    script_filename: str
+    readme_exists: bool = False
+    results_exists: bool = False
+    result_count: int = 0
+    created_user_id: int
+    created_user_name: str | None = None
+    created_at: datetime
+    updated_at: datetime
+    can_edit: bool = False
+    can_delete: bool = False
+    results_format: str = "none"
+
+
+class PolicyFileUpsert(BaseModel):
+    name: str = Field(min_length=1, max_length=128)
+    folder: str | None = Field(default=None, max_length=255)
+    readme: str = Field(min_length=1, max_length=255)
+    path: str = Field(min_length=1, max_length=255)
+    results: str | None = Field(default=None, max_length=255)
+    list_show_fields: str = Field(default="", max_length=500)
+    created_user_id: int | None = None
+
+
+class PolicyFileDetail(PolicyFileListItem):
+    readme_content: str | None = None
+    results_data: PolicyResultsOut | None = None
+    results_html_content: str | None = None
+    list_display_columns: list[PolicyDisplayColumn] = Field(default_factory=list)
+    detail_display_columns: list[PolicyDisplayColumn] = Field(default_factory=list)
+
+
 TokenResponse.model_rebuild()

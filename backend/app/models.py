@@ -107,6 +107,22 @@ class QuantRegressionHistory(Base):
     user = relationship("User", back_populates="quant_regression_histories")
 
 
+class PolicyFile(Base):
+    __tablename__ = "policy_files"
+    __table_args__ = {"comment": "量化策略文件表"}
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True, comment="自增id")
+    name: Mapped[str] = mapped_column(String(128), nullable=False, default="", comment="策略名称")
+    folder: Mapped[str | None] = mapped_column(String(255), nullable=True, comment="策略目录")
+    readme: Mapped[str] = mapped_column(String(255), nullable=False, default="", comment="策略脚本使用文档")
+    path: Mapped[str] = mapped_column(String(255), nullable=False, default="", comment="文件路径")
+    results: Mapped[str | None] = mapped_column(String(255), nullable=True, comment="结果文件")
+    list_show_fields: Mapped[str] = mapped_column(String(500), nullable=False, default="", comment="列表展示字段，不超过5个")
+    created_user_id: Mapped[int] = mapped_column(Integer, nullable=False, comment="策略创建人")
+    created_at: Mapped[str] = mapped_column(DateTime, server_default=func.now(), nullable=False, comment="创建时间")
+    updated_at: Mapped[str] = mapped_column(DateTime, server_default=func.now(), nullable=False, comment="更新时间")
+
+
 class MarketNews(Base):
     __tablename__ = "market_news"
     __table_args__ = (

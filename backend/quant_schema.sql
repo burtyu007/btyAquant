@@ -88,6 +88,23 @@ CREATE TABLE `quant_regression_history` (
   CONSTRAINT `quant_regression_history_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='量化回归历史表，保存基于历史数据的策略回测结果，使用 JSON 结果兼容多种量化算法扩展';
 /*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `policy_files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `policy_files` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `name` varchar(128) NOT NULL DEFAULT '' COMMENT '策略名称',
+  `folder` varchar(255) DEFAULT NULL COMMENT '策略目录',
+  `readme` varchar(255) NOT NULL DEFAULT '' COMMENT '策略脚本使用文档',
+  `path` varchar(255) NOT NULL DEFAULT '' COMMENT '文件路径',
+  `results` varchar(255) DEFAULT NULL COMMENT '结果文件',
+  `list_show_fields` varchar(500) NOT NULL DEFAULT '' COMMENT '列表展示字段，不超过5个',
+  `created_user_id` int unsigned NOT NULL COMMENT '策略创建人',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='量化策略文件表';
+/*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
