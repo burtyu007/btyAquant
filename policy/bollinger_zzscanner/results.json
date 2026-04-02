@@ -1,0 +1,273 @@
+{
+  "fields": {
+    "排名": "rank",
+    "股票代码": "code",
+    "股票名称": "name",
+    "最新价": "price",
+    "涨跌幅": "pct_change",
+    "Z-Score": "zscore",
+    "偏离均值": "pct_from_mean",
+    "20日均线": "mean_20",
+    "20日标准差": "std_20",
+    "布林上轨": "upper_band",
+    "布林下轨": "lower_band",
+    "60日涨跌幅": "return_60d",
+    "量比": "vol_ratio",
+    "ATR波动率": "atr_pct",
+    "资产负债率": "debt_ratio",
+    "资产负债率数值": "debt_ratio_val",
+    "净资产收益率": "roe",
+    "净利润": "net_profit",
+    "营业收入": "revenue",
+    "营收同比": "revenue_yoy",
+    "净利润同比": "profit_yoy",
+    "每股收益": "eps",
+    "每股净资产": "book_value",
+    "总市值": "total_mv",
+    "流通市值": "float_mv",
+    "行业板块": "industry",
+    "报告期": "report_period",
+    "消息摘要": "news_summary",
+    "消息评分": "news_score",
+    "技术评分": "tech_score",
+    "财务评分": "finance_score",
+    "综合评分": "buy_score",
+    "评分依据": "score_detail",
+    "风险提示": "risk",
+    "近期新闻": "news_list"
+  },
+  "lists": [
+    {
+      "rank": 1,
+      "code": "600018",
+      "name": "600018",
+      "price": 5.04,
+      "pct_change": -0.98,
+      "zscore": -1.264,
+      "pct_from_mean": -1.53,
+      "mean_20": 5.119,
+      "std_20": 0.062,
+      "upper_band": 5.243,
+      "lower_band": 4.994,
+      "return_60d": -8.7,
+      "vol_ratio": 0.859,
+      "atr_pct": 1.73,
+      "debt_ratio": "29.68%",
+      "debt_ratio_val": 29.68,
+      "roe": "9.62%",
+      "net_profit": "135.65亿",
+      "revenue": "396.11亿",
+      "revenue_yoy": "3.92%",
+      "profit_yoy": "-9.29%",
+      "eps": "0.5837",
+      "book_value": "6.05",
+      "total_mv": "N/A",
+      "float_mv": "N/A",
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：上港集团：2025年净利润同比下降9.29% 拟10派1.4 | 上港集团：2025年净利润同比下降9.29% 拟10派1.4 | 足球概念下跌0.01%，7股主力资金净流出超千万元。财务：资产负债率29.68%，ROE9.62%。",
+      "news_score": 10,
+      "tech_score": 29,
+      "finance_score": 35,
+      "buy_score": 74,
+      "score_detail": "技术29分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "上港集团：2025年净利润同比下降9.29% 拟10派1.45元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "上港集团：2025年净利润同比下降9.29% 拟10派1.45元"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "足球概念下跌0.01%，7股主力资金净流出超千万元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "足球概念涨0.18%，主力资金净流入16股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "投资收益减少，主业成本上涨，上港集团2025年净利同比降9%"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "code": "600009",
+      "name": "600009",
+      "price": 28.12,
+      "pct_change": 1.81,
+      "zscore": -0.652,
+      "pct_from_mean": -1.89,
+      "mean_20": 28.66,
+      "std_20": 0.83,
+      "upper_band": 30.32,
+      "lower_band": 27.001,
+      "return_60d": -15.76,
+      "vol_ratio": 0.802,
+      "atr_pct": 1.71,
+      "debt_ratio": "37.86%",
+      "debt_ratio_val": 37.86,
+      "roe": "4.64%",
+      "net_profit": "19.34亿",
+      "revenue": "123.69亿",
+      "revenue_yoy": "11.97%",
+      "profit_yoy": "107.05%",
+      "eps": "0.7800",
+      "book_value": "16.74",
+      "total_mv": "N/A",
+      "float_mv": "N/A",
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：上海机场：拟14.69亿元投建浦东国际机场运行保障基地项目 | 上海机场：拟14.69亿元投资建设浦东国际机场运行保障基地项 | 上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%。财务：资产负债率37.86%，ROE4.64%。",
+      "news_score": 10,
+      "tech_score": 27,
+      "finance_score": 35,
+      "buy_score": 72,
+      "score_detail": "技术27分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-16",
+          "title": "上海机场：拟14.69亿元投建浦东国际机场运行保障基地项目"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "上海机场：拟14.69亿元投资建设浦东国际机场运行保障基地项目"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "上海机场：公司向机场集团租赁浦东机场四期酒店等相关资产并取得经营权"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "code": "600019",
+      "name": "600019",
+      "price": 6.48,
+      "pct_change": 1.09,
+      "zscore": -0.753,
+      "pct_from_mean": -3.49,
+      "mean_20": 6.714,
+      "std_20": 0.311,
+      "upper_band": 7.337,
+      "lower_band": 6.092,
+      "return_60d": -11.84,
+      "vol_ratio": 0.601,
+      "atr_pct": 2.61,
+      "debt_ratio": "39.66%",
+      "debt_ratio_val": 39.66,
+      "roe": "3.67%",
+      "net_profit": "73.62亿",
+      "revenue": "3221.16亿",
+      "revenue_yoy": "-6.60%",
+      "profit_yoy": "-38.36%",
+      "eps": "0.3400",
+      "book_value": "9.12",
+      "total_mv": "N/A",
+      "float_mv": "N/A",
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：解密主力资金出逃股 连续5日净流出806股 | 特钢概念下跌3.14%，主力资金净流出37股 | 杠杆资金大手笔加仓股名单。财务：资产负债率39.66%，ROE3.67%。",
+      "news_score": 10,
+      "tech_score": 27,
+      "finance_score": 35,
+      "buy_score": 72,
+      "score_detail": "技术27分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-19",
+          "title": "解密主力资金出逃股 连续5日净流出806股"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "特钢概念下跌3.14%，主力资金净流出37股"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "杠杆资金大手笔加仓股名单"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "20.13亿元资金今日流出钢铁股"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "宝钢股份持股公司在内蒙古成立新材料公司"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "code": "600006",
+      "name": "600006",
+      "price": 6.39,
+      "pct_change": 0.31,
+      "zscore": -0.999,
+      "pct_from_mean": -3.96,
+      "mean_20": 6.653,
+      "std_20": 0.264,
+      "upper_band": 7.181,
+      "lower_band": 6.126,
+      "return_60d": -11.25,
+      "vol_ratio": 0.717,
+      "atr_pct": 2.56,
+      "debt_ratio": "50.28%",
+      "debt_ratio_val": 50.28,
+      "roe": "0.35%",
+      "net_profit": "2916.22万",
+      "revenue": "109.37亿",
+      "revenue_yoy": "-9.38%",
+      "profit_yoy": "-85.42%",
+      "eps": "0.0100",
+      "book_value": "4.14",
+      "total_mv": "N/A",
+      "float_mv": "N/A",
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：东风股份获1亿元政府补助 | 现场拿下128辆订单 东风乾坤油电双线并举发力绿通、冷链市场 | 东风股份：2026年前两月销量同比下降0.87%。财务：资产负债率50.28%，ROE0.35%。",
+      "news_score": 13,
+      "tech_score": 27,
+      "finance_score": 30,
+      "buy_score": 70,
+      "score_detail": "技术27分+财务30分+消息13分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "东风股份获1亿元政府补助"
+        },
+        {
+          "date": "2026-03-29",
+          "title": "现场拿下128辆订单 东风乾坤油电双线并举发力绿通、冷链市场"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "东风股份：2026年前两月销量同比下降0.87%"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "东风股份1月汽车销量增31.61% 发动机产、销量双增"
+        },
+        {
+          "date": "2026-01-23",
+          "title": "产品销售承压，整体毛利率下滑，东风股份2025年最高预亏4.8亿元，全年销量目标完成64%"
+        }
+      ]
+    }
+  ]
+}
