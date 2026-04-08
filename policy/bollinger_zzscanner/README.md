@@ -13,6 +13,8 @@ python bollinger_zscore_scanner.py
 
 依赖：`akshare`、`pandas`、`numpy`
 
+说明：当前脚本默认优先使用本地 SQLite 日线库 `/Users/burtyu/Work/python/cron/stock_data/stock_daily.db`。本地库模式下股票池和历史日线都直接查库，不再使用股票数据缓存；如果关闭本地库模式，才会再回退到原有网络数据源。
+
 ---
 
 ## 核心算法
@@ -33,6 +35,10 @@ N = bb_window（布林带窗口，默认20日）
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `market` | `"A"` | 市场范围：`"A"` 沪深A股 / `"SH"` 上证 / `"SZ"` 深证 |
+| `use_local_db` | `True` | 是否优先使用本地 SQLite 日线库 |
+| `daily_db_path` | `/Users/burtyu/Work/python/cron/stock_data/stock_daily.db` | 本地股票日线库路径 |
+| `use_em` | `False` | 是否优先使用东财接口；当前环境若东财不可用，建议保持 `False` |
+| `prefer_sina_spot` | `True` | 东财不可用时优先使用新浪全量快照，速度明显快于腾讯逐股降级 |
 
 ### 布林带参数
 
@@ -40,14 +46,14 @@ N = bb_window（布林带窗口，默认20日）
 |------|--------|------|
 | `bb_window` | `20` | 布林带窗口（日） |
 | `bb_std` | `2.0` | 布林带标准差倍数 |
-| `lookback_months` | `60` | 历史回看区间（月），约5年 |
+| `lookback_months` | `24` | 历史回看区间（月），约2年 |
 
 ### Z-Score 筛选条件
 
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `zscore_min` | `-999` | Z-Score 下限，低于此值纳入（`-999` 表示关闭） |
-| `zscore_max` | `-2.5` | Z-Score 上限，高于此值纳入（`999` 表示关闭） |
+| `zscore_max` | `0.0` | Z-Score 上限，高于此值纳入（`999` 表示关闭） |
 
 **典型用法：**
 
@@ -67,8 +73,8 @@ N = bb_window（布林带窗口，默认20日）
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `sort_by` | `"buy_score"` | 排序字段：`zscore` / `buy_score` / `return_60d` / `debt_ratio` / `price` |
-| `ascending` | `True` | `True` 升序 / `False` 降序 |
-| `top_n` | `50` | 最多返回 N 条结果 |
+| `ascending` | `False` | `True` 升序 / `False` 降序 |
+| `top_n` | `500` | 最多返回 N 条结果 |
 
 ### 基础过滤
 
@@ -84,7 +90,22 @@ N = bb_window（布林带窗口，默认20日）
 |------|--------|------|
 | `prefilter_return_days` | `60` | 初筛使用多少日的涨跌幅 |
 | `prefilter_return_pct` | `-5` | 初筛阈值（%），N日涨跌幅低于此值才进入精确计算 |
-| `max_candidates` | `5000` | 最大候选股数量，防止运行时间过长 |
+| `max_candidates` | `20` | 最大候选股数量，防止运行时间过长；全市场正式跑可调大到 `5000` |
+
+补充：
+
+- 当快照数据源不提供 `60日涨跌幅` 时，脚本会先按当日 `pct_change` 从低到高优先扫描，再在历史日线阶段用真实 `return_60d` 做过滤。
+- 这样可以在不依赖东财快照的情况下继续保持超跌预筛逻辑。
+- 使用本地 SQLite 股票池时，股票池直接取最新交易日快照，历史布林计算直接读取库里的 `stock_daily`。
+
+### 性能相关
+
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `spot_concurrent_workers` | `12` | 新浪全量快照分页并发数 |
+| `tx_concurrent_workers` | `6` | 腾讯历史日线并发数 |
+| `scan_concurrent_workers` | `6` | 候选股扫描并发数 |
+| `load_industry_map` | `False` | 是否加载全量行业映射；开启会明显变慢 |
 
 ### 新闻参数
 
@@ -165,8 +186,15 @@ ROE > 20% 额外 +5，ROE < -10% 扣 15 分。
 
 ## 数据来源
 
-- 实时行情：东方财富 `stock_zh_a_spot_em`
-- 历史日线：东方财富 `stock_zh_a_hist`（复权：前复权）
+- 股票池快照：
+  - 默认：本地 SQLite `stock_daily`
+  - 优先：东方财富 `stock_zh_a_spot_em`
+  - 东财不可用时：新浪 `stock_zh_a_spot`
+  - 最终降级：腾讯 `stock_zh_a_hist_tx` 近 90 日拼接
+- 历史日线：
+  - 默认：本地 SQLite `stock_daily`
+  - 优先：东方财富 `stock_zh_a_hist`（复权：前复权）
+  - 东财不可用时：腾讯 `stock_zh_a_hist_tx`
 - 财务摘要：同花顺 `stock_financial_abstract_ths`
 - 新闻数据：东方财富 `stock_news_em`
 

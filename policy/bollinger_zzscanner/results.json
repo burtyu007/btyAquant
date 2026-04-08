@@ -11,7 +11,6 @@
     "20日标准差": "std_20",
     "布林上轨": "upper_band",
     "布林下轨": "lower_band",
-    "60日涨跌幅": "return_60d",
     "量比": "vol_ratio",
     "ATR波动率": "atr_pct",
     "资产负债率": "debt_ratio",
@@ -34,240 +33,5809 @@
     "综合评分": "buy_score",
     "评分依据": "score_detail",
     "风险提示": "risk",
-    "近期新闻": "news_list"
+    "近期新闻": "news_list",
+    "60日涨跌幅": "return_60d"
   },
   "lists": [
     {
       "rank": 1,
-      "code": "600018",
-      "name": "600018",
-      "price": 5.04,
-      "pct_change": -0.98,
-      "zscore": -1.264,
-      "pct_from_mean": -1.53,
-      "mean_20": 5.119,
-      "std_20": 0.062,
-      "upper_band": 5.243,
-      "lower_band": 4.994,
-      "return_60d": -8.7,
-      "vol_ratio": 0.859,
-      "atr_pct": 1.73,
-      "debt_ratio": "29.68%",
-      "debt_ratio_val": 29.68,
-      "roe": "9.62%",
-      "net_profit": "135.65亿",
-      "revenue": "396.11亿",
-      "revenue_yoy": "3.92%",
-      "profit_yoy": "-9.29%",
-      "eps": "0.5837",
-      "book_value": "6.05",
-      "total_mv": "N/A",
-      "float_mv": "N/A",
+      "code": "002145",
+      "name": "钛能化学",
+      "price": 4.38,
+      "pct_change": -3.5242,
+      "zscore": -2.617,
+      "pct_from_mean": -14.34,
+      "mean_20": 5.113,
+      "std_20": 0.28,
+      "upper_band": 5.674,
+      "lower_band": 4.553,
+      "vol_ratio": 0.511,
+      "atr_pct": 4.21,
+      "debt_ratio": "37.81%",
+      "debt_ratio_val": 37.81,
+      "roe": "4.69%",
+      "net_profit": "5.65亿",
+      "revenue": "68.75亿",
+      "revenue_yoy": "38.98%",
+      "profit_yoy": "34.84%",
+      "eps": "0.1540",
+      "book_value": "3.11",
+      "total_mv": null,
+      "float_mv": null,
       "industry": "未知",
-      "report_period": "2025",
-      "news_summary": "近期动态：上港集团：2025年净利润同比下降9.29% 拟10派1.4 | 上港集团：2025年净利润同比下降9.29% 拟10派1.4 | 足球概念下跌0.01%，7股主力资金净流出超千万元。财务：资产负债率29.68%，ROE9.62%。",
-      "news_score": 10,
-      "tech_score": 29,
+      "report_period": "2024",
+      "news_summary": "近期动态：磷化工概念下跌3.54%，13股主力资金净流出超亿元 | 钛能化学：全资子公司贵州中合磷碳科技有限公司现有黄磷产能12 | 今日89只个股突破半年线。财务：资产负债率37.81%，ROE4.69%。",
+      "news_score": 24,
+      "tech_score": 35,
       "finance_score": 35,
-      "buy_score": 74,
-      "score_detail": "技术29分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "buy_score": 94,
+      "score_detail": "技术35分+财务35分+消息24分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
       "risk": "无特别风险提示",
       "news_list": [
         {
           "date": "2026-03-31",
-          "title": "上港集团：2025年净利润同比下降9.29% 拟10派1.45元"
+          "title": "磷化工概念下跌3.54%，13股主力资金净流出超亿元"
         },
         {
-          "date": "2026-03-31",
-          "title": "上港集团：2025年净利润同比下降9.29% 拟10派1.45元"
+          "date": "2026-03-10",
+          "title": "钛能化学：全资子公司贵州中合磷碳科技有限公司现有黄磷产能12万吨/年"
         },
         {
-          "date": "2026-04-01",
-          "title": "足球概念下跌0.01%，7股主力资金净流出超千万元"
+          "date": "2026-03-11",
+          "title": "今日89只个股突破半年线"
         },
         {
-          "date": "2026-03-31",
-          "title": "足球概念涨0.18%，主力资金净流入16股"
+          "date": "2026-03-11",
+          "title": "今日105只个股突破半年线"
         },
         {
-          "date": "2026-03-31",
-          "title": "投资收益减少，主业成本上涨，上港集团2025年净利同比降9%"
+          "date": "2026-03-11",
+          "title": "【盘中播报】84只个股突破半年线"
         }
-      ]
+      ],
+      "return_60d": -10.98
     },
     {
       "rank": 2,
-      "code": "600009",
-      "name": "600009",
-      "price": 28.12,
-      "pct_change": 1.81,
-      "zscore": -0.652,
-      "pct_from_mean": -1.89,
-      "mean_20": 28.66,
-      "std_20": 0.83,
-      "upper_band": 30.32,
-      "lower_band": 27.001,
-      "return_60d": -15.76,
-      "vol_ratio": 0.802,
-      "atr_pct": 1.71,
-      "debt_ratio": "37.86%",
-      "debt_ratio_val": 37.86,
-      "roe": "4.64%",
-      "net_profit": "19.34亿",
-      "revenue": "123.69亿",
-      "revenue_yoy": "11.97%",
-      "profit_yoy": "107.05%",
-      "eps": "0.7800",
-      "book_value": "16.74",
-      "total_mv": "N/A",
-      "float_mv": "N/A",
+      "code": "600690",
+      "name": "海尔智家",
+      "price": 21.15,
+      "pct_change": -1.0758,
+      "zscore": -2.792,
+      "pct_from_mean": -15.5,
+      "mean_20": 25.03,
+      "std_20": 1.39,
+      "upper_band": 27.809,
+      "lower_band": 22.251,
+      "vol_ratio": 1.389,
+      "atr_pct": 3.05,
+      "debt_ratio": "57.41%",
+      "debt_ratio_val": 57.41,
+      "roe": "16.47%",
+      "net_profit": "195.53亿",
+      "revenue": "3023.47亿",
+      "revenue_yoy": "5.71%",
+      "profit_yoy": "4.39%",
+      "eps": "2.1200",
+      "book_value": "12.66",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：海尔智家回购1535万股 金额3.34亿元 | 沪市公司回购增持升温：过去一周22家公司新增回购增持计划 | 35股去年四季度获社保基金扎堆持有。财务：资产负债率57.41%，ROE16.47%。",
+      "news_score": 27,
+      "tech_score": 35,
+      "finance_score": 32,
+      "buy_score": 94,
+      "score_detail": "技术35分+财务32分+消息27分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "海尔智家回购1535万股 金额3.34亿元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "沪市公司回购增持升温：过去一周22家公司新增回购增持计划"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "35股去年四季度获社保基金扎堆持有"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "海尔智家回购765万股 金额1.68亿元"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "海尔智家回购4758万股 金额12.01亿元"
+        }
+      ],
+      "return_60d": -20.31
+    },
+    {
+      "rank": 3,
+      "code": "603617",
+      "name": "君禾股份",
+      "price": 6.96,
+      "pct_change": -2.7933,
+      "zscore": -2.552,
+      "pct_from_mean": -9.08,
+      "mean_20": 7.656,
+      "std_20": 0.272,
+      "upper_band": 8.2,
+      "lower_band": 7.111,
+      "vol_ratio": 0.446,
+      "atr_pct": 3.99,
+      "debt_ratio": "37.40%",
+      "debt_ratio_val": 37.4,
+      "roe": "5.31%",
+      "net_profit": "7944.81万",
+      "revenue": "11.11亿",
+      "revenue_yoy": "54.62%",
+      "profit_yoy": "116.96%",
+      "eps": "0.2100",
+      "book_value": "3.83",
+      "total_mv": null,
+      "float_mv": null,
       "industry": "未知",
       "report_period": "2024",
-      "news_summary": "近期动态：上海机场：拟14.69亿元投建浦东国际机场运行保障基地项目 | 上海机场：拟14.69亿元投资建设浦东国际机场运行保障基地项 | 上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%。财务：资产负债率37.86%，ROE4.64%。",
-      "news_score": 10,
-      "tech_score": 27,
+      "news_summary": "近期动态：今日51只个股突破年线 | 今日突破五日均线个股一览 | 893只股短线走稳 站上五日均线。财务：资产负债率37.40%，ROE5.31%。",
+      "news_score": 24,
+      "tech_score": 35,
       "finance_score": 35,
-      "buy_score": 72,
-      "score_detail": "技术27分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "buy_score": 94,
+      "score_detail": "技术35分+财务35分+消息24分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-01-30",
+          "title": "今日51只个股突破年线"
+        },
+        {
+          "date": "2026-01-06",
+          "title": "今日突破五日均线个股一览"
+        },
+        {
+          "date": "2026-01-06",
+          "title": "893只股短线走稳 站上五日均线"
+        },
+        {
+          "date": "2026-01-06",
+          "title": "今日盘中突破五日均线个股一览"
+        },
+        {
+          "date": "2026-01-06",
+          "title": "922只股短线走稳 站上五日均线"
+        }
+      ],
+      "return_60d": -8.18
+    },
+    {
+      "rank": 4,
+      "code": "601865",
+      "name": "福莱特",
+      "price": 13.46,
+      "pct_change": -3.0259,
+      "zscore": -3.019,
+      "pct_from_mean": -17.07,
+      "mean_20": 16.231,
+      "std_20": 0.918,
+      "upper_band": 18.067,
+      "lower_band": 14.395,
+      "vol_ratio": 1.15,
+      "atr_pct": 4.94,
+      "debt_ratio": "46.65%",
+      "debt_ratio_val": 46.65,
+      "roe": "4.36%",
+      "net_profit": "9.81亿",
+      "revenue": "155.67亿",
+      "revenue_yoy": "-16.68%",
+      "profit_yoy": "-2.59%",
+      "eps": "0.4200",
+      "book_value": "9.40",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：福莱特2025年净利9.81亿元，同比下降2.59% | 福莱特：2025年净利润9.81亿元 同比下降2.59% | 福莱特拟每10股派发现金红利1.5元 分红率35.64%。财务：资产负债率46.65%，ROE4.36%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-27",
+          "title": "福莱特2025年净利9.81亿元，同比下降2.59%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "福莱特：2025年净利润9.81亿元 同比下降2.59%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "福莱特拟每10股派发现金红利1.5元 分红率35.64%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "福莱特：2025年净利润9.81亿元 同比下降2.59%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "福莱特：2025年净利润同比下降2.59% 拟10派1.5元"
+        }
+      ],
+      "return_60d": -15.29
+    },
+    {
+      "rank": 5,
+      "code": "603312",
+      "name": "西典新能",
+      "price": 37.05,
+      "pct_change": -3.4905,
+      "zscore": -3.096,
+      "pct_from_mean": -20.67,
+      "mean_20": 46.703,
+      "std_20": 3.118,
+      "upper_band": 52.94,
+      "lower_band": 40.466,
+      "vol_ratio": 0.805,
+      "atr_pct": 5.59,
+      "debt_ratio": "36.43%",
+      "debt_ratio_val": 36.43,
+      "roe": "14.66%",
+      "net_profit": "2.61亿",
+      "revenue": "27.82亿",
+      "revenue_yoy": "28.52%",
+      "profit_yoy": "14.50%",
+      "eps": "1.6200",
+      "book_value": "11.12",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：上市公司2025年度分红方案一览 | 104股今日获机构买入评级 18股上涨空间超20% | A股三大股指涨跌互现：铝板块带动有色金属走强，超2800股飘。财务：资产负债率36.43%，ROE14.66%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "104股今日获机构买入评级 18股上涨空间超20%"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "A股三大股指涨跌互现：铝板块带动有色金属走强，超2800股飘红"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "高铁概念上涨0.26%，8股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "西典新能：2025年净利润同比增长14.5% 拟10派4元"
+        }
+      ],
+      "return_60d": -20.95
+    },
+    {
+      "rank": 6,
+      "code": "600423",
+      "name": "柳化股份",
+      "price": 3.28,
+      "pct_change": -9.1413,
+      "zscore": -3.308,
+      "pct_from_mean": -14.52,
+      "mean_20": 3.837,
+      "std_20": 0.168,
+      "upper_band": 4.174,
+      "lower_band": 3.5,
+      "vol_ratio": 2.205,
+      "atr_pct": 7.34,
+      "debt_ratio": "8.40%",
+      "debt_ratio_val": 8.4,
+      "roe": "5.47%",
+      "net_profit": "3017.53万",
+      "revenue": "1.65亿",
+      "revenue_yoy": "22.37%",
+      "profit_yoy": "-58.81%",
+      "eps": "0.0400",
+      "book_value": "0.69",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：72只股上午收盘涨停(附股) | A股三大股指震荡收涨：沪指剑指3900点，化工股掀涨停潮 | 柳化股份：拟约2.9亿元投建20万吨/年全酸性流化床过氧化氢。财务：资产负债率8.40%，ROE5.47%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "72只股上午收盘涨停(附股)"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "A股三大股指震荡收涨：沪指剑指3900点，化工股掀涨停潮"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "柳化股份：拟约2.9亿元投建20万吨/年全酸性流化床过氧化氢项目"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "【盘中播报】65只个股突破半年线"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "业绩连降之际逆势扩产 柳化股份2.89亿加码双氧水项目"
+        }
+      ],
+      "return_60d": -12.53
+    },
+    {
+      "rank": 7,
+      "code": "301041",
+      "name": "金百泽",
+      "price": 24.73,
+      "pct_change": -1.8261,
+      "zscore": -2.614,
+      "pct_from_mean": -12.74,
+      "mean_20": 28.339,
+      "std_20": 1.381,
+      "upper_band": 31.1,
+      "lower_band": 25.578,
+      "vol_ratio": 0.794,
+      "atr_pct": 5.76,
+      "debt_ratio": "22.17%",
+      "debt_ratio_val": 22.17,
+      "roe": "5.70%",
+      "net_profit": "3906.30万",
+      "revenue": "6.83亿",
+      "revenue_yoy": "7.39%",
+      "profit_yoy": "-1.45%",
+      "eps": "0.3700",
+      "book_value": "6.43",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：虚拟电厂概念下跌1.73%，16股主力资金净流出超亿元 | PCB概念下跌6.44%，20股主力资金净流出超亿元 | 今日302只个股突破半年线。财务：资产负债率22.17%，ROE5.70%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "虚拟电厂概念下跌1.73%，16股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "PCB概念下跌6.44%，20股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "今日302只个股突破半年线"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "267只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "今日242只个股突破半年线"
+        }
+      ],
+      "return_60d": -7.76
+    },
+    {
+      "rank": 8,
+      "code": "000524",
+      "name": "岭南控股",
+      "price": 10.4,
+      "pct_change": -4.4995,
+      "zscore": -3.235,
+      "pct_from_mean": -16.68,
+      "mean_20": 12.482,
+      "std_20": 0.644,
+      "upper_band": 13.769,
+      "lower_band": 11.195,
+      "vol_ratio": 1.382,
+      "atr_pct": 6.19,
+      "debt_ratio": "40.28%",
+      "debt_ratio_val": 40.28,
+      "roe": "3.06%",
+      "net_profit": "7006.10万",
+      "revenue": "45.04亿",
+      "revenue_yoy": "4.52%",
+      "profit_yoy": "-53.34%",
+      "eps": "0.1000",
+      "book_value": "3.41",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：岭南控股：首席运营官赵文志退休 | 研学游订单翻倍！春假搅动清明节旅游市场 节后有望热度延续 | 岭南集团旗下2位新帅首交“成绩单”。财务：资产负债率40.28%，ROE3.06%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "岭南控股：首席运营官赵文志退休"
+        },
+        {
+          "date": "2026-04-06",
+          "title": "研学游订单翻倍！春假搅动清明节旅游市场 节后有望热度延续"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "岭南集团旗下2位新帅首交“成绩单”"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "冰雪产业概念涨0.02%，主力资金净流入22股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "7742.44万元资金今日流入社会服务股"
+        }
+      ],
+      "return_60d": -13.12
+    },
+    {
+      "rank": 9,
+      "code": "000920",
+      "name": "沃顿科技",
+      "price": 10.81,
+      "pct_change": -3.4821,
+      "zscore": -2.658,
+      "pct_from_mean": -16.04,
+      "mean_20": 12.876,
+      "std_20": 0.777,
+      "upper_band": 14.43,
+      "lower_band": 11.321,
+      "vol_ratio": 0.973,
+      "atr_pct": 4.81,
+      "debt_ratio": "26.20%",
+      "debt_ratio_val": 26.2,
+      "roe": "11.07%",
+      "net_profit": "2.21亿",
+      "revenue": "20.21亿",
+      "revenue_yoy": "15.89%",
+      "profit_yoy": "11.57%",
+      "eps": "0.4700",
+      "book_value": "4.22",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：沃顿科技：公司2025年海外业务增长主要源于膜业务板块的出口 | 沃顿科技：2025年度计提信用及资产减值准备合计2,471. | 上市公司2025年度分红方案一览。财务：资产负债率26.20%，ROE11.07%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-27",
+          "title": "沃顿科技：公司2025年海外业务增长主要源于膜业务板块的出口增量"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "沃顿科技：2025年度计提信用及资产减值准备合计2,471.90万元"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "沃顿科技：2025年净利润同比增长11.57% 拟10派1.64元"
+        },
+        {
+          "date": "2026-03-05",
+          "title": "今日突破半年线个股"
+        }
+      ],
+      "return_60d": -13.03
+    },
+    {
+      "rank": 10,
+      "code": "600512",
+      "name": "腾达建设",
+      "price": 2.29,
+      "pct_change": -7.2874,
+      "zscore": -2.813,
+      "pct_from_mean": -7.77,
+      "mean_20": 2.483,
+      "std_20": 0.069,
+      "upper_band": 2.62,
+      "lower_band": 2.346,
+      "vol_ratio": 2.092,
+      "atr_pct": 5.52,
+      "debt_ratio": "42.71%",
+      "debt_ratio_val": 42.71,
+      "roe": "0.42%",
+      "net_profit": "2599.98万",
+      "revenue": "37.18亿",
+      "revenue_yoy": "-8.52%",
+      "profit_yoy": "-44.77%",
+      "eps": "0.0200",
+      "book_value": "3.90",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：【盘中播报】75只个股突破半年线 | 67只股中线走稳 站上半年线 | 今日盘中突破半年线个股。财务：资产负债率42.71%，ROE0.42%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "【盘中播报】75只个股突破半年线"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "67只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "今日盘中突破半年线个股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "56只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "56.01亿元资金今日流出建筑装饰股"
+        }
+      ],
+      "return_60d": -5.37
+    },
+    {
+      "rank": 11,
+      "code": "601188",
+      "name": "龙江交通",
+      "price": 3.21,
+      "pct_change": -3.0211,
+      "zscore": -3.009,
+      "pct_from_mean": -9.73,
+      "mean_20": 3.556,
+      "std_20": 0.115,
+      "upper_band": 3.786,
+      "lower_band": 3.326,
+      "vol_ratio": 0.791,
+      "atr_pct": 3.23,
+      "debt_ratio": "22.55%",
+      "debt_ratio_val": 22.55,
+      "roe": "3.76%",
+      "net_profit": "1.68亿",
+      "revenue": "7.70亿",
+      "revenue_yoy": "-23.77%",
+      "profit_yoy": "-5.58%",
+      "eps": "0.1288",
+      "book_value": "3.43",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：龙江交通：2025年净利润同比下降5.58% 拟10派0.5 | 今日46家公司公布年报 5家业绩增幅翻倍 | 945家公司公布年度分红方案。财务：资产负债率22.55%，ROE3.76%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "龙江交通：2025年净利润同比下降5.58% 拟10派0.52元"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "今日46家公司公布年报 5家业绩增幅翻倍"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "945家公司公布年度分红方案"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "龙江交通2025年营收净利双降 货币资金较上年末“腰斩” 龙翼投资收入锐减"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "龙江交通2025年实现净利润1.68亿元，将进一步优化产业布局"
+        }
+      ],
+      "return_60d": -8.02
+    },
+    {
+      "rank": 12,
+      "code": "002732",
+      "name": "燕塘乳业",
+      "price": 15.67,
+      "pct_change": -3.3909,
+      "zscore": -3.119,
+      "pct_from_mean": -9.32,
+      "mean_20": 17.28,
+      "std_20": 0.516,
+      "upper_band": 18.313,
+      "lower_band": 16.248,
+      "vol_ratio": 0.967,
+      "atr_pct": 3.85,
+      "debt_ratio": "24.24%",
+      "debt_ratio_val": 24.24,
+      "roe": "3.82%",
+      "net_profit": "5762.51万",
+      "revenue": "15.86亿",
+      "revenue_yoy": "-8.47%",
+      "profit_yoy": "-43.94%",
+      "eps": "0.3700",
+      "book_value": "9.59",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：玉米概念下跌3.39%，主力资金净流出23股 | 5.01亿主力资金净流入，玉米概念涨2.22% | 燕塘乳业：2025年净利润5762.51万元 拟10派0.6。财务：资产负债率24.24%，ROE3.82%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "玉米概念下跌3.39%，主力资金净流出23股"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "5.01亿主力资金净流入，玉米概念涨2.22%"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "燕塘乳业：2025年净利润5762.51万元 拟10派0.6元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "燕塘乳业：2025年实现净利5726.51万元 拟10派0.6元"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "燕塘乳业2025年持续现金分红，守正创新全面筑牢高质量发展根基"
+        }
+      ],
+      "return_60d": -7.71
+    },
+    {
+      "rank": 13,
+      "code": "300350",
+      "name": "华鹏飞",
+      "price": 5.06,
+      "pct_change": -3.4351,
+      "zscore": -2.781,
+      "pct_from_mean": -18.93,
+      "mean_20": 6.242,
+      "std_20": 0.425,
+      "upper_band": 7.091,
+      "lower_band": 5.392,
+      "vol_ratio": 0.62,
+      "atr_pct": 4.73,
+      "debt_ratio": "18.23%",
+      "debt_ratio_val": 18.23,
+      "roe": "1.87%",
+      "net_profit": "1714.15万",
+      "revenue": "3.34亿",
+      "revenue_yoy": "-7.66%",
+      "profit_yoy": "-82.65%",
+      "eps": "0.0300",
+      "book_value": "1.64",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：【盘中播报】34只个股突破半年线 | 今日61只个股突破半年线 | 今日56只股长线走稳 站上年线。财务：资产负债率18.23%，ROE1.87%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-09",
+          "title": "【盘中播报】34只个股突破半年线"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "今日61只个股突破半年线"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "今日56只股长线走稳 站上年线"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "【盘中播报】36只股长线走稳 站上年线"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "交通运输行业3月3日资金流向日报"
+        }
+      ],
+      "return_60d": -19.43
+    },
+    {
+      "rank": 14,
+      "code": "001388",
+      "name": "信通电子",
+      "price": 37.38,
+      "pct_change": -3.3859,
+      "zscore": -3.198,
+      "pct_from_mean": -15.16,
+      "mean_20": 44.062,
+      "std_20": 2.089,
+      "upper_band": 48.24,
+      "lower_band": 39.883,
+      "vol_ratio": 0.681,
+      "atr_pct": 5.15,
+      "debt_ratio": "44.33%",
+      "debt_ratio_val": 44.33,
+      "roe": "16.73%",
+      "net_profit": "1.43亿",
+      "revenue": "10.05亿",
+      "revenue_yoy": "7.97%",
+      "profit_yoy": "15.11%",
+      "eps": "1.2200",
+      "book_value": "7.29",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：信通电子：公司目前没有电算协同方面的项目 | 电力物联网概念下跌3.08%，12股主力资金净流出超5000 | 28只股中线走稳 站上半年线。财务：资产负债率44.33%，ROE16.73%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-20",
+          "title": "信通电子：公司目前没有电算协同方面的项目"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "电力物联网概念下跌3.08%，12股主力资金净流出超5000万元"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "28只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "【盘中播报】44只个股突破半年线"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "69只股中线走稳 站上半年线"
+        }
+      ],
+      "return_60d": -13.65
+    },
+    {
+      "rank": 15,
+      "code": "000828",
+      "name": "东莞控股",
+      "price": 9.87,
+      "pct_change": -0.4036,
+      "zscore": -3.136,
+      "pct_from_mean": -8.43,
+      "mean_20": 10.778,
+      "std_20": 0.29,
+      "upper_band": 11.357,
+      "lower_band": 10.199,
+      "vol_ratio": 1.544,
+      "atr_pct": 2.63,
+      "debt_ratio": "34.72%",
+      "debt_ratio_val": 34.72,
+      "roe": "8.08%",
+      "net_profit": "8.24亿",
+      "revenue": "15.52亿",
+      "revenue_yoy": "-8.28%",
+      "profit_yoy": "-13.79%",
+      "eps": "0.7922",
+      "book_value": "9.80",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：融资客看好9股 买入占成交比例超三成 | 融资客看好4股 买入占成交比例超三成 | 融资客看好2股 买入占成交比例超三成。财务：资产负债率34.72%，ROE8.08%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "融资客看好9股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "融资客看好4股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-29",
+          "title": "东莞控股：持续高比例分红 2025年全年派息近5亿元"
+        }
+      ],
+      "return_60d": -8.44
+    },
+    {
+      "rank": 16,
+      "code": "002449",
+      "name": "国星光电",
+      "price": 7.46,
+      "pct_change": -1.4531,
+      "zscore": -2.534,
+      "pct_from_mean": -12.58,
+      "mean_20": 8.534,
+      "std_20": 0.424,
+      "upper_band": 9.382,
+      "lower_band": 7.686,
+      "vol_ratio": 0.659,
+      "atr_pct": 4.8,
+      "debt_ratio": "38.81%",
+      "debt_ratio_val": 38.81,
+      "roe": "1.35%",
+      "net_profit": "5153.01万",
+      "revenue": "34.73亿",
+      "revenue_yoy": "-1.94%",
+      "profit_yoy": "-39.83%",
+      "eps": "0.0833",
+      "book_value": "6.18",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：18.88亿主力资金净流入，先进封装概念涨0.31% | 血氧仪概念下跌6.58%，8股主力资金净流出超千万元 | 今日72只个股突破半年线。财务：资产负债率38.81%，ROE1.35%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "18.88亿主力资金净流入，先进封装概念涨0.31%"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "血氧仪概念下跌6.58%，8股主力资金净流出超千万元"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "今日72只个股突破半年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "【盘中播报】32只个股突破年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "46只股中线走稳 站上半年线"
+        }
+      ],
+      "return_60d": -11.3
+    },
+    {
+      "rank": 17,
+      "code": "605020",
+      "name": "永和股份",
+      "price": 23.37,
+      "pct_change": -5.3846,
+      "zscore": -2.503,
+      "pct_from_mean": -15.32,
+      "mean_20": 27.599,
+      "std_20": 1.69,
+      "upper_band": 30.978,
+      "lower_band": 24.22,
+      "vol_ratio": 0.718,
+      "atr_pct": 3.97,
+      "debt_ratio": "27.66%",
+      "debt_ratio_val": 27.66,
+      "roe": "9.77%",
+      "net_profit": "5.62亿",
+      "revenue": "52.06亿",
+      "revenue_yoy": "13.04%",
+      "profit_yoy": "123.46%",
+      "eps": "1.2100",
+      "book_value": "11.26",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：上市公司2025年度分红方案一览 | 配额制管理提升毛利率 永和股份去年净利润增长123.46% | 永和股份：2025年净利润同比增长123.46% 拟10派4。财务：资产负债率27.66%，ROE9.77%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "配额制管理提升毛利率 永和股份去年净利润增长123.46%"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "永和股份：2025年净利润同比增长123.46% 拟10派4.5元"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "1.96亿主力资金净流入，PVDF概念涨0.19%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "环氧丙烷概念涨0.06%，主力资金净流入这些股"
+        }
+      ],
+      "return_60d": -13.76
+    },
+    {
+      "rank": 18,
+      "code": "605169",
+      "name": "洪通燃气",
+      "price": 11.45,
+      "pct_change": -5.9162,
+      "zscore": -3.45,
+      "pct_from_mean": -15.77,
+      "mean_20": 13.593,
+      "std_20": 0.621,
+      "upper_band": 14.836,
+      "lower_band": 12.351,
+      "vol_ratio": 1.045,
+      "atr_pct": 5.78,
+      "debt_ratio": "22.50%",
+      "debt_ratio_val": 22.5,
+      "roe": "8.92%",
+      "net_profit": "1.73亿",
+      "revenue": "27.53亿",
+      "revenue_yoy": "46.17%",
+      "profit_yoy": "13.05%",
+      "eps": "0.6165",
+      "book_value": "6.86",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：洪通燃气：公司目前LNG生产工艺中不涉及氦气提取业务 | 今日突破五日均线个股一览 | 涨停股复盘：17股封单超亿元。财务：资产负债率22.50%，ROE8.92%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 91,
+      "score_detail": "技术35分+财务35分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-27",
+          "title": "洪通燃气：公司目前LNG生产工艺中不涉及氦气提取业务"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "今日突破五日均线个股一览"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "涨停股复盘：17股封单超亿元"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "公用事业行业今日净流入资金7.77亿元，广安爱众等8股净流入资金超亿元"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "A股三大股指集体收跌，沪指险守4000点：油气、煤炭逆势走强"
+        }
+      ],
+      "return_60d": -13.78
+    },
+    {
+      "rank": 19,
+      "code": "002681",
+      "name": "奋达科技",
+      "price": 4.99,
+      "pct_change": -3.4816,
+      "zscore": -2.226,
+      "pct_from_mean": -19.71,
+      "mean_20": 6.215,
+      "std_20": 0.55,
+      "upper_band": 7.315,
+      "lower_band": 5.114,
+      "vol_ratio": 0.551,
+      "atr_pct": 3.68,
+      "debt_ratio": "49.82%",
+      "debt_ratio_val": 49.82,
+      "roe": "4.03%",
+      "net_profit": "9709.00万",
+      "revenue": "31.44亿",
+      "revenue_yoy": "8.76%",
+      "profit_yoy": "117.44%",
+      "eps": "0.0500",
+      "book_value": "1.33",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：奋达科技已回购1071万股 金额6667万元 | 血氧仪概念下跌6.58%，8股主力资金净流出超千万元 | 奋达科技已回购556万股 金额3748万元。财务：资产负债率49.82%，ROE4.03%。",
+      "news_score": 22,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 90,
+      "score_detail": "技术33分+财务35分+消息22分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "奋达科技已回购1071万股 金额6667万元"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "血氧仪概念下跌6.58%，8股主力资金净流出超千万元"
+        },
+        {
+          "date": "2026-03-02",
+          "title": "奋达科技已回购556万股 金额3748万元"
+        },
+        {
+          "date": "2026-02-27",
+          "title": "奋达科技：获得北京某新锐智能硬件公司的AI萌宠陪伴机器人新订单"
+        },
+        {
+          "date": "2026-02-27",
+          "title": "奋达科技：获得北京某新锐智能硬件公司的AI萌宠陪伴机器人新订单"
+        }
+      ],
+      "return_60d": -25.52
+    },
+    {
+      "rank": 20,
+      "code": "300546",
+      "name": "雄帝科技",
+      "price": 20.59,
+      "pct_change": -0.7711,
+      "zscore": -2.245,
+      "pct_from_mean": -14.42,
+      "mean_20": 24.06,
+      "std_20": 1.546,
+      "upper_band": 27.152,
+      "lower_band": 20.968,
+      "vol_ratio": 0.431,
+      "atr_pct": 4.23,
+      "debt_ratio": "18.21%",
+      "debt_ratio_val": 18.21,
+      "roe": "2.66%",
+      "net_profit": "2914.79万",
+      "revenue": "5.52亿",
+      "revenue_yoy": "33.93%",
+      "profit_yoy": "223.78%",
+      "eps": "0.1600",
+      "book_value": "5.91",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：【盘中播报】32只个股突破年线 | 今日盘中突破年线个股 | 【盘中播报】38只个股突破年线。财务：资产负债率18.21%，ROE2.66%。",
+      "news_score": 22,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 90,
+      "score_detail": "技术33分+财务35分+消息22分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-12",
+          "title": "【盘中播报】32只个股突破年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "今日盘中突破年线个股"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "【盘中播报】38只个股突破年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "今日突破年线个股"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "电子身份证概念下跌3.05%，7股主力资金净流出超3000万元"
+        }
+      ],
+      "return_60d": -19.57
+    },
+    {
+      "rank": 21,
+      "code": "002067",
+      "name": "景兴纸业",
+      "price": 4.56,
+      "pct_change": -5.1975,
+      "zscore": -3.045,
+      "pct_from_mean": -16.44,
+      "mean_20": 5.457,
+      "std_20": 0.295,
+      "upper_band": 6.047,
+      "lower_band": 4.868,
+      "vol_ratio": 0.381,
+      "atr_pct": 4.04,
+      "debt_ratio": "33.33%",
+      "debt_ratio_val": 33.33,
+      "roe": "1.22%",
+      "net_profit": "7126.44万",
+      "revenue": "54.79亿",
+      "revenue_yoy": "0.41%",
+      "profit_yoy": "-22.18%",
+      "eps": "0.0600",
+      "book_value": "4.58",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：轻工制造行业3月31日资金流向日报 | 景兴纸业：截至目前，公司主营中尚无跨境电商相关业务 | 景兴纸业：平湖弘欣热电有限公司是本公司的能源供应商，双方有多。财务：资产负债率33.33%，ROE1.22%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "轻工制造行业3月31日资金流向日报"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "景兴纸业：截至目前，公司主营中尚无跨境电商相关业务"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "景兴纸业：平湖弘欣热电有限公司是本公司的能源供应商，双方有多年的业务往来关系"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "4.08亿元资金今日流入轻工制造股"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "景兴纸业：公司没有热电厂"
+        }
+      ],
+      "return_60d": -20.83
+    },
+    {
+      "rank": 22,
+      "code": "301502",
+      "name": "华阳智能",
+      "price": 40.24,
+      "pct_change": -4.1448,
+      "zscore": -2.661,
+      "pct_from_mean": -11.67,
+      "mean_20": 45.554,
+      "std_20": 1.997,
+      "upper_band": 49.549,
+      "lower_band": 41.56,
+      "vol_ratio": 0.719,
+      "atr_pct": 4.64,
+      "debt_ratio": "23.43%",
+      "debt_ratio_val": 23.43,
+      "roe": "4.07%",
+      "net_profit": "3364.85万",
+      "revenue": "4.83亿",
+      "revenue_yoy": "1.57%",
+      "profit_yoy": "-48.51%",
+      "eps": "0.6000",
+      "book_value": "14.47",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客看好2股 买入占成交比例超三成 | 今日226只个股跨越牛熊分界线 | 今日171只个股跨越牛熊分界线。财务：资产负债率23.43%，ROE4.07%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "今日226只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "今日171只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "【盘中播报】204只个股突破年线"
+        },
+        {
+          "date": "2026-01-16",
+          "title": "杠杆资金连续九日加仓创业板股"
+        }
+      ],
+      "return_60d": -9.9
+    },
+    {
+      "rank": 23,
+      "code": "000897",
+      "name": "津滨发展",
+      "price": 2.01,
+      "pct_change": -2.4272,
+      "zscore": -2.678,
+      "pct_from_mean": -10.08,
+      "mean_20": 2.235,
+      "std_20": 0.084,
+      "upper_band": 2.404,
+      "lower_band": 2.067,
+      "vol_ratio": 0.686,
+      "atr_pct": 3.98,
+      "debt_ratio": "32.58%",
+      "debt_ratio_val": 32.58,
+      "roe": "15.85%",
+      "net_profit": "5.08亿",
+      "revenue": "28.31亿",
+      "revenue_yoy": "-7.60%",
+      "profit_yoy": "-3.12%",
+      "eps": "0.3144",
+      "book_value": "1.98",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：天津自贸区概念涨0.24%，主力资金净流入这些股 | 短线防风险 80只个股短期均线现死叉 | 今日突破年线个股。财务：资产负债率32.58%，ROE15.85%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-26",
+          "title": "天津自贸区概念涨0.24%，主力资金净流入这些股"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "短线防风险 80只个股短期均线现死叉"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "今日突破年线个股"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "【盘中播报】38只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "今日49只个股突破年线"
+        }
+      ],
+      "return_60d": -11.45
+    },
+    {
+      "rank": 24,
+      "code": "300105",
+      "name": "龙源技术",
+      "price": 6.47,
+      "pct_change": -3.7202,
+      "zscore": -2.819,
+      "pct_from_mean": -13.46,
+      "mean_20": 7.476,
+      "std_20": 0.357,
+      "upper_band": 8.19,
+      "lower_band": 6.762,
+      "vol_ratio": 0.794,
+      "atr_pct": 4.38,
+      "debt_ratio": "29.74%",
+      "debt_ratio_val": 29.74,
+      "roe": "3.38%",
+      "net_profit": "6528.75万",
+      "revenue": "12.77亿",
+      "revenue_yoy": "13.06%",
+      "profit_yoy": "-53.77%",
+      "eps": "0.1264",
+      "book_value": "3.74",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：PM2.5概念涨4.53%，主力资金净流入这些股 | 涉案金额逾2亿元！龙源技术将两客户告上法庭 大额信用减值“吞 | 固废处理概念涨4.55%，主力资金净流入64股。财务：资产负债率29.74%，ROE3.38%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-24",
+          "title": "PM2.5概念涨4.53%，主力资金净流入这些股"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "涉案金额逾2亿元！龙源技术将两客户告上法庭 大额信用减值“吞噬”净利"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "固废处理概念涨4.55%，主力资金净流入64股"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "超超临界发电概念下跌2.46%，12股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "【盘中播报】92只个股突破年线"
+        }
+      ],
+      "return_60d": -9.38
+    },
+    {
+      "rank": 25,
+      "code": "002495",
+      "name": "佳隆股份",
+      "price": 2.42,
+      "pct_change": -7.2797,
+      "zscore": -3.27,
+      "pct_from_mean": -10.51,
+      "mean_20": 2.704,
+      "std_20": 0.087,
+      "upper_band": 2.878,
+      "lower_band": 2.53,
+      "vol_ratio": 0.993,
+      "atr_pct": 4.75,
+      "debt_ratio": "4.30%",
+      "debt_ratio_val": 4.3,
+      "roe": "2.21%",
+      "net_profit": "2469.63万",
+      "revenue": "2.68亿",
+      "revenue_yoy": "3.02%",
+      "profit_yoy": "155.23%",
+      "eps": "0.0266",
+      "book_value": "1.19",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：71股股东户数连续下降 （附股） | 103股股东户数连续下降 （附股） | 佳隆股份：公司各项生产经营活动均正常开展。财务：资产负债率4.30%，ROE2.21%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "71股股东户数连续下降 （附股）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "103股股东户数连续下降 （附股）"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "佳隆股份：公司各项生产经营活动均正常开展"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "速看 最新筹码集中股找到了（附股）"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "佳隆股份：目前，公司各项生产经营活动均正常开展"
+        }
+      ],
+      "return_60d": -9.36
+    },
+    {
+      "rank": 26,
+      "code": "300859",
+      "name": "西域旅游",
+      "price": 31.55,
+      "pct_change": -2.8334,
+      "zscore": -2.51,
+      "pct_from_mean": -14.54,
+      "mean_20": 36.916,
+      "std_20": 2.138,
+      "upper_band": 41.193,
+      "lower_band": 32.64,
+      "vol_ratio": 0.646,
+      "atr_pct": 4.13,
+      "debt_ratio": "28.91%",
+      "debt_ratio_val": 28.91,
+      "roe": "9.55%",
+      "net_profit": "7468.15万",
+      "revenue": "3.26亿",
+      "revenue_yoy": "7.32%",
+      "profit_yoy": "-13.68%",
+      "eps": "0.4800",
+      "book_value": "5.04",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：冰雪产业概念涨0.02%，主力资金净流入22股 | 7742.44万元资金今日流入社会服务股 | 西域旅游拟每10股派发现金红利3元。财务：资产负债率28.91%，ROE9.55%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "冰雪产业概念涨0.02%，主力资金净流入22股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "7742.44万元资金今日流入社会服务股"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "西域旅游拟每10股派发现金红利3元"
+        },
+        {
+          "date": "2026-03-29",
+          "title": "西域旅游2025年报出炉：营收增长超3.2亿元，新演艺项目成亮点但短期利润承压"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "西域旅游举办2026年项目推介签约大会 业绩增长下持续深化文旅融合"
+        }
+      ],
+      "return_60d": -14.08
+    },
+    {
+      "rank": 27,
+      "code": "001380",
+      "name": "华纬科技",
+      "price": 19.28,
+      "pct_change": -8.5823,
+      "zscore": -2.53,
+      "pct_from_mean": -15.15,
+      "mean_20": 22.722,
+      "std_20": 1.36,
+      "upper_band": 25.442,
+      "lower_band": 20.001,
+      "vol_ratio": 0.867,
+      "atr_pct": 3.9,
+      "debt_ratio": "34.24%",
+      "debt_ratio_val": 34.24,
+      "roe": "14.27%",
+      "net_profit": "2.75亿",
+      "revenue": "19.92亿",
+      "revenue_yoy": "7.08%",
+      "profit_yoy": "21.49%",
+      "eps": "1.0200",
+      "book_value": "7.12",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：华纬科技拟每10股派息1元 | 华纬科技：预计2026年度日常关联交易额度不超过4,254. | 华纬科技：2025年净利润同比增长21.49% 拟10派1元。财务：资产负债率34.24%，ROE14.27%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "华纬科技拟每10股派息1元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "华纬科技：预计2026年度日常关联交易额度不超过4,254.20万元"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "华纬科技：2025年净利润同比增长21.49% 拟10派1元"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "华纬科技：公司产品所涉领域包括但不限于汽车、轨道交通、电气能源、工程机械、农用机械、机器人等"
+        }
+      ],
+      "return_60d": -15.92
+    },
+    {
+      "rank": 28,
+      "code": "603128",
+      "name": "华贸物流",
+      "price": 5.46,
+      "pct_change": -1.7986,
+      "zscore": -2.762,
+      "pct_from_mean": -7.85,
+      "mean_20": 5.925,
+      "std_20": 0.168,
+      "upper_band": 6.262,
+      "lower_band": 5.588,
+      "vol_ratio": 0.873,
+      "atr_pct": 2.28,
+      "debt_ratio": "43.78%",
+      "debt_ratio_val": 43.78,
+      "roe": "9.01%",
+      "net_profit": "5.39亿",
+      "revenue": "175.25亿",
+      "revenue_yoy": "19.96%",
+      "profit_yoy": "-12.60%",
+      "eps": "0.4100",
+      "book_value": "4.57",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：华贸物流：公司暂未获得控股股东旗下中欧班列资产注入的计划 | 47只股中线走稳 站上半年线 | 航运概念涨2.34%，主力资金净流入44股。财务：资产负债率43.78%，ROE9.01%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-18",
+          "title": "华贸物流：公司暂未获得控股股东旗下中欧班列资产注入的计划"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "47只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "航运概念涨2.34%，主力资金净流入44股"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "航运概念下跌3.62%，主力资金净流出61股"
+        },
+        {
+          "date": "2026-01-12",
+          "title": "13家公司重要股东开启增持模式 累计增持4.02亿元（附股）"
+        }
+      ],
+      "return_60d": -10.2
+    },
+    {
+      "rank": 29,
+      "code": "002706",
+      "name": "良信股份",
+      "price": 9.35,
+      "pct_change": -3.0083,
+      "zscore": -2.759,
+      "pct_from_mean": -16.32,
+      "mean_20": 11.174,
+      "std_20": 0.661,
+      "upper_band": 12.496,
+      "lower_band": 9.852,
+      "vol_ratio": 0.907,
+      "atr_pct": 6.34,
+      "debt_ratio": "27.76%",
+      "debt_ratio_val": 27.76,
+      "roe": "7.85%",
+      "net_profit": "3.12亿",
+      "revenue": "42.38亿",
+      "revenue_yoy": "-7.57%",
+      "profit_yoy": "-38.92%",
+      "eps": "0.2800",
+      "book_value": "3.54",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：良信股份：公司目前拥有完整的风电行业低压电器解决方案，并成功 | 良信股份：部分固态断路器产品将根据市场需求进行北美UL产品认 | 良信股份：公司低压电器在算力中心中的主配电、不间断电源及末端。财务：资产负债率27.76%，ROE7.85%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "良信股份：公司目前拥有完整的风电行业低压电器解决方案，并成功推出适配1800V风电机组的电气方案"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "良信股份：部分固态断路器产品将根据市场需求进行北美UL产品认证工作"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "良信股份：公司低压电器在算力中心中的主配电、不间断电源及末端配电等用电环节均有产品应用"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "解密主力资金出逃股 连续5日净流出395股"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "【盘中播报】23只个股突破半年线"
+        }
+      ],
+      "return_60d": -12.29
+    },
+    {
+      "rank": 30,
+      "code": "002381",
+      "name": "双箭股份",
+      "price": 6.2,
+      "pct_change": -5.1988,
+      "zscore": -2.549,
+      "pct_from_mean": -9.74,
+      "mean_20": 6.869,
+      "std_20": 0.262,
+      "upper_band": 7.394,
+      "lower_band": 6.344,
+      "vol_ratio": 1.028,
+      "atr_pct": 4.08,
+      "debt_ratio": "44.09%",
+      "debt_ratio_val": 44.09,
+      "roe": "3.04%",
+      "net_profit": "6530.23万",
+      "revenue": "26.75亿",
+      "revenue_yoy": "-1.40%",
+      "profit_yoy": "-57.48%",
+      "eps": "0.1600",
+      "book_value": "5.20",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：上市公司2025年度分红方案一览 | 双箭股份：2025年净利润同比下降57.48% 拟10派1元 | 双箭股份：公司以桐乡和济颐养院有限公司为平台从事养老护理服务。财务：资产负债率44.09%，ROE3.04%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "双箭股份：2025年净利润同比下降57.48% 拟10派1元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "双箭股份：公司以桐乡和济颐养院有限公司为平台从事养老护理服务相关业务"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "下游需求“寒冬”未过，双箭股份2025年净利大降57%，创始人女儿沈凯菲接班"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "双箭股份：2025年净利润6530.23万元 拟10派1元"
+        }
+      ],
+      "return_60d": -5.78
+    },
+    {
+      "rank": 31,
+      "code": "603366",
+      "name": "日出东方",
+      "price": 8.3,
+      "pct_change": -7.8801,
+      "zscore": -3.128,
+      "pct_from_mean": -15.07,
+      "mean_20": 9.773,
+      "std_20": 0.471,
+      "upper_band": 10.714,
+      "lower_band": 8.831,
+      "vol_ratio": 1.076,
+      "atr_pct": 6.85,
+      "debt_ratio": "42.72%",
+      "debt_ratio_val": 42.72,
+      "roe": "5.10%",
+      "net_profit": "2.12亿",
+      "revenue": "50.79亿",
+      "revenue_yoy": "4.89%",
+      "profit_yoy": "1.79%",
+      "eps": "0.2611",
+      "book_value": "5.12",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：解密主力资金出逃股 连续5日净流出395股 | 解密主力资金出逃股 连续5日净流出460股 | 解密主力资金出逃股 连续5日净流出414股。财务：资产负债率42.72%，ROE5.10%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "解密主力资金出逃股 连续5日净流出395股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "解密主力资金出逃股 连续5日净流出460股"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "解密主力资金出逃股 连续5日净流出414股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "家用电器行业资金流出榜：天银机电等5股净流出资金超3000万元"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "家用电器行业3月30日资金流向日报"
+        }
+      ],
+      "return_60d": -13.99
+    },
+    {
+      "rank": 32,
+      "code": "300274",
+      "name": "阳光电源",
+      "price": 123.32,
+      "pct_change": -3.0884,
+      "zscore": -3.035,
+      "pct_from_mean": -22.05,
+      "mean_20": 158.207,
+      "std_20": 11.494,
+      "upper_band": 181.195,
+      "lower_band": 135.219,
+      "vol_ratio": 1.389,
+      "atr_pct": 8.2,
+      "debt_ratio": "58.06%",
+      "debt_ratio_val": 58.06,
+      "roe": "28.88%",
+      "net_profit": "134.61亿",
+      "revenue": "891.84亿",
+      "revenue_yoy": "14.55%",
+      "profit_yoy": "21.97%",
+      "eps": "6.5500",
+      "book_value": "22.48",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：300274，成交额A股第一 | A股一周20大熊股出炉：最熊股复牌后大跌80%，电力概念股领 | 阳光电源：2026年预计全球储能市场增速30%—50%。财务：资产负债率58.06%，ROE28.88%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-03-11",
+          "title": "300274，成交额A股第一"
+        },
+        {
+          "date": "2026-04-04",
+          "title": "A股一周20大熊股出炉：最熊股复牌后大跌80%，电力概念股领跌"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "阳光电源：2026年预计全球储能市场增速30%—50%"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "阳光电源：2026年预计全球储能市场增速30%—50%"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "阳光电源：2025年度净利润134.61亿元 同比增长21.97%"
+        }
+      ],
+      "return_60d": -31.13
+    },
+    {
+      "rank": 33,
+      "code": "301320",
+      "name": "豪江智能",
+      "price": 15.91,
+      "pct_change": -3.7508,
+      "zscore": -2.575,
+      "pct_from_mean": -10.99,
+      "mean_20": 17.874,
+      "std_20": 0.763,
+      "upper_band": 19.399,
+      "lower_band": 16.349,
+      "vol_ratio": 0.698,
+      "atr_pct": 4.59,
+      "debt_ratio": "30.25%",
+      "debt_ratio_val": 30.25,
+      "roe": "4.51%",
+      "net_profit": "4688.06万",
+      "revenue": "8.28亿",
+      "revenue_yoy": "15.74%",
+      "profit_yoy": "-0.58%",
+      "eps": "0.2600",
+      "book_value": "5.74",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：豪江智能：拟5936万元收购优特电源53%股权 与现有电子类 | 豪江智能拟收购优特电源53%股权 完善电子电源业务布局 | 融资客看好2股 买入占成交比例超三成。财务：资产负债率30.25%，ROE4.51%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "豪江智能：拟5936万元收购优特电源53%股权 与现有电子类产品形成技术互补"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "豪江智能拟收购优特电源53%股权 完善电子电源业务布局"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "今日139只个股突破半年线"
+        }
+      ],
+      "return_60d": -6.36
+    },
+    {
+      "rank": 34,
+      "code": "600576",
+      "name": "祥源文旅",
+      "price": 5.67,
+      "pct_change": -2.911,
+      "zscore": -2.713,
+      "pct_from_mean": -11.7,
+      "mean_20": 6.421,
+      "std_20": 0.277,
+      "upper_band": 6.975,
+      "lower_band": 5.868,
+      "vol_ratio": 0.714,
+      "atr_pct": 3.84,
+      "debt_ratio": "33.85%",
+      "debt_ratio_val": 33.85,
+      "roe": "5.21%",
+      "net_profit": "1.47亿",
+      "revenue": "8.64亿",
+      "revenue_yoy": "19.64%",
+      "profit_yoy": "-3.14%",
+      "eps": "0.1400",
+      "book_value": "2.67",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：祥源文旅已回购808万股 金额5407万元 | 冰雪产业概念涨0.02%，主力资金净流入22股 | 7742.44万元资金今日流入社会服务股。财务：资产负债率33.85%，ROE5.21%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "祥源文旅已回购808万股 金额5407万元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "冰雪产业概念涨0.02%，主力资金净流入22股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "7742.44万元资金今日流入社会服务股"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "露营经济概念涨4.59%，主力资金净流入20股"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "5.19亿元资金今日流出社会服务股"
+        }
+      ],
+      "return_60d": -10.71
+    },
+    {
+      "rank": 35,
+      "code": "003028",
+      "name": "振邦智能",
+      "price": 25.22,
+      "pct_change": -2.5502,
+      "zscore": -2.623,
+      "pct_from_mean": -16.73,
+      "mean_20": 30.289,
+      "std_20": 1.932,
+      "upper_band": 34.153,
+      "lower_band": 26.425,
+      "vol_ratio": 0.865,
+      "atr_pct": 4.2,
+      "debt_ratio": "35.14%",
+      "debt_ratio_val": 35.14,
+      "roe": "4.21%",
+      "net_profit": "7341.09万",
+      "revenue": "13.67亿",
+      "revenue_yoy": "-2.48%",
+      "profit_yoy": "-63.89%",
+      "eps": "0.5100",
+      "book_value": "12.06",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：振邦智能：任期未满即“闪辞” 汤力辞任副总及财务总监 | 振邦智能2025年归母净利润降63.9%至7341万元 | 振邦智能：公司没有介入脑机接口领域的计划。财务：资产负债率35.14%，ROE4.21%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "振邦智能：任期未满即“闪辞” 汤力辞任副总及财务总监"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "振邦智能2025年归母净利润降63.9%至7341万元"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "振邦智能：公司没有介入脑机接口领域的计划"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "振邦智能2025年实现营收13.67亿元 新能源业务持续突破"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "共封装光学(CPO)概念上涨2.12%，33股主力资金净流入超亿元"
+        }
+      ],
+      "return_60d": -15.23
+    },
+    {
+      "rank": 36,
+      "code": "603332",
+      "name": "苏州龙杰",
+      "price": 12.07,
+      "pct_change": -2.9743,
+      "zscore": -2.557,
+      "pct_from_mean": -11.28,
+      "mean_20": 13.605,
+      "std_20": 0.601,
+      "upper_band": 14.806,
+      "lower_band": 12.404,
+      "vol_ratio": 0.754,
+      "atr_pct": 6.59,
+      "debt_ratio": "17.33%",
+      "debt_ratio_val": 17.33,
+      "roe": "4.56%",
+      "net_profit": "5776.35万",
+      "revenue": "16.79亿",
+      "revenue_yoy": "5.01%",
+      "profit_yoy": "301.73%",
+      "eps": "0.2700",
+      "book_value": "5.85",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：65股每笔成交量增长超50% | 67只股上午收盘涨停(附股) | 今日盘中突破年线个股。财务：资产负债率17.33%，ROE4.56%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2025-12-29",
+          "title": "65股每笔成交量增长超50%"
+        },
+        {
+          "date": "2025-12-29",
+          "title": "67只股上午收盘涨停(附股)"
+        },
+        {
+          "date": "2025-12-24",
+          "title": "今日盘中突破年线个股"
+        },
+        {
+          "date": "2025-12-29",
+          "title": "90只股涨停 最大封单资金26.22亿元"
+        },
+        {
+          "date": "2025-10-27",
+          "title": "苏州龙杰：2025年前三季度净利润5458.96万元"
+        }
+      ],
+      "return_60d": -9.38
+    },
+    {
+      "rank": 37,
+      "code": "301325",
+      "name": "曼恩斯特",
+      "price": 40.79,
+      "pct_change": -2.7884,
+      "zscore": -2.563,
+      "pct_from_mean": -19.81,
+      "mean_20": 50.867,
+      "std_20": 3.931,
+      "upper_band": 58.728,
+      "lower_band": 43.005,
+      "vol_ratio": 0.539,
+      "atr_pct": 4.56,
+      "debt_ratio": "37.54%",
+      "debt_ratio_val": 37.54,
+      "roe": "1.06%",
+      "net_profit": "3069.92万",
+      "revenue": "16.99亿",
+      "revenue_yoy": "113.70%",
+      "profit_yoy": "-91.01%",
+      "eps": "0.2100",
+      "book_value": "20.11",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客控盘比例超一成个股（附名单） | 融资客控盘比例超一成个股（附名单） | 18.88亿主力资金净流入，先进封装概念涨0.31%。财务：资产负债率37.54%，ROE1.06%。",
+      "news_score": 18,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 88,
+      "score_detail": "技术35分+财务35分+消息18分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "18.88亿主力资金净流入，先进封装概念涨0.31%"
+        },
+        {
+          "date": "2026-03-17",
+          "title": "曼恩斯特：公司钙钛矿业务主要为客户提供涂布技术解决方案，陆续取得多家客户不同规格的核心设备订单"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "22.99亿主力资金净流入，钙钛矿电池概念涨0.12%"
+        }
+      ],
+      "return_60d": -20.61
+    },
+    {
+      "rank": 38,
+      "code": "600444",
+      "name": "国机通用",
+      "price": 16.67,
+      "pct_change": -2.4576,
+      "zscore": -2.089,
+      "pct_from_mean": -10.39,
+      "mean_20": 18.602,
+      "std_20": 0.925,
+      "upper_band": 20.452,
+      "lower_band": 16.752,
+      "vol_ratio": 0.591,
+      "atr_pct": 3.93,
+      "debt_ratio": "47.24%",
+      "debt_ratio_val": 47.24,
+      "roe": "5.67%",
+      "net_profit": "4015.93万",
+      "revenue": "7.66亿",
+      "revenue_yoy": "1.47%",
+      "profit_yoy": "0.28%",
+      "eps": "0.2743",
+      "book_value": "4.84",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：盐湖提锂概念涨3.83%，主力资金净流入29股 | 248家公司公布业绩快报：68%去年净利润增长 | 186家公司公布业绩快报：69%去年净利润增长。财务：资产负债率47.24%，ROE5.67%。",
+      "news_score": 19,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 87,
+      "score_detail": "技术33分+财务35分+消息19分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-27",
+          "title": "盐湖提锂概念涨3.83%，主力资金净流入29股"
+        },
+        {
+          "date": "2026-02-26",
+          "title": "248家公司公布业绩快报：68%去年净利润增长"
+        },
+        {
+          "date": "2026-02-25",
+          "title": "186家公司公布业绩快报：69%去年净利润增长"
+        },
+        {
+          "date": "2026-02-24",
+          "title": "168家公司公布业绩快报：69%去年净利润增长"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "国机通用：2025年净利润5851.57万元 同比增长45.71%"
+        }
+      ],
+      "return_60d": -8.66
+    },
+    {
+      "rank": 39,
+      "code": "000823",
+      "name": "超声电子",
+      "price": 12.65,
+      "pct_change": -0.6284,
+      "zscore": -2.026,
+      "pct_from_mean": -13.22,
+      "mean_20": 14.578,
+      "std_20": 0.951,
+      "upper_band": 16.48,
+      "lower_band": 12.675,
+      "vol_ratio": 0.683,
+      "atr_pct": 5.82,
+      "debt_ratio": "36.24%",
+      "debt_ratio_val": 36.24,
+      "roe": "4.55%",
+      "net_profit": "2.22亿",
+      "revenue": "63.31亿",
+      "revenue_yoy": "9.98%",
+      "profit_yoy": "3.10%",
+      "eps": "0.4143",
+      "book_value": "8.87",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：【盘中播报】12只个股突破年线 | 【盘中播报】22只个股突破年线 | 今日213只个股跨越牛熊分界线。财务：资产负债率36.24%，ROE4.55%。",
+      "news_score": 19,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 87,
+      "score_detail": "技术33分+财务35分+消息19分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "【盘中播报】12只个股突破年线"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "【盘中播报】22只个股突破年线"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "今日213只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "今日178只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "【盘中播报】150只个股突破年线"
+        }
+      ],
+      "return_60d": -7.87
+    },
+    {
+      "rank": 40,
+      "code": "003025",
+      "name": "思进智能",
+      "price": 13.26,
+      "pct_change": -2.0679,
+      "zscore": -2.444,
+      "pct_from_mean": -8.97,
+      "mean_20": 14.566,
+      "std_20": 0.534,
+      "upper_band": 15.635,
+      "lower_band": 13.497,
+      "vol_ratio": 0.668,
+      "atr_pct": 4.25,
+      "debt_ratio": "17.95%",
+      "debt_ratio_val": 17.95,
+      "roe": "15.44%",
+      "net_profit": "1.82亿",
+      "revenue": "6.24亿",
+      "revenue_yoy": "28.41%",
+      "profit_yoy": "86.27%",
+      "eps": "0.7700",
+      "book_value": "4.97",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：今日38只个股突破年线 | 思进智能：公司的多工位智能精密温热镦成形装备已进入实质性研制 | 新华红利回报混合：2025年第四季度利润476.56万元 净。财务：资产负债率17.95%，ROE15.44%。",
+      "news_score": 19,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 87,
+      "score_detail": "技术33分+财务35分+消息19分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-04",
+          "title": "今日38只个股突破年线"
+        },
+        {
+          "date": "2026-01-26",
+          "title": "思进智能：公司的多工位智能精密温热镦成形装备已进入实质性研制阶段"
+        },
+        {
+          "date": "2026-01-23",
+          "title": "新华红利回报混合：2025年第四季度利润476.56万元 净值增长率5.56%"
+        },
+        {
+          "date": "2025-10-29",
+          "title": "思进智能：拟3000万元—5000万元回购股份"
+        },
+        {
+          "date": "2025-10-30",
+          "title": "今日340只个股突破五日均线"
+        }
+      ],
+      "return_60d": -7.27
+    },
+    {
+      "rank": 41,
+      "code": "688697",
+      "name": "纽威数控",
+      "price": 14.08,
+      "pct_change": -1.4006,
+      "zscore": -2.011,
+      "pct_from_mean": -9.25,
+      "mean_20": 15.515,
+      "std_20": 0.714,
+      "upper_band": 16.943,
+      "lower_band": 14.088,
+      "vol_ratio": 0.405,
+      "atr_pct": 2.99,
+      "debt_ratio": "55.96%",
+      "debt_ratio_val": 55.96,
+      "roe": "18.72%",
+      "net_profit": "3.25亿",
+      "revenue": "24.62亿",
+      "revenue_yoy": "6.08%",
+      "profit_yoy": "2.36%",
+      "eps": "1.0000",
+      "book_value": "5.32",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：277只科创板股融资余额环比增加 | 今日89只个股突破半年线 | 今日105只个股突破半年线。财务：资产负债率55.96%，ROE18.72%。",
+      "news_score": 22,
+      "tech_score": 33,
+      "finance_score": 32,
+      "buy_score": 87,
+      "score_detail": "技术33分+财务32分+消息22分 | 资产负债率健康(+5); ROE为正(+5)",
       "risk": "无特别风险提示",
       "news_list": [
         {
           "date": "2026-03-16",
-          "title": "上海机场：拟14.69亿元投建浦东国际机场运行保障基地项目"
+          "title": "277只科创板股融资余额环比增加"
         },
         {
-          "date": "2026-03-16",
-          "title": "上海机场：拟14.69亿元投资建设浦东国际机场运行保障基地项目"
+          "date": "2026-03-11",
+          "title": "今日89只个股突破半年线"
         },
         {
-          "date": "2026-03-13",
-          "title": "上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%"
+          "date": "2026-03-11",
+          "title": "今日105只个股突破半年线"
         },
         {
-          "date": "2026-03-13",
-          "title": "上海机场：2月浦东国际机场旅客吞吐量同比增长12.3%"
+          "date": "2026-03-11",
+          "title": "【盘中播报】84只个股突破半年线"
         },
         {
-          "date": "2026-03-04",
-          "title": "上海机场：公司向机场集团租赁浦东机场四期酒店等相关资产并取得经营权"
+          "date": "2026-03-11",
+          "title": "今日盘中突破半年线个股"
         }
-      ]
+      ],
+      "return_60d": -9.34
     },
     {
-      "rank": 3,
-      "code": "600019",
-      "name": "600019",
-      "price": 6.48,
-      "pct_change": 1.09,
-      "zscore": -0.753,
-      "pct_from_mean": -3.49,
-      "mean_20": 6.714,
-      "std_20": 0.311,
-      "upper_band": 7.337,
-      "lower_band": 6.092,
-      "return_60d": -11.84,
-      "vol_ratio": 0.601,
-      "atr_pct": 2.61,
-      "debt_ratio": "39.66%",
-      "debt_ratio_val": 39.66,
-      "roe": "3.67%",
-      "net_profit": "73.62亿",
-      "revenue": "3221.16亿",
-      "revenue_yoy": "-6.60%",
-      "profit_yoy": "-38.36%",
-      "eps": "0.3400",
-      "book_value": "9.12",
-      "total_mv": "N/A",
-      "float_mv": "N/A",
+      "rank": 42,
+      "code": "300180",
+      "name": "华峰超纤",
+      "price": 5.91,
+      "pct_change": 3.3217,
+      "zscore": -2.091,
+      "pct_from_mean": -11.12,
+      "mean_20": 6.649,
+      "std_20": 0.354,
+      "upper_band": 7.357,
+      "lower_band": 5.942,
+      "vol_ratio": 0.575,
+      "atr_pct": 3.92,
+      "debt_ratio": "34.29%",
+      "debt_ratio_val": 34.29,
+      "roe": "1.53%",
+      "net_profit": "7101.55万",
+      "revenue": "45.82亿",
+      "revenue_yoy": "-0.12%",
+      "profit_yoy": "130.69%",
+      "eps": "0.0403",
+      "book_value": "2.63",
+      "total_mv": null,
+      "float_mv": null,
       "industry": "未知",
       "report_period": "2024",
-      "news_summary": "近期动态：解密主力资金出逃股 连续5日净流出806股 | 特钢概念下跌3.14%，主力资金净流出37股 | 杠杆资金大手笔加仓股名单。财务：资产负债率39.66%，ROE3.67%。",
-      "news_score": 10,
-      "tech_score": 27,
+      "news_summary": "近期动态：解密主力资金出逃股 连续5日净流出395股 | 今日72只个股突破半年线 | 46只股中线走稳 站上半年线。财务：资产负债率34.29%，ROE1.53%。",
+      "news_score": 19,
+      "tech_score": 33,
       "finance_score": 35,
-      "buy_score": 72,
-      "score_detail": "技术27分+财务35分+消息10分 | 资产负债率健康(+5); ROE为正(+5)",
+      "buy_score": 87,
+      "score_detail": "技术33分+财务35分+消息19分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "解密主力资金出逃股 连续5日净流出395股"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "今日72只个股突破半年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "46只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "【盘中播报】78只个股突破半年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "今日盘中突破半年线个股"
+        }
+      ],
+      "return_60d": -13.97
+    },
+    {
+      "rank": 43,
+      "code": "600805",
+      "name": "悦达投资",
+      "price": 4.97,
+      "pct_change": -3.4951,
+      "zscore": -3.158,
+      "pct_from_mean": -11.23,
+      "mean_20": 5.598,
+      "std_20": 0.199,
+      "upper_band": 5.996,
+      "lower_band": 5.201,
+      "vol_ratio": 1.186,
+      "atr_pct": 4.63,
+      "debt_ratio": "51.58%",
+      "debt_ratio_val": 51.58,
+      "roe": "0.87%",
+      "net_profit": "3687.15万",
+      "revenue": "25.56亿",
+      "revenue_yoy": "-15.89%",
+      "profit_yoy": "37.94%",
+      "eps": "0.0400",
+      "book_value": "5.00",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：融资客看好9股 买入占成交比例超三成 | 百亿资产跨线后：悦达投资转型账本中的“利息对冲”考验 | 悦达投资2025年年报重磅出炉：转型攻坚成效凸显 全年业绩稳。财务：资产负债率51.58%，ROE0.87%。",
+      "news_score": 21,
+      "tech_score": 35,
+      "finance_score": 30,
+      "buy_score": 86,
+      "score_detail": "技术35分+财务30分+消息21分 | Z-Score极度超跌(+8); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "Z-Score极度超跌，注意继续下行风险",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "融资客看好9股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "百亿资产跨线后：悦达投资转型账本中的“利息对冲”考验"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "悦达投资2025年年报重磅出炉：转型攻坚成效凸显 全年业绩稳增开启高质量发展新征程"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "综合行业今日涨3.87%，主力资金净流出9662.08万元"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "悦达投资2025年年报发布：六大亮点齐发力 业绩与分红双丰收"
+        }
+      ],
+      "return_60d": -7.79
+    },
+    {
+      "rank": 44,
+      "code": "603080",
+      "name": "新疆火炬",
+      "price": 20.61,
+      "pct_change": -4.3175,
+      "zscore": -2.506,
+      "pct_from_mean": -13.26,
+      "mean_20": 23.762,
+      "std_20": 1.258,
+      "upper_band": 26.277,
+      "lower_band": 21.247,
+      "vol_ratio": 0.396,
+      "atr_pct": 3.64,
+      "debt_ratio": "30.89%",
+      "debt_ratio_val": 30.89,
+      "roe": "10.29%",
+      "net_profit": "1.57亿",
+      "revenue": "14.78亿",
+      "revenue_yoy": "35.49%",
+      "profit_yoy": "16.88%",
+      "eps": "1.1100",
+      "book_value": "10.77",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：天然气概念上涨0.10%，13股主力资金净流入超亿元 | 涨停股复盘：26股封单超亿元 | 天然气概念下跌2.64%，主力资金净流出118股。财务：资产负债率30.89%，ROE10.29%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
       "risk": "无特别风险提示",
       "news_list": [
         {
           "date": "2026-03-19",
-          "title": "解密主力资金出逃股 连续5日净流出806股"
+          "title": "天然气概念上涨0.10%，13股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "涨停股复盘：26股封单超亿元"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "天然气概念下跌2.64%，主力资金净流出118股"
+        },
+        {
+          "date": "2026-03-03",
+          "title": "天然气概念涨4.29%，主力资金净流入这些股"
+        },
+        {
+          "date": "2026-03-02",
+          "title": "天然气概念涨2.88%，主力资金净流入67股"
+        }
+      ],
+      "return_60d": -14.45
+    },
+    {
+      "rank": 45,
+      "code": "002613",
+      "name": "北玻股份",
+      "price": 3.44,
+      "pct_change": -6.5217,
+      "zscore": -2.827,
+      "pct_from_mean": -12.51,
+      "mean_20": 3.932,
+      "std_20": 0.174,
+      "upper_band": 4.279,
+      "lower_band": 3.584,
+      "vol_ratio": 0.897,
+      "atr_pct": 4.34,
+      "debt_ratio": "28.07%",
+      "debt_ratio_val": 28.07,
+      "roe": "2.74%",
+      "net_profit": "6044.08万",
+      "revenue": "16.34亿",
+      "revenue_yoy": "-1.28%",
+      "profit_yoy": "-26.89%",
+      "eps": "0.0627",
+      "book_value": "2.00",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：建筑材料行业今日涨1.67%，主力资金净流入11.24亿元 | 高铁概念上涨0.26%，8股主力资金净流入超亿元 | 7.36亿元主力资金今日抢筹建筑材料板块。财务：资产负债率28.07%，ROE2.74%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "建筑材料行业今日涨1.67%，主力资金净流入11.24亿元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "高铁概念上涨0.26%，8股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "7.36亿元主力资金今日抢筹建筑材料板块"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "装配式建筑概念涨4.47%，主力资金净流入44股"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "22.99亿主力资金净流入，钙钛矿电池概念涨0.12%"
+        }
+      ],
+      "return_60d": -7.53
+    },
+    {
+      "rank": 46,
+      "code": "002632",
+      "name": "道明光学",
+      "price": 11.12,
+      "pct_change": -4.0552,
+      "zscore": -2.758,
+      "pct_from_mean": -13.26,
+      "mean_20": 12.82,
+      "std_20": 0.616,
+      "upper_band": 14.052,
+      "lower_band": 11.587,
+      "vol_ratio": 0.791,
+      "atr_pct": 6.22,
+      "debt_ratio": "23.45%",
+      "debt_ratio_val": 23.45,
+      "roe": "10.14%",
+      "net_profit": "2.22亿",
+      "revenue": "14.91亿",
+      "revenue_yoy": "3.49%",
+      "profit_yoy": "30.43%",
+      "eps": "0.3500",
+      "book_value": "3.50",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：道明光学：2025年净利润同比增长30.43% 拟10派1. | 道明光学2025年营收净利双增 新兴领域布局构筑增长新引擎 | 液冷服务器概念上涨3.09%，25股主力资金净流入超亿元。财务：资产负债率23.45%，ROE10.14%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "道明光学：2025年净利润同比增长30.43% 拟10派1.7元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "道明光学2025年营收净利双增 新兴领域布局构筑增长新引擎"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "液冷服务器概念上涨3.09%，25股主力资金净流入超亿元"
         },
         {
           "date": "2026-03-16",
-          "title": "特钢概念下跌3.14%，主力资金净流出37股"
+          "title": "基础化工行业资金流出榜：万华化学等17股净流出资金超亿元"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "1193只股短线走稳 站上五日均线"
+        }
+      ],
+      "return_60d": -10.75
+    },
+    {
+      "rank": 47,
+      "code": "603107",
+      "name": "上海汽配",
+      "price": 13.96,
+      "pct_change": -2.2409,
+      "zscore": -2.548,
+      "pct_from_mean": -7.13,
+      "mean_20": 15.031,
+      "std_20": 0.42,
+      "upper_band": 15.872,
+      "lower_band": 14.19,
+      "vol_ratio": 0.702,
+      "atr_pct": 2.12,
+      "debt_ratio": "25.57%",
+      "debt_ratio_val": 25.57,
+      "roe": "9.12%",
+      "net_profit": "1.89亿",
+      "revenue": "21.50亿",
+      "revenue_yoy": "12.66%",
+      "profit_yoy": "17.32%",
+      "eps": "0.5600",
+      "book_value": "6.16",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客看好2股 买入占成交比例超三成 | 上海汽配：全资子公司收到奔驰新项目的提名 | 上海汽配成功“上车”奔驰，跻身全球高端供应链。财务：资产负债率25.57%，ROE9.12%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-23",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "上海汽配：全资子公司收到奔驰新项目的提名"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "上海汽配成功“上车”奔驰，跻身全球高端供应链"
+        },
+        {
+          "date": "2026-01-19",
+          "title": "上海汽配：公司位于上海市浦东新区的空调管产能已完成部分搬迁工作，剩余搬迁工作正在有序进行中"
+        },
+        {
+          "date": "2026-01-19",
+          "title": "上海汽配：公司原位于上海的燃油管产能已全部搬迁至浙江海利特，空调管产能部分已搬迁至浙江海利特"
+        }
+      ],
+      "return_60d": -6.18
+    },
+    {
+      "rank": 48,
+      "code": "000910",
+      "name": "大亚圣象",
+      "price": 6.71,
+      "pct_change": -3.592,
+      "zscore": -2.96,
+      "pct_from_mean": -10.87,
+      "mean_20": 7.528,
+      "std_20": 0.277,
+      "upper_band": 8.082,
+      "lower_band": 6.975,
+      "vol_ratio": 1.051,
+      "atr_pct": 3.25,
+      "debt_ratio": "27.84%",
+      "debt_ratio_val": 27.84,
+      "roe": "0.20%",
+      "net_profit": "1333.70万",
+      "revenue": "45.75亿",
+      "revenue_yoy": "-14.49%",
+      "profit_yoy": "-90.41%",
+      "eps": "0.0200",
+      "book_value": "12.16",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：1009家公司公布派现方案 合计派现10080.25亿元 | 公司快评｜净利润连降七年叠加经营现金流转负，大亚圣象亟需重构 | 上市公司派现榜：58家每10股派现超10元。财务：资产负债率27.84%，ROE0.20%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "1009家公司公布派现方案 合计派现10080.25亿元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "公司快评｜净利润连降七年叠加经营现金流转负，大亚圣象亟需重构增长逻辑"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "上市公司派现榜：58家每10股派现超10元"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "“地板大王”地位难保？大亚圣象2025年净利从上亿跌至千万 经营现金流转负"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "923家公司公布派现方案 合计派现10026.97亿元"
+        }
+      ],
+      "return_60d": -9.93
+    },
+    {
+      "rank": 49,
+      "code": "001234",
+      "name": "泰慕士",
+      "price": 24.04,
+      "pct_change": -3.415,
+      "zscore": -2.791,
+      "pct_from_mean": -13.27,
+      "mean_20": 27.719,
+      "std_20": 1.318,
+      "upper_band": 30.356,
+      "lower_band": 25.083,
+      "vol_ratio": 0.716,
+      "atr_pct": 4.13,
+      "debt_ratio": "23.91%",
+      "debt_ratio_val": 23.91,
+      "roe": "5.07%",
+      "net_profit": "4710.55万",
+      "revenue": "8.40亿",
+      "revenue_yoy": "-7.47%",
+      "profit_yoy": "-33.07%",
+      "eps": "0.4400",
+      "book_value": "8.50",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：泰慕士：2025年营收净利润双降 运动及儿童服装营收下滑拖累 | 泰慕士：2025年净利润同比下降33.07% 拟10派2.9 | 纺织服饰行业今日净流入资金2.23亿元，孚日股份等9股净流入。财务：资产负债率23.91%，ROE5.07%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "泰慕士：2025年营收净利润双降 运动及儿童服装营收下滑拖累业绩"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "泰慕士：2025年净利润同比下降33.07% 拟10派2.9元"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "纺织服饰行业今日净流入资金2.23亿元，孚日股份等9股净流入资金超千万元"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "筹码新动向：280股筹码趋向集中"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "887家公司公布最新股东户数"
+        }
+      ],
+      "return_60d": -10.83
+    },
+    {
+      "rank": 50,
+      "code": "600218",
+      "name": "全柴动力",
+      "price": 8.68,
+      "pct_change": -2.9083,
+      "zscore": -2.669,
+      "pct_from_mean": -17.15,
+      "mean_20": 10.477,
+      "std_20": 0.673,
+      "upper_band": 11.823,
+      "lower_band": 9.13,
+      "vol_ratio": 0.548,
+      "atr_pct": 4.18,
+      "debt_ratio": "46.93%",
+      "debt_ratio_val": 46.93,
+      "roe": "1.98%",
+      "net_profit": "6446.13万",
+      "revenue": "43.98亿",
+      "revenue_yoy": "10.73%",
+      "profit_yoy": "-22.66%",
+      "eps": "0.1500",
+      "book_value": "7.46",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：全柴动力：控股子公司元隽氢能的氢燃料电池及关键零部件产品可适 | 全柴动力：控股子公司元隽氢能的质子交换膜和膜电极等产品正处于 | 全柴动力：部分产品可用于发电机组等特定的功率较小的作业场景，。财务：资产负债率46.93%，ROE1.98%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "全柴动力：控股子公司元隽氢能的氢燃料电池及关键零部件产品可适配于公交车、叉车、储能等领域"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "全柴动力：控股子公司元隽氢能的质子交换膜和膜电极等产品正处于测试验证和试产试销阶段"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "全柴动力：部分产品可用于发电机组等特定的功率较小的作业场景，占产品总销量比例较小"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "全柴动力：截至目前，公司成功开发了混动专用发动机、变速箱等产品，部分新产品已实现小批量投产或量产"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "全柴动力拟每股派发现金红利0.03元"
+        }
+      ],
+      "return_60d": -17.33
+    },
+    {
+      "rank": 51,
+      "code": "000958",
+      "name": "电投产融",
+      "price": 6.02,
+      "pct_change": -3.0596,
+      "zscore": -2.912,
+      "pct_from_mean": -8.92,
+      "mean_20": 6.609,
+      "std_20": 0.202,
+      "upper_band": 7.014,
+      "lower_band": 6.205,
+      "vol_ratio": 0.777,
+      "atr_pct": 3.33,
+      "debt_ratio": "37.72%",
+      "debt_ratio_val": 37.72,
+      "roe": "5.22%",
+      "net_profit": "10.44亿",
+      "revenue": "57.45亿",
+      "revenue_yoy": "-5.47%",
+      "profit_yoy": "-17.82%",
+      "eps": "0.1939",
+      "book_value": "3.71",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：今年以来定增累计募资2133.47亿元 | 电投产融：当前公司尚未涉及可控核聚变技术领域 | 非银金融行业3月26日资金流向日报。财务：资产负债率37.72%，ROE5.22%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-24",
+          "title": "今年以来定增累计募资2133.47亿元"
+        },
+        {
+          "date": "2026-03-18",
+          "title": "电投产融：当前公司尚未涉及可控核聚变技术领域"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "非银金融行业3月26日资金流向日报"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "国家电投集团：总资产近2万亿元，将超前布局氢能、四代核电"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "年内定增募资排行榜：5家公司募资超50亿元"
+        }
+      ],
+      "return_60d": -7.67
+    },
+    {
+      "rank": 52,
+      "code": "600269",
+      "name": "赣粤高速",
+      "price": 4.55,
+      "pct_change": -1.7279,
+      "zscore": -2.645,
+      "pct_from_mean": -8.02,
+      "mean_20": 4.947,
+      "std_20": 0.15,
+      "upper_band": 5.247,
+      "lower_band": 4.647,
+      "vol_ratio": 0.995,
+      "atr_pct": 2.39,
+      "debt_ratio": "43.22%",
+      "debt_ratio_val": 43.22,
+      "roe": "6.56%",
+      "net_profit": "12.80亿",
+      "revenue": "62.83亿",
+      "revenue_yoy": "4.98%",
+      "profit_yoy": "0.03%",
+      "eps": "0.5500",
+      "book_value": "8.35",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：社保基金持仓动向：去年四季度新进54股 | 赣粤高速：2025年净利润同比增长0.03% 拟10派1.7 | 社保基金持仓动向：去年四季度新进52股。财务：资产负债率43.22%，ROE6.56%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "社保基金持仓动向：去年四季度新进54股"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "赣粤高速：2025年净利润同比增长0.03% 拟10派1.7元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "社保基金持仓动向：去年四季度新进52股"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "社保基金去年四季度新建仓股票（附名单）"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "主业“失血”、靠炒股“续命”？赣粤高速扣非净利润下滑2.75%，智慧交通难撑增长"
+        }
+      ],
+      "return_60d": -12.33
+    },
+    {
+      "rank": 53,
+      "code": "603136",
+      "name": "天目湖",
+      "price": 10.91,
+      "pct_change": -3.0222,
+      "zscore": -2.568,
+      "pct_from_mean": -7.82,
+      "mean_20": 11.835,
+      "std_20": 0.36,
+      "upper_band": 12.555,
+      "lower_band": 11.115,
+      "vol_ratio": 0.749,
+      "atr_pct": 3.46,
+      "debt_ratio": "17.64%",
+      "debt_ratio_val": 17.64,
+      "roe": "7.81%",
+      "net_profit": "1.05亿",
+      "revenue": "5.36亿",
+      "revenue_yoy": "-14.87%",
+      "profit_yoy": "-28.80%",
+      "eps": "0.3900",
+      "book_value": "4.96",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：7742.44万元资金今日流入社会服务股 | 5.19亿元资金今日流出社会服务股 | 社会服务行业2月11日资金流向日报。财务：资产负债率17.64%，ROE7.81%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "7742.44万元资金今日流入社会服务股"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "5.19亿元资金今日流出社会服务股"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "社会服务行业2月11日资金流向日报"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "社会服务行业资金流出榜：宋城演艺、凯撒旅业等净流出资金居前"
+        },
+        {
+          "date": "2026-01-30",
+          "title": "【盘中播报】28只个股跨越牛熊分界线"
+        }
+      ],
+      "return_60d": -7.15
+    },
+    {
+      "rank": 54,
+      "code": "300425",
+      "name": "中建环能",
+      "price": 4.65,
+      "pct_change": -3.3264,
+      "zscore": -2.669,
+      "pct_from_mean": -9.48,
+      "mean_20": 5.137,
+      "std_20": 0.182,
+      "upper_band": 5.502,
+      "lower_band": 4.772,
+      "vol_ratio": 0.901,
+      "atr_pct": 3.98,
+      "debt_ratio": "45.70%",
+      "debt_ratio_val": 45.7,
+      "roe": "3.72%",
+      "net_profit": "8820.16万",
+      "revenue": "15.37亿",
+      "revenue_yoy": "-8.06%",
+      "profit_yoy": "-47.33%",
+      "eps": "0.1299",
+      "book_value": "3.47",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：129只创业板股最新筹码趋向集中 | 创业板股最新筹码变动：3股股东户数降逾一成 | 6只创业板股最新股东户数降逾一成。财务：资产负债率45.70%，ROE3.72%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "129只创业板股最新筹码趋向集中"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "创业板股最新筹码变动：3股股东户数降逾一成"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "6只创业板股最新股东户数降逾一成"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "速看 最新筹码集中股找到了（附股）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "632家公司公布最新股东户数"
+        }
+      ],
+      "return_60d": -5.87
+    },
+    {
+      "rank": 55,
+      "code": "300517",
+      "name": "海波重科",
+      "price": 10.42,
+      "pct_change": -4.927,
+      "zscore": -2.522,
+      "pct_from_mean": -12.87,
+      "mean_20": 11.959,
+      "std_20": 0.61,
+      "upper_band": 13.18,
+      "lower_band": 10.739,
+      "vol_ratio": 0.638,
+      "atr_pct": 4.66,
+      "debt_ratio": "30.99%",
+      "debt_ratio_val": 30.99,
+      "roe": "2.17%",
+      "net_profit": "2300.36万",
+      "revenue": "4.20亿",
+      "revenue_yoy": "1.07%",
+      "profit_yoy": "280.37%",
+      "eps": "0.1200",
+      "book_value": "5.18",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：装配式建筑概念涨4.47%，主力资金净流入44股 | 海波重科下修业绩预告，2025年扣非净利将迎上市十年来首亏 | 93只股中线走稳 站上半年线。财务：资产负债率30.99%，ROE2.17%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-24",
+          "title": "装配式建筑概念涨4.47%，主力资金净流入44股"
+        },
+        {
+          "date": "2026-03-18",
+          "title": "海波重科下修业绩预告，2025年扣非净利将迎上市十年来首亏"
+        },
+        {
+          "date": "2026-02-02",
+          "title": "93只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-02-02",
+          "title": "123只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-01-30",
+          "title": "海波重科：2025年净利同比预降42.18%-60.88%"
+        }
+      ],
+      "return_60d": -5.96
+    },
+    {
+      "rank": 56,
+      "code": "301581",
+      "name": "黄山谷捷",
+      "price": 43.27,
+      "pct_change": -2.9821,
+      "zscore": -2.817,
+      "pct_from_mean": -11.63,
+      "mean_20": 48.965,
+      "std_20": 2.022,
+      "upper_band": 53.009,
+      "lower_band": 44.921,
+      "vol_ratio": 0.369,
+      "atr_pct": 3.7,
+      "debt_ratio": "16.90%",
+      "debt_ratio_val": 16.9,
+      "roe": "11.08%",
+      "net_profit": "1.12亿",
+      "revenue": "7.25亿",
+      "revenue_yoy": "-4.53%",
+      "profit_yoy": "-28.84%",
+      "eps": "1.8700",
+      "book_value": "12.63",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：供销社概念下跌3.96%，6股主力资金净流出超千万元 | 供销社概念下跌3.57%，5股主力资金净流出超千万元 | 黄山谷捷：拟投7500万元参设产业基金 培育第二增长曲线。财务：资产负债率16.90%，ROE11.08%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "供销社概念下跌3.96%，6股主力资金净流出超千万元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "供销社概念下跌3.57%，5股主力资金净流出超千万元"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "黄山谷捷：拟投7500万元参设产业基金 培育第二增长曲线"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "融资客看好3股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "供销社概念涨0.20%，主力资金净流入这些股"
+        }
+      ],
+      "return_60d": -8.23
+    },
+    {
+      "rank": 57,
+      "code": "603406",
+      "name": "天富龙",
+      "price": 33.22,
+      "pct_change": -3.5144,
+      "zscore": -2.679,
+      "pct_from_mean": -13.5,
+      "mean_20": 38.407,
+      "std_20": 1.936,
+      "upper_band": 42.279,
+      "lower_band": 34.534,
+      "vol_ratio": 0.604,
+      "atr_pct": 4.27,
+      "debt_ratio": "10.33%",
+      "debt_ratio_val": 10.33,
+      "roe": "13.07%",
+      "net_profit": "4.54亿",
+      "revenue": "38.41亿",
+      "revenue_yoy": "15.14%",
+      "profit_yoy": "5.19%",
+      "eps": "1.2600",
+      "book_value": "9.64",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：45股每笔成交量增长超50% | 49股每笔成交量增长超50% | 75股每笔成交量增长超50%。财务：资产负债率10.33%，ROE13.07%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-12",
+          "title": "45股每笔成交量增长超50%"
+        },
+        {
+          "date": "2026-02-10",
+          "title": "49股每笔成交量增长超50%"
+        },
+        {
+          "date": "2026-02-09",
+          "title": "75股每笔成交量增长超50%"
+        },
+        {
+          "date": "2026-01-06",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-01-05",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        }
+      ],
+      "return_60d": -17.77
+    },
+    {
+      "rank": 58,
+      "code": "603395",
+      "name": "红四方",
+      "price": 27.79,
+      "pct_change": -4.1724,
+      "zscore": -2.977,
+      "pct_from_mean": -9.61,
+      "mean_20": 30.744,
+      "std_20": 0.992,
+      "upper_band": 32.728,
+      "lower_band": 28.759,
+      "vol_ratio": 0.649,
+      "atr_pct": 3.81,
+      "debt_ratio": "36.30%",
+      "debt_ratio_val": 36.3,
+      "roe": "6.74%",
+      "net_profit": "9316.68万",
+      "revenue": "34.85亿",
+      "revenue_yoy": "-10.62%",
+      "profit_yoy": "-41.16%",
+      "eps": "0.6000",
+      "book_value": "6.91",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：27只股中线走稳 站上半年线 | 红四方向关联方出售资产 降低合成氨综合能耗和成本 | 82只股中线走稳 站上半年线。财务：资产负债率36.30%，ROE6.74%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-19",
+          "title": "27只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "红四方向关联方出售资产 降低合成氨综合能耗和成本"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "82只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "131只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "104只股中线走稳 站上半年线"
+        }
+      ],
+      "return_60d": -5.99
+    },
+    {
+      "rank": 59,
+      "code": "301632",
+      "name": "广东建科",
+      "price": 19.56,
+      "pct_change": -3.9293,
+      "zscore": -2.505,
+      "pct_from_mean": -17.39,
+      "mean_20": 23.676,
+      "std_20": 1.643,
+      "upper_band": 26.963,
+      "lower_band": 20.39,
+      "vol_ratio": 0.583,
+      "atr_pct": 4.41,
+      "debt_ratio": "26.68%",
+      "debt_ratio_val": 26.68,
+      "roe": "5.30%",
+      "net_profit": "1.07亿",
+      "revenue": "11.97亿",
+      "revenue_yoy": "3.72%",
+      "profit_yoy": "7.99%",
+      "eps": "0.3400",
+      "book_value": "6.43",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：7742.44万元资金今日流入社会服务股 | 5.19亿元资金今日流出社会服务股 | 广东建科：2025年净利润1.13亿元 同比增长5.6%。财务：资产负债率26.68%，ROE5.30%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "7742.44万元资金今日流入社会服务股"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "5.19亿元资金今日流出社会服务股"
+        },
+        {
+          "date": "2026-03-05",
+          "title": "广东建科：2025年净利润1.13亿元 同比增长5.6%"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "碳交易概念上涨0.67%，6股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "创业板公司业绩快报抢先看"
+        }
+      ],
+      "return_60d": -19.11
+    },
+    {
+      "rank": 60,
+      "code": "300543",
+      "name": "朗科智能",
+      "price": 9.05,
+      "pct_change": -3.5181,
+      "zscore": -2.95,
+      "pct_from_mean": -17.3,
+      "mean_20": 10.943,
+      "std_20": 0.642,
+      "upper_band": 12.226,
+      "lower_band": 9.66,
+      "vol_ratio": 0.79,
+      "atr_pct": 5.23,
+      "debt_ratio": "48.50%",
+      "debt_ratio_val": 48.5,
+      "roe": "4.61%",
+      "net_profit": "5170.64万",
+      "revenue": "16.23亿",
+      "revenue_yoy": "21.67%",
+      "profit_yoy": "29.20%",
+      "eps": "0.1900",
+      "book_value": "3.81",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：家用电器行业资金流出榜：天银机电等5股净流出资金超3000万 | 家用电器行业3月30日资金流向日报 | 家用电器行业资金流入榜：三花智控、新宝股份等净流入资金居前。财务：资产负债率48.50%，ROE4.61%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "家用电器行业资金流出榜：天银机电等5股净流出资金超3000万元"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "家用电器行业3月30日资金流向日报"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "家用电器行业资金流入榜：三花智控、新宝股份等净流入资金居前"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "21只创业板股最新股东户数降逾一成"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "19只创业板股最新股东户数降逾一成"
+        }
+      ],
+      "return_60d": -18.32
+    },
+    {
+      "rank": 61,
+      "code": "002303",
+      "name": "美盈森",
+      "price": 3.34,
+      "pct_change": -7.989,
+      "zscore": -2.882,
+      "pct_from_mean": -15.72,
+      "mean_20": 3.963,
+      "std_20": 0.216,
+      "upper_band": 4.395,
+      "lower_band": 3.531,
+      "vol_ratio": 1.262,
+      "atr_pct": 3.49,
+      "debt_ratio": "36.89%",
+      "debt_ratio_val": 36.89,
+      "roe": "5.86%",
+      "net_profit": "2.61亿",
+      "revenue": "39.70亿",
+      "revenue_yoy": "-0.92%",
+      "profit_yoy": "-7.34%",
+      "eps": "0.1704",
+      "book_value": "2.91",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：美盈森：2025年净利润同比下降7.34% 拟10派0.8元 | 第四季度暴雷，净利下降98.72%！美盈森去年业绩双降，股价 | 美盈森：2025年净利润2.61亿元 拟10派0.8元。财务：资产负债率36.89%，ROE5.86%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "美盈森：2025年净利润同比下降7.34% 拟10派0.8元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "第四季度暴雷，净利下降98.72%！美盈森去年业绩双降，股价大跌7%"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "美盈森：2025年净利润2.61亿元 拟10派0.8元"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "人造肉概念涨0.19%，主力资金净流入这些股"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "【盘中播报】22只个股跨越牛熊分界线"
+        }
+      ],
+      "return_60d": -17.53
+    },
+    {
+      "rank": 62,
+      "code": "300468",
+      "name": "四方精创",
+      "price": 28.6,
+      "pct_change": 0.598,
+      "zscore": -2.584,
+      "pct_from_mean": -17.16,
+      "mean_20": 34.525,
+      "std_20": 2.293,
+      "upper_band": 39.112,
+      "lower_band": 29.938,
+      "vol_ratio": 0.669,
+      "atr_pct": 6.56,
+      "debt_ratio": "7.05%",
+      "debt_ratio_val": 7.05,
+      "roe": "4.52%",
+      "net_profit": "7430.13万",
+      "revenue": "6.31亿",
+      "revenue_yoy": "-14.76%",
+      "profit_yoy": "10.30%",
+      "eps": "0.1400",
+      "book_value": "3.10",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：2.62亿元主力资金今日抢筹计算机板块 | 计算机行业资金流出榜：华胜天成、网宿科技等净流出资金居前 | 四方精创：2025年净利润同比增长10.3% 拟10派0.6。财务：资产负债率7.05%，ROE4.52%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "2.62亿元主力资金今日抢筹计算机板块"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "计算机行业资金流出榜：华胜天成、网宿科技等净流出资金居前"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "四方精创：2025年净利润同比增长10.3% 拟10派0.6元"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "四方精创业绩快报：2025年净利润7430.13万元 同比增长10.3%"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "88.47亿元主力资金今日撤离计算机板块"
+        }
+      ],
+      "return_60d": -24.91
+    },
+    {
+      "rank": 63,
+      "code": "002117",
+      "name": "东港股份",
+      "price": 9.43,
+      "pct_change": -3.7755,
+      "zscore": -2.56,
+      "pct_from_mean": -17.57,
+      "mean_20": 11.44,
+      "std_20": 0.785,
+      "upper_band": 13.01,
+      "lower_band": 9.87,
+      "vol_ratio": 0.792,
+      "atr_pct": 3.64,
+      "debt_ratio": "29.62%",
+      "debt_ratio_val": 29.62,
+      "roe": "10.07%",
+      "net_profit": "1.44亿",
+      "revenue": "11.86亿",
+      "revenue_yoy": "0.68%",
+      "profit_yoy": "-8.65%",
+      "eps": "0.2800",
+      "book_value": "2.73",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：东港股份：2025年净利润同比下降8.65% 拟10派3元 | 71股股东户数连续下降 （附股） | 103股股东户数连续下降 （附股）。财务：资产负债率29.62%，ROE10.07%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "东港股份：2025年净利润同比下降8.65% 拟10派3元"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "71股股东户数连续下降 （附股）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "103股股东户数连续下降 （附股）"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "速看 最新筹码集中股找到了（附股）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "632家公司公布最新股东户数"
+        }
+      ],
+      "return_60d": -33.78
+    },
+    {
+      "rank": 64,
+      "code": "002096",
+      "name": "易普力",
+      "price": 11.34,
+      "pct_change": -1.5625,
+      "zscore": -2.913,
+      "pct_from_mean": -16.22,
+      "mean_20": 13.536,
+      "std_20": 0.754,
+      "upper_band": 15.043,
+      "lower_band": 12.028,
+      "vol_ratio": 1.533,
+      "atr_pct": 3.64,
+      "debt_ratio": "30.27%",
+      "debt_ratio_val": 30.27,
+      "roe": "9.93%",
+      "net_profit": "7.93亿",
+      "revenue": "98.32亿",
+      "revenue_yoy": "15.05%",
+      "profit_yoy": "11.16%",
+      "eps": "0.6400",
+      "book_value": "6.44",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：易普力：公司2026年第一季度报告预计于4月30日披露 | 基金最新调研公司名单曝光 | 易普力2025年营收净利双增 一体化与智能化驱动高质量增长。财务：资产负债率30.27%，ROE9.93%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-03",
+          "title": "易普力：公司2026年第一季度报告预计于4月30日披露"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "基金最新调研公司名单曝光"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "易普力2025年营收净利双增 一体化与智能化驱动高质量增长"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "220家公司获机构调研（附名单）"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "强势股追踪 主力资金连续5日净流入45股"
+        }
+      ],
+      "return_60d": -14.67
+    },
+    {
+      "rank": 65,
+      "code": "301379",
+      "name": "天山电子",
+      "price": 22.85,
+      "pct_change": -2.3087,
+      "zscore": -2.596,
+      "pct_from_mean": -16.09,
+      "mean_20": 27.233,
+      "std_20": 1.688,
+      "upper_band": 30.61,
+      "lower_band": 23.856,
+      "vol_ratio": 0.475,
+      "atr_pct": 5.23,
+      "debt_ratio": "30.17%",
+      "debt_ratio_val": 30.17,
+      "roe": "10.67%",
+      "net_profit": "1.50亿",
+      "revenue": "14.77亿",
+      "revenue_yoy": "16.54%",
+      "profit_yoy": "39.99%",
+      "eps": "1.0600",
+      "book_value": "9.93",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客控盘比例超一成个股（附名单） | 融资客控盘比例超一成个股（附名单） | 融资客控盘比例超一成个股（附名单）。财务：资产负债率30.17%，ROE10.67%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        }
+      ],
+      "return_60d": -12.85
+    },
+    {
+      "rank": 66,
+      "code": "603210",
+      "name": "泰鸿万立",
+      "price": 16.76,
+      "pct_change": -3.0093,
+      "zscore": -2.801,
+      "pct_from_mean": -12.5,
+      "mean_20": 19.155,
+      "std_20": 0.855,
+      "upper_band": 20.865,
+      "lower_band": 17.445,
+      "vol_ratio": 0.78,
+      "atr_pct": 3.55,
+      "debt_ratio": "49.39%",
+      "debt_ratio_val": 49.39,
+      "roe": "16.79%",
+      "net_profit": "1.77亿",
+      "revenue": "16.89亿",
+      "revenue_yoy": "9.35%",
+      "profit_yoy": "9.93%",
+      "eps": "0.6900",
+      "book_value": "4.12",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：220家公司获机构调研（附名单） | 泰鸿万立：子公司完成土地使用权登记 汽车结构件项目建设稳步推 | 199家公司获机构调研（附名单）。财务：资产负债率49.39%，ROE16.79%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "220家公司获机构调研（附名单）"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "泰鸿万立：子公司完成土地使用权登记 汽车结构件项目建设稳步推进"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "199家公司获机构调研（附名单）"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "190家公司获机构调研（附名单）"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "136家公司获机构调研（附名单）"
+        }
+      ],
+      "return_60d": -14.27
+    },
+    {
+      "rank": 67,
+      "code": "603187",
+      "name": "海容冷链",
+      "price": 14.0,
+      "pct_change": -2.507,
+      "zscore": -2.518,
+      "pct_from_mean": -11.66,
+      "mean_20": 15.848,
+      "std_20": 0.734,
+      "upper_band": 17.317,
+      "lower_band": 14.38,
+      "vol_ratio": 1.182,
+      "atr_pct": 3.94,
+      "debt_ratio": "25.50%",
+      "debt_ratio_val": 25.5,
+      "roe": "8.56%",
+      "net_profit": "3.54亿",
+      "revenue": "28.31亿",
+      "revenue_yoy": "-11.67%",
+      "profit_yoy": "-14.39%",
+      "eps": "0.9200",
+      "book_value": "10.69",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：海容冷链：通过高新技术企业重新认定 继续享15%所得税优惠 | 无人零售概念下跌4.41% 主力资金净流出21股 | 海容冷链：欧洲地区营业收入在公司主营业务收入中占比2%~3%。财务：资产负债率25.50%，ROE8.56%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-06",
+          "title": "海容冷链：通过高新技术企业重新认定 继续享15%所得税优惠"
+        },
+        {
+          "date": "2026-03-02",
+          "title": "无人零售概念下跌4.41% 主力资金净流出21股"
+        },
+        {
+          "date": "2026-01-16",
+          "title": "海容冷链：欧洲地区营业收入在公司主营业务收入中占比2%~3%，公司以境内主体直接向欧洲客户出口为主"
+        },
+        {
+          "date": "2026-01-07",
+          "title": "无人零售概念下跌1.45%，主力资金净流出14股"
+        },
+        {
+          "date": "2025-12-24",
+          "title": "海容冷链2025年前三季度利润分配预案：拟10派3元"
+        }
+      ],
+      "return_60d": -9.68
+    },
+    {
+      "rank": 68,
+      "code": "002085",
+      "name": "万丰奥威",
+      "price": 13.41,
+      "pct_change": -2.7556,
+      "zscore": -2.519,
+      "pct_from_mean": -14.89,
+      "mean_20": 15.757,
+      "std_20": 0.932,
+      "upper_band": 17.62,
+      "lower_band": 13.893,
+      "vol_ratio": 0.442,
+      "atr_pct": 3.19,
+      "debt_ratio": "46.03%",
+      "debt_ratio_val": 46.03,
+      "roe": "9.42%",
+      "net_profit": "6.53亿",
+      "revenue": "162.64亿",
+      "revenue_yoy": "0.35%",
+      "profit_yoy": "-10.14%",
+      "eps": "0.3200",
+      "book_value": "3.27",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：万丰奥威：公司镁合金产品多年来已配套应用在5G通信领域客户 | 万丰奥威：目前公司低空飞行器eVTOL部分机型仍在型号合格证 | 万丰奥威：公司自主知识产权Austro系列航空发动机在境外子。财务：资产负债率46.03%，ROE9.42%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "万丰奥威：公司镁合金产品多年来已配套应用在5G通信领域客户"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "万丰奥威：目前公司低空飞行器eVTOL部分机型仍在型号合格证（TC）适航取证中"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "万丰奥威：公司自主知识产权Austro系列航空发动机在境外子公司奥地利发动机有限公司生产"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "万丰奥威：钻石eDA40目前仍在型号合格证（TC）适航取证中"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "万丰奥威：目前公司部分eVTOL机型仍在型号合格证（TC）适航取证中"
+        }
+      ],
+      "return_60d": -15.92
+    },
+    {
+      "rank": 69,
+      "code": "002494",
+      "name": "华斯股份",
+      "price": 4.88,
+      "pct_change": -5.973,
+      "zscore": -2.753,
+      "pct_from_mean": -12.23,
+      "mean_20": 5.56,
+      "std_20": 0.247,
+      "upper_band": 6.054,
+      "lower_band": 5.066,
+      "vol_ratio": 1.211,
+      "atr_pct": 5.62,
+      "debt_ratio": "25.38%",
+      "debt_ratio_val": 25.38,
+      "roe": "1.81%",
+      "net_profit": "2221.94万",
+      "revenue": "5.02亿",
+      "revenue_yoy": "24.11%",
+      "profit_yoy": "270.90%",
+      "eps": "0.0594",
+      "book_value": "3.26",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：王亮因内幕交易华斯股份被罚没52万元 | 沪指跌1%报3880.1点：通信电子逆市上涨，两市成交1.6 | 物业管理概念下跌1.27%，6股主力资金净流出超亿元。财务：资产负债率25.38%，ROE1.81%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-01",
+          "title": "王亮因内幕交易华斯股份被罚没52万元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "沪指跌1%报3880.1点：通信电子逆市上涨，两市成交1.66万亿元"
+        },
+        {
+          "date": "2026-02-26",
+          "title": "物业管理概念下跌1.27%，6股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-02-05",
+          "title": "特色小镇概念涨0.95%，主力资金净流入16股"
+        },
+        {
+          "date": "2026-02-05",
+          "title": "网红经济概念涨1.30% 主力资金净流入58股"
+        }
+      ],
+      "return_60d": -9.8
+    },
+    {
+      "rank": 70,
+      "code": "002486",
+      "name": "嘉麟杰",
+      "price": 2.7,
+      "pct_change": -5.5944,
+      "zscore": -2.819,
+      "pct_from_mean": -12.18,
+      "mean_20": 3.074,
+      "std_20": 0.133,
+      "upper_band": 3.34,
+      "lower_band": 2.809,
+      "vol_ratio": 0.808,
+      "atr_pct": 5.16,
+      "debt_ratio": "17.72%",
+      "debt_ratio_val": 17.72,
+      "roe": "1.84%",
+      "net_profit": "1911.50万",
+      "revenue": "11.82亿",
+      "revenue_yoy": "19.65%",
+      "profit_yoy": "-62.86%",
+      "eps": "0.0230",
+      "book_value": "1.25",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：002486，实控人被拘留 | 002486，实控人被警方拘留！ | 露营经济概念涨4.59%，主力资金净流入20股。财务：资产负债率17.72%，ROE1.84%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-02-13",
+          "title": "002486，实控人被拘留"
+        },
+        {
+          "date": "2026-02-13",
+          "title": "002486，实控人被警方拘留！"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "露营经济概念涨4.59%，主力资金净流入20股"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "A股深V三大股指收涨：超5100股飘红，两市成交2万亿元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "沪指跌1%报3880.1点：通信电子逆市上涨，两市成交1.66万亿元"
+        }
+      ],
+      "return_60d": -12.62
+    },
+    {
+      "rank": 71,
+      "code": "002052",
+      "name": "同洲电子",
+      "price": 9.93,
+      "pct_change": -1.5857,
+      "zscore": -2.669,
+      "pct_from_mean": -17.19,
+      "mean_20": 11.991,
+      "std_20": 0.772,
+      "upper_band": 13.535,
+      "lower_band": 10.447,
+      "vol_ratio": 0.67,
+      "atr_pct": 4.72,
+      "debt_ratio": "58.01%",
+      "debt_ratio_val": 58.01,
+      "roe": "65.20%",
+      "net_profit": "1.80亿",
+      "revenue": "6.91亿",
+      "revenue_yoy": "15.27%",
+      "profit_yoy": "158.90%",
+      "eps": "0.2400",
+      "book_value": "0.37",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：今日376家公司公布年报 48家业绩增幅翻倍 | 同洲电子：2025年净利润1.8亿元 同比增长158.9% | 家用电器行业资金流出榜：天银机电等5股净流出资金超3000万。财务：资产负债率58.01%，ROE65.20%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "今日376家公司公布年报 48家业绩增幅翻倍"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "同洲电子：2025年净利润1.8亿元 同比增长158.9%"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "家用电器行业资金流出榜：天银机电等5股净流出资金超3000万元"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "家用电器行业3月30日资金流向日报"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "家用电器行业资金流入榜：三花智控、新宝股份等净流入资金居前"
+        }
+      ],
+      "return_60d": -23.97
+    },
+    {
+      "rank": 72,
+      "code": "603151",
+      "name": "邦基科技",
+      "price": 15.62,
+      "pct_change": -5.3333,
+      "zscore": -2.908,
+      "pct_from_mean": -15.59,
+      "mean_20": 18.504,
+      "std_20": 0.992,
+      "upper_band": 20.488,
+      "lower_band": 16.52,
+      "vol_ratio": 1.015,
+      "atr_pct": 4.37,
+      "debt_ratio": "28.81%",
+      "debt_ratio_val": 28.81,
+      "roe": "4.02%",
+      "net_profit": "5012.98万",
+      "revenue": "25.42亿",
+      "revenue_yoy": "54.36%",
+      "profit_yoy": "-40.24%",
+      "eps": "0.2984",
+      "book_value": "7.42",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：农林牧渔行业今日跌5.56%，主力资金净流出11.81亿元 | 股东户数降幅榜：44股最新股东户数降逾一成 | 股东户数降幅榜：43股最新股东户数降逾一成。财务：资产负债率28.81%，ROE4.02%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-23",
+          "title": "农林牧渔行业今日跌5.56%，主力资金净流出11.81亿元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "股东户数降幅榜：44股最新股东户数降逾一成"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "股东户数降幅榜：43股最新股东户数降逾一成"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "筹码新动向：280股筹码趋向集中"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "筹码新动向：379股筹码趋向集中"
+        }
+      ],
+      "return_60d": -14.97
+    },
+    {
+      "rank": 73,
+      "code": "002515",
+      "name": "金字火腿",
+      "price": 5.38,
+      "pct_change": -2.7125,
+      "zscore": -2.701,
+      "pct_from_mean": -10.32,
+      "mean_20": 5.999,
+      "std_20": 0.229,
+      "upper_band": 6.458,
+      "lower_band": 5.541,
+      "vol_ratio": 0.661,
+      "atr_pct": 4.01,
+      "debt_ratio": "3.87%",
+      "debt_ratio_val": 3.87,
+      "roe": "2.37%",
+      "net_profit": "6217.30万",
+      "revenue": "3.44亿",
+      "revenue_yoy": "9.62%",
+      "profit_yoy": "55.19%",
+      "eps": "0.0500",
+      "book_value": "2.17",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：食品饮料行业资金流出榜：东鹏饮料等6股净流出资金超3000万 | 共封装光学(CPO)概念上涨2.12%，33股主力资金净流入 | 人造肉概念涨0.19%，主力资金净流入这些股。财务：资产负债率3.87%，ROE2.37%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "食品饮料行业资金流出榜：东鹏饮料等6股净流出资金超3000万元"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "共封装光学(CPO)概念上涨2.12%，33股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "人造肉概念涨0.19%，主力资金净流入这些股"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "共封装光学(CPO)概念涨3.37%，主力资金净流入这些股"
         },
         {
           "date": "2026-03-17",
-          "title": "杠杆资金大手笔加仓股名单"
+          "title": "食品饮料行业3月17日资金流向日报"
+        }
+      ],
+      "return_60d": -10.48
+    },
+    {
+      "rank": 74,
+      "code": "001965",
+      "name": "招商公路",
+      "price": 9.12,
+      "pct_change": -8.4337,
+      "zscore": -2.536,
+      "pct_from_mean": -6.8,
+      "mean_20": 9.786,
+      "std_20": 0.262,
+      "upper_band": 10.31,
+      "lower_band": 9.261,
+      "vol_ratio": 1.173,
+      "atr_pct": 3.09,
+      "debt_ratio": "43.58%",
+      "debt_ratio_val": 43.58,
+      "roe": "6.21%",
+      "net_profit": "46.10亿",
+      "revenue": "133.60亿",
+      "revenue_yoy": "5.11%",
+      "profit_yoy": "-13.38%",
+      "eps": "0.6557",
+      "book_value": "10.15",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：上市公司2025年度分红方案一览 | 招商公路：2025年净利润同比下降13.38% 拟10派3. | 利润高度依赖投资收益，公路运营贡献微薄，招商公路2025年净。财务：资产负债率43.58%，ROE6.21%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "招商公路：2025年净利润同比下降13.38% 拟10派3.73元"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "利润高度依赖投资收益，公路运营贡献微薄，招商公路2025年净利降13.4%"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "招商公路：2025年净利润46.10亿元 拟10派3.73元"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "主研仿制药且无在研创新药项目！5连板医药股发布股票交易风险提示性公告|盘后公告集锦"
+        }
+      ],
+      "return_60d": -9.34
+    },
+    {
+      "rank": 75,
+      "code": "603779",
+      "name": "威龙股份",
+      "price": 5.79,
+      "pct_change": -5.8537,
+      "zscore": -2.837,
+      "pct_from_mean": -12.54,
+      "mean_20": 6.62,
+      "std_20": 0.293,
+      "upper_band": 7.206,
+      "lower_band": 6.035,
+      "vol_ratio": 1.063,
+      "atr_pct": 4.92,
+      "debt_ratio": "48.77%",
+      "debt_ratio_val": 48.77,
+      "roe": "1.85%",
+      "net_profit": "1026.16万",
+      "revenue": "4.45亿",
+      "revenue_yoy": "15.67%",
+      "profit_yoy": "106.62%",
+      "eps": "0.0300",
+      "book_value": "1.67",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：农业种植概念上涨1.62%，5股主力资金净流入超3000万元 | 2025业绩预告接近退市指标遇问询 威龙股份回复 | 白酒概念下跌1.50%，6股主力资金净流出超5000万元。财务：资产负债率48.77%，ROE1.85%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "农业种植概念上涨1.62%，5股主力资金净流入超3000万元"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "2025业绩预告接近退市指标遇问询 威龙股份回复"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "白酒概念下跌1.50%，6股主力资金净流出超5000万元"
+        },
+        {
+          "date": "2026-01-29",
+          "title": "白酒概念上涨5.23%，12股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-01-30",
+          "title": "农业种植概念涨1.39%，主力资金净流入23股"
+        }
+      ],
+      "return_60d": -9.81
+    },
+    {
+      "rank": 76,
+      "code": "002247",
+      "name": "聚力文化",
+      "price": 2.63,
+      "pct_change": -6.4057,
+      "zscore": -2.614,
+      "pct_from_mean": -9.9,
+      "mean_20": 2.919,
+      "std_20": 0.111,
+      "upper_band": 3.14,
+      "lower_band": 2.698,
+      "vol_ratio": 0.978,
+      "atr_pct": 5.08,
+      "debt_ratio": "32.76%",
+      "debt_ratio_val": 32.76,
+      "roe": "34.98%",
+      "net_profit": "2.18亿",
+      "revenue": "8.40亿",
+      "revenue_yoy": "-11.31%",
+      "profit_yoy": "164.95%",
+      "eps": "0.2600",
+      "book_value": "0.73",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：建筑材料行业今日涨1.67%，主力资金净流入11.24亿元 | 【盘中播报】233只股长线走稳 站上年线 | 今日196只个股跨越牛熊分界线。财务：资产负债率32.76%，ROE34.98%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "建筑材料行业今日涨1.67%，主力资金净流入11.24亿元"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "【盘中播报】233只股长线走稳 站上年线"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "今日196只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "7.36亿元主力资金今日抢筹建筑材料板块"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "建筑材料行业资金流入榜：再升科技等5股净流入资金超亿元"
+        }
+      ],
+      "return_60d": -7.39
+    },
+    {
+      "rank": 77,
+      "code": "688459",
+      "name": "哈铁科技",
+      "price": 8.81,
+      "pct_change": -3.3991,
+      "zscore": -2.654,
+      "pct_from_mean": -9.62,
+      "mean_20": 9.748,
+      "std_20": 0.353,
+      "upper_band": 10.454,
+      "lower_band": 9.041,
+      "vol_ratio": 1.245,
+      "atr_pct": 3.15,
+      "debt_ratio": "17.34%",
+      "debt_ratio_val": 17.34,
+      "roe": "3.69%",
+      "net_profit": "1.26亿",
+      "revenue": "11.06亿",
+      "revenue_yoy": "14.08%",
+      "profit_yoy": "13.44%",
+      "eps": "0.2617",
+      "book_value": "7.10",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客看好6股 买入占成交比例超三成 | 高铁概念上涨0.26%，8股主力资金净流入超亿元 | 涉合同纠纷案 哈铁科技全资子公司及其分公司被起诉。财务：资产负债率17.34%，ROE3.69%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "融资客看好6股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "高铁概念上涨0.26%，8股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "涉合同纠纷案 哈铁科技全资子公司及其分公司被起诉"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "融资客看好9股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "MCU芯片概念涨2.07%，主力资金净流入这些股"
+        }
+      ],
+      "return_60d": -8.04
+    },
+    {
+      "rank": 78,
+      "code": "300120",
+      "name": "经纬辉开",
+      "price": 7.17,
+      "pct_change": -3.2389,
+      "zscore": -2.988,
+      "pct_from_mean": -15.78,
+      "mean_20": 8.513,
+      "std_20": 0.45,
+      "upper_band": 9.412,
+      "lower_band": 7.614,
+      "vol_ratio": 0.505,
+      "atr_pct": 3.46,
+      "debt_ratio": "34.04%",
+      "debt_ratio_val": 34.04,
+      "roe": "0.72%",
+      "net_profit": "2145.74万",
+      "revenue": "32.61亿",
+      "revenue_yoy": "-5.03%",
+      "profit_yoy": "107.42%",
+      "eps": "0.0374",
+      "book_value": "5.19",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：300120，拟筹划重大资产重组 | 300120，拟重大资产重组！ | 300120，筹划重大资产重组！。财务：资产负债率34.04%，ROE0.72%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-14",
+          "title": "300120，拟筹划重大资产重组"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "300120，拟重大资产重组！"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "300120，筹划重大资产重组！"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "经纬辉开：拟剥离电子信息板块业务资产 预计构成重大资产重组"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "经纬辉开：拟剥离电子信息板块业务资产 预计构成重大资产重组"
+        }
+      ],
+      "return_60d": -13.93
+    },
+    {
+      "rank": 79,
+      "code": "301236",
+      "name": "软通动力",
+      "price": 36.58,
+      "pct_change": -0.9746,
+      "zscore": -2.118,
+      "pct_from_mean": -21.24,
+      "mean_20": 46.446,
+      "std_20": 4.659,
+      "upper_band": 55.763,
+      "lower_band": 37.129,
+      "vol_ratio": 0.579,
+      "atr_pct": 4.13,
+      "debt_ratio": "53.99%",
+      "debt_ratio_val": 53.99,
+      "roe": "1.71%",
+      "net_profit": "1.80亿",
+      "revenue": "313.16亿",
+      "revenue_yoy": "78.13%",
+      "profit_yoy": "-66.21%",
+      "eps": "0.1900",
+      "book_value": "11.10",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：软通动力“龙虾”系列产品矩阵全面落地 | 软通动力：拟1亿元至2亿元回购公司股份 | 软通动力：拟1亿至2亿元回购公司股份。财务：资产负债率53.99%，ROE1.71%。",
+      "news_score": 22,
+      "tech_score": 33,
+      "finance_score": 30,
+      "buy_score": 85,
+      "score_detail": "技术33分+财务30分+消息22分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "软通动力“龙虾”系列产品矩阵全面落地"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "软通动力：拟1亿元至2亿元回购公司股份"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "软通动力：拟1亿至2亿元回购公司股份"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "软通动力：拟回购1亿元-2亿元股份"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "软通动力：拟1亿至2亿元回购公司股份"
+        }
+      ],
+      "return_60d": -23.54
+    },
+    {
+      "rank": 80,
+      "code": "600885",
+      "name": "宏发股份",
+      "price": 25.57,
+      "pct_change": 0.8679,
+      "zscore": -2.61,
+      "pct_from_mean": -15.42,
+      "mean_20": 30.232,
+      "std_20": 1.786,
+      "upper_band": 33.804,
+      "lower_band": 26.659,
+      "vol_ratio": 1.198,
+      "atr_pct": 3.69,
+      "debt_ratio": "31.47%",
+      "debt_ratio_val": 31.47,
+      "roe": "13.91%",
+      "net_profit": "17.58亿",
+      "revenue": "172.02亿",
+      "revenue_yoy": "21.98%",
+      "profit_yoy": "7.76%",
+      "eps": "1.2000",
+      "book_value": "8.16",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：宏发股份600885龙虎榜数据04-02) | 4月2日龙虎榜净卖出额前10个股 | 沪股通现身5只个股龙虎榜。财务：资产负债率31.47%，ROE13.91%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "宏发股份600885龙虎榜数据04-02)"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "4月2日龙虎榜净卖出额前10个股"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "沪股通现身5只个股龙虎榜"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "宏发股份：2025年净利润同比增长7.76% 董事长郭满金薪酬大幅上涨近两百万"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "宏发股份：2025年净利润同比增长7.76% 拟10派3.47元"
+        }
+      ],
+      "return_60d": -16.49
+    },
+    {
+      "rank": 81,
+      "code": "300896",
+      "name": "爱美客",
+      "price": 112.46,
+      "pct_change": -2.1917,
+      "zscore": -2.592,
+      "pct_from_mean": -19.63,
+      "mean_20": 139.919,
+      "std_20": 10.594,
+      "upper_band": 161.106,
+      "lower_band": 118.732,
+      "vol_ratio": 0.693,
+      "atr_pct": 3.46,
+      "debt_ratio": "8.35%",
+      "debt_ratio_val": 8.35,
+      "roe": "17.02%",
+      "net_profit": "12.91亿",
+      "revenue": "24.53亿",
+      "revenue_yoy": "-18.94%",
+      "profit_yoy": "-34.05%",
+      "eps": "4.2800",
+      "book_value": "25.06",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：爱美客：公司目前的产品主要是Ⅲ类医疗器械 | 爱美客：公司已预约2026年4月23日披露2026年第一季度 | 爱美客：获得射频皮肤治疗仪医疗器械注册证。财务：资产负债率8.35%，ROE17.02%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "爱美客：公司目前的产品主要是Ⅲ类医疗器械"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "爱美客：公司已预约2026年4月23日披露2026年第一季度报告"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "爱美客：获得射频皮肤治疗仪医疗器械注册证"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "爱美客：注射用A型肉毒毒素已于2026年1月获批上市，司美格鲁肽注射液等产品临床试验稳步推进"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "爱美客：控股子公司取得射频皮肤治疗仪医疗器械注册证"
+        }
+      ],
+      "return_60d": -20.38
+    },
+    {
+      "rank": 82,
+      "code": "300894",
+      "name": "火星人",
+      "price": 9.74,
+      "pct_change": -3.4688,
+      "zscore": -2.559,
+      "pct_from_mean": -15.36,
+      "mean_20": 11.508,
+      "std_20": 0.691,
+      "upper_band": 12.89,
+      "lower_band": 10.126,
+      "vol_ratio": 0.658,
+      "atr_pct": 4.38,
+      "debt_ratio": "42.90%",
+      "debt_ratio_val": 42.9,
+      "roe": "0.79%",
+      "net_profit": "1115.12万",
+      "revenue": "13.76亿",
+      "revenue_yoy": "-35.68%",
+      "profit_yoy": "-95.49%",
+      "eps": "0.0300",
+      "book_value": "3.23",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：融资客看好2股 买入占成交比例超三成 | 融资客看好2股 买入占成交比例超三成 | 129只创业板股最新筹码趋向集中。财务：资产负债率42.90%，ROE0.79%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "129只创业板股最新筹码趋向集中"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "71股股东户数连续下降 （附股）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "103股股东户数连续下降 （附股）"
+        }
+      ],
+      "return_60d": -13.58
+    },
+    {
+      "rank": 83,
+      "code": "002741",
+      "name": "光华科技",
+      "price": 16.51,
+      "pct_change": -3.9558,
+      "zscore": -2.619,
+      "pct_from_mean": -20.34,
+      "mean_20": 20.726,
+      "std_20": 1.609,
+      "upper_band": 23.945,
+      "lower_band": 17.507,
+      "vol_ratio": 0.74,
+      "atr_pct": 5.03,
+      "debt_ratio": "48.59%",
+      "debt_ratio_val": 48.59,
+      "roe": "5.37%",
+      "net_profit": "1.04亿",
+      "revenue": "29.64亿",
+      "revenue_yoy": "14.50%",
+      "profit_yoy": "150.70%",
+      "eps": "0.2200",
+      "book_value": "4.16",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：002741，财务总监被证监会立案！涉嫌内幕交易 | 光华科技：目前公司硫化锂产品产能为300吨/年，暂未有扩产计 | 光华科技：董事蔡雯涉嫌内幕交易被立案调查。财务：资产负债率48.59%，ROE5.37%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-01",
+          "title": "002741，财务总监被证监会立案！涉嫌内幕交易"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "光华科技：目前公司硫化锂产品产能为300吨/年，暂未有扩产计划"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "光华科技：董事蔡雯涉嫌内幕交易被立案调查"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "光华科技：董事蔡雯因涉嫌内幕交易被立案"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "光华科技：董事蔡雯因涉嫌内幕交易被证监会立案"
+        }
+      ],
+      "return_60d": -18.67
+    },
+    {
+      "rank": 84,
+      "code": "000718",
+      "name": "苏宁环球",
+      "price": 2.0,
+      "pct_change": -2.9126,
+      "zscore": -2.529,
+      "pct_from_mean": -12.88,
+      "mean_20": 2.296,
+      "std_20": 0.117,
+      "upper_band": 2.529,
+      "lower_band": 2.062,
+      "vol_ratio": 0.761,
+      "atr_pct": 3.82,
+      "debt_ratio": "32.64%",
+      "debt_ratio_val": 32.64,
+      "roe": "1.76%",
+      "net_profit": "1.65亿",
+      "revenue": "21.21亿",
+      "revenue_yoy": "0.36%",
+      "profit_yoy": "-9.30%",
+      "eps": "0.0544",
+      "book_value": "3.10",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：苏宁环球：公司暂不涉及黄金、有色金属矿产业务 | 房地产行业资金流出榜：保利发展、万科A等净流出资金居前 | 融资客看好2股 买入占成交比例超三成。财务：资产负债率32.64%，ROE1.76%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-10",
+          "title": "苏宁环球：公司暂不涉及黄金、有色金属矿产业务"
+        },
+        {
+          "date": "2026-03-18",
+          "title": "房地产行业资金流出榜：保利发展、万科A等净流出资金居前"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "融资客看好2股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "融资客看好3股 买入占成交比例超三成"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "医美概念上涨0.49%，6股主力资金净流入超3000万元"
+        }
+      ],
+      "return_60d": -11.89
+    },
+    {
+      "rank": 85,
+      "code": "301121",
+      "name": "紫建电子",
+      "price": 33.35,
+      "pct_change": -2.4569,
+      "zscore": -2.658,
+      "pct_from_mean": -15.83,
+      "mean_20": 39.621,
+      "std_20": 2.359,
+      "upper_band": 44.339,
+      "lower_band": 34.903,
+      "vol_ratio": 0.571,
+      "atr_pct": 4.22,
+      "debt_ratio": "36.39%",
+      "debt_ratio_val": 36.39,
+      "roe": "4.82%",
+      "net_profit": "8020.19万",
+      "revenue": "11.45亿",
+      "revenue_yoy": "17.78%",
+      "profit_yoy": "239.44%",
+      "eps": "1.1300",
+      "book_value": "23.52",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：钠离子电池概念涨0.28%，主力资金净流入69股 | 创业板两融余额增加29.11亿元 | 太阳能5.27亿收购金华风凌 紫建电子3.44亿建新兴锂电池。财务：资产负债率36.39%，ROE4.82%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-26",
+          "title": "钠离子电池概念涨0.28%，主力资金净流入69股"
+        },
+        {
+          "date": "2026-02-26",
+          "title": "创业板两融余额增加29.11亿元"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "太阳能5.27亿收购金华风凌 紫建电子3.44亿建新兴锂电池项目"
+        },
+        {
+          "date": "2026-02-10",
+          "title": "创业板股融资余额增幅榜（附股）"
+        },
+        {
+          "date": "2026-02-06",
+          "title": "新型烟草(电子烟)概念涨2.11%，主力资金净流入20股"
+        }
+      ],
+      "return_60d": -15.57
+    },
+    {
+      "rank": 86,
+      "code": "301083",
+      "name": "百胜智能",
+      "price": 16.25,
+      "pct_change": -2.0494,
+      "zscore": -2.855,
+      "pct_from_mean": -16.51,
+      "mean_20": 19.462,
+      "std_20": 1.125,
+      "upper_band": 21.713,
+      "lower_band": 17.212,
+      "vol_ratio": 0.908,
+      "atr_pct": 5.31,
+      "debt_ratio": "19.86%",
+      "debt_ratio_val": 19.86,
+      "roe": "4.00%",
+      "net_profit": "3302.36万",
+      "revenue": "4.00亿",
+      "revenue_yoy": "3.05%",
+      "profit_yoy": "-6.15%",
+      "eps": "0.1857",
+      "book_value": "4.64",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：创业板公司融资余额减少41.91亿元 41股遭减仓超5% | 18只创业板股获杠杆资金加仓超10% | 27只股中线走稳 站上半年线。财务：资产负债率19.86%，ROE4.00%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "创业板公司融资余额减少41.91亿元 41股遭减仓超5%"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "18只创业板股获杠杆资金加仓超10%"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "27只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "3.49亿主力资金净流入，新型城镇化概念涨4.55%"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "创业板最新筹码集中股名单（附股）"
+        }
+      ],
+      "return_60d": -12.35
+    },
+    {
+      "rank": 87,
+      "code": "605499",
+      "name": "东鹏饮料",
+      "price": 202.27,
+      "pct_change": -2.2283,
+      "zscore": -2.198,
+      "pct_from_mean": -18.62,
+      "mean_20": 248.535,
+      "std_20": 21.05,
+      "upper_band": 290.635,
+      "lower_band": 206.435,
+      "vol_ratio": 1.895,
+      "atr_pct": 4.34,
+      "debt_ratio": "64.73%",
+      "debt_ratio_val": 64.73,
+      "roe": "46.87%",
+      "net_profit": "44.15亿",
+      "revenue": "208.75亿",
+      "revenue_yoy": "31.80%",
+      "profit_yoy": "32.72%",
+      "eps": "8.4907",
+      "book_value": "18.12",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：东鹏饮料605499龙虎榜数据03-31) | 上证早知道｜605499，回购10亿至20亿元；300839 | 东鹏饮料：拟回购10亿元-20亿元股份。财务：资产负债率64.73%，ROE46.87%。",
+      "news_score": 22,
+      "tech_score": 33,
+      "finance_score": 30,
+      "buy_score": 85,
+      "score_detail": "技术33分+财务30分+消息22分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "东鹏饮料605499龙虎榜数据03-31)"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "上证早知道｜605499，回购10亿至20亿元；300839，预增183.99%至204.99%"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "东鹏饮料：拟回购10亿元-20亿元股份"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "东鹏饮料：拟以10亿元—20亿元回购公司股份"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "东鹏饮料：拟10亿至20亿元回购股份 不低于90%将用于注销并减少注册资本"
+        }
+      ],
+      "return_60d": -24.53
+    },
+    {
+      "rank": 88,
+      "code": "000557",
+      "name": "西部创业",
+      "price": 4.54,
+      "pct_change": -2.5751,
+      "zscore": -2.758,
+      "pct_from_mean": -8.61,
+      "mean_20": 4.968,
+      "std_20": 0.155,
+      "upper_band": 5.278,
+      "lower_band": 4.658,
+      "vol_ratio": 0.594,
+      "atr_pct": 3.15,
+      "debt_ratio": "9.94%",
+      "debt_ratio_val": 9.94,
+      "roe": "4.30%",
+      "net_profit": "2.63亿",
+      "revenue": "13.45亿",
+      "revenue_yoy": "-19.21%",
+      "profit_yoy": "8.50%",
+      "eps": "0.1803",
+      "book_value": "4.19",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：煤炭概念下跌3.25% 11股主力资金净流出超亿元 | 煤炭概念上涨2.29%，11股主力资金净流入超亿元 | 煤炭概念下跌1.54%，13股主力资金净流出超亿元。财务：资产负债率9.94%，ROE4.30%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-31",
+          "title": "煤炭概念下跌3.25% 11股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "煤炭概念上涨2.29%，11股主力资金净流入超亿元"
+        },
+        {
+          "date": "2026-03-10",
+          "title": "煤炭概念下跌1.54%，13股主力资金净流出超亿元"
+        },
+        {
+          "date": "2026-02-10",
+          "title": "西部创业：公司2025年年度报告预约披露日期为2026年4月29日"
+        },
+        {
+          "date": "2026-02-04",
+          "title": "30.99亿主力资金净流入，煤炭概念涨4.22%"
+        }
+      ],
+      "return_60d": -9.56
+    },
+    {
+      "rank": 89,
+      "code": "300838",
+      "name": "浙江力诺",
+      "price": 14.21,
+      "pct_change": -3.2016,
+      "zscore": -2.703,
+      "pct_from_mean": -11.54,
+      "mean_20": 16.064,
+      "std_20": 0.686,
+      "upper_band": 17.436,
+      "lower_band": 14.692,
+      "vol_ratio": 0.713,
+      "atr_pct": 5.57,
+      "debt_ratio": "35.91%",
+      "debt_ratio_val": 35.91,
+      "roe": "1.84%",
+      "net_profit": "1833.39万",
+      "revenue": "9.33亿",
+      "revenue_yoy": "-16.05%",
+      "profit_yoy": "-82.88%",
+      "eps": "0.1300",
+      "book_value": "7.21",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：浙江力诺：公司产品目前暂未进入核电领域 | 浙江力诺：产品可适用于石油、石化、化工、造纸、环保、能源、电 | 浙江力诺：预计2025年亏损1500万元-3000万元。财务：资产负债率35.91%，ROE1.84%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "浙江力诺：公司产品目前暂未进入核电领域"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "浙江力诺：产品可适用于石油、石化、化工、造纸、环保、能源、电力、矿山、冶金等行业"
+        },
+        {
+          "date": "2026-01-29",
+          "title": "浙江力诺：预计2025年亏损1500万元-3000万元"
+        },
+        {
+          "date": "2025-12-24",
+          "title": "今日141只股长线走稳 站上年线"
+        },
+        {
+          "date": "2025-12-24",
+          "title": "【盘中播报】145只个股突破年线"
+        }
+      ],
+      "return_60d": -7.43
+    },
+    {
+      "rank": 90,
+      "code": "300978",
+      "name": "东箭科技",
+      "price": 10.24,
+      "pct_change": -3.3962,
+      "zscore": -2.725,
+      "pct_from_mean": -15.91,
+      "mean_20": 12.177,
+      "std_20": 0.711,
+      "upper_band": 13.599,
+      "lower_band": 10.755,
+      "vol_ratio": 0.437,
+      "atr_pct": 3.91,
+      "debt_ratio": "37.89%",
+      "debt_ratio_val": 37.89,
+      "roe": "9.05%",
+      "net_profit": "1.50亿",
+      "revenue": "21.90亿",
+      "revenue_yoy": "7.10%",
+      "profit_yoy": "6.92%",
+      "eps": "0.3559",
+      "book_value": "3.93",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：东箭科技：目前公司暂未与张雪机车开展合作 | 融资客控盘比例超一成个股（附名单） | 融资客控盘比例超一成个股（附名单）。财务：资产负债率37.89%，ROE9.05%。",
+      "news_score": 15,
+      "tech_score": 35,
+      "finance_score": 35,
+      "buy_score": 85,
+      "score_detail": "技术35分+财务35分+消息15分 | Z-Score严重超跌(+5); 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "东箭科技：目前公司暂未与张雪机车开展合作"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "融资客控盘比例超一成个股（附名单）"
+        }
+      ],
+      "return_60d": -17.88
+    },
+    {
+      "rank": 91,
+      "code": "300154",
+      "name": "瑞凌股份",
+      "price": 7.75,
+      "pct_change": -2.5157,
+      "zscore": -2.078,
+      "pct_from_mean": -13.7,
+      "mean_20": 8.98,
+      "std_20": 0.592,
+      "upper_band": 10.164,
+      "lower_band": 7.796,
+      "vol_ratio": 0.656,
+      "atr_pct": 4.13,
+      "debt_ratio": "29.79%",
+      "debt_ratio_val": 29.79,
+      "roe": "8.50%",
+      "net_profit": "1.50亿",
+      "revenue": "10.15亿",
+      "revenue_yoy": "-11.73%",
+      "profit_yoy": "49.48%",
+      "eps": "0.3300",
+      "book_value": "3.93",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：瑞凌股份：焊接机器人业务方面，公司与大型品牌机器人厂商开展了 | 今日突破年线个股 | 今日48只个股突破年线。财务：资产负债率29.79%，ROE8.50%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-19",
+          "title": "瑞凌股份：焊接机器人业务方面，公司与大型品牌机器人厂商开展了合作"
+        },
+        {
+          "date": "2026-02-26",
+          "title": "今日突破年线个股"
+        },
+        {
+          "date": "2026-01-16",
+          "title": "今日48只个股突破年线"
+        },
+        {
+          "date": "2026-01-22",
+          "title": "203家公司获机构调研（附名单）"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "207家公司获机构调研（附名单）"
+        }
+      ],
+      "return_60d": -20.59
+    },
+    {
+      "rank": 92,
+      "code": "603878",
+      "name": "武进不锈",
+      "price": 7.17,
+      "pct_change": -2.8455,
+      "zscore": -2.081,
+      "pct_from_mean": -16.26,
+      "mean_20": 8.563,
+      "std_20": 0.669,
+      "upper_band": 9.901,
+      "lower_band": 7.224,
+      "vol_ratio": 0.373,
+      "atr_pct": 5.02,
+      "debt_ratio": "35.71%",
+      "debt_ratio_val": 35.71,
+      "roe": "4.83%",
+      "net_profit": "1.26亿",
+      "revenue": "26.52亿",
+      "revenue_yoy": "-24.57%",
+      "profit_yoy": "-64.25%",
+      "eps": "0.2200",
+      "book_value": "4.60",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：武进不锈：公司产品广泛应用于工业领域，您所提到部分的占比很小 | 20.13亿元资金今日流出钢铁股 | 今日242只个股突破半年线。财务：资产负债率35.71%，ROE4.83%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-23",
+          "title": "武进不锈：公司产品广泛应用于工业领域，您所提到部分的占比很小，未对公司业绩产生实质的影响"
         },
         {
           "date": "2026-03-16",
           "title": "20.13亿元资金今日流出钢铁股"
         },
         {
-          "date": "2026-03-09",
-          "title": "宝钢股份持股公司在内蒙古成立新材料公司"
+          "date": "2026-03-10",
+          "title": "今日242只个股突破半年线"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "今日盘中突破半年线个股"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "210只股中线走稳 站上半年线"
         }
-      ]
+      ],
+      "return_60d": -22.57
     },
     {
-      "rank": 4,
-      "code": "600006",
-      "name": "600006",
-      "price": 6.39,
-      "pct_change": 0.31,
-      "zscore": -0.999,
-      "pct_from_mean": -3.96,
-      "mean_20": 6.653,
-      "std_20": 0.264,
-      "upper_band": 7.181,
-      "lower_band": 6.126,
-      "return_60d": -11.25,
-      "vol_ratio": 0.717,
-      "atr_pct": 2.56,
-      "debt_ratio": "50.28%",
-      "debt_ratio_val": 50.28,
-      "roe": "0.35%",
-      "net_profit": "2916.22万",
-      "revenue": "109.37亿",
-      "revenue_yoy": "-9.38%",
-      "profit_yoy": "-85.42%",
-      "eps": "0.0100",
-      "book_value": "4.14",
-      "total_mv": "N/A",
-      "float_mv": "N/A",
+      "rank": 93,
+      "code": "688695",
+      "name": "中创股份",
+      "price": 23.36,
+      "pct_change": -2.869,
+      "zscore": -2.241,
+      "pct_from_mean": -15.32,
+      "mean_20": 27.586,
+      "std_20": 1.886,
+      "upper_band": 31.359,
+      "lower_band": 23.814,
+      "vol_ratio": 0.707,
+      "atr_pct": 4.43,
+      "debt_ratio": "5.66%",
+      "debt_ratio_val": 5.66,
+      "roe": "4.77%",
+      "net_profit": "3871.68万",
+      "revenue": "1.94亿",
+      "revenue_yoy": "7.96%",
+      "profit_yoy": "-41.92%",
+      "eps": "0.4900",
+      "book_value": "9.54",
+      "total_mv": null,
+      "float_mv": null,
       "industry": "未知",
       "report_period": "2024",
-      "news_summary": "近期动态：东风股份获1亿元政府补助 | 现场拿下128辆订单 东风乾坤油电双线并举发力绿通、冷链市场 | 东风股份：2026年前两月销量同比下降0.87%。财务：资产负债率50.28%，ROE0.35%。",
-      "news_score": 13,
-      "tech_score": 27,
-      "finance_score": 30,
-      "buy_score": 70,
-      "score_detail": "技术27分+财务30分+消息13分 | 资产负债率健康(+5); ROE为正(+5)",
+      "news_summary": "近期动态：中创股份：公司目前在手订单充足，生产经营情况正常有序 | 220只科创板股融资余额环比增加 | 中创股份：213万股首发战略配售限售股3月13日上市流通。财务：资产负债率5.66%，ROE4.77%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-18",
+          "title": "中创股份：公司目前在手订单充足，生产经营情况正常有序"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "220只科创板股融资余额环比增加"
+        },
+        {
+          "date": "2026-03-05",
+          "title": "中创股份：213万股首发战略配售限售股3月13日上市流通"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "科创板股今日大宗交易成交明细"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "财税数字化概念涨2.12%，主力资金净流入这些股"
+        }
+      ],
+      "return_60d": -12.35
+    },
+    {
+      "rank": 94,
+      "code": "000529",
+      "name": "广弘控股",
+      "price": 5.6,
+      "pct_change": -3.2815,
+      "zscore": -2.272,
+      "pct_from_mean": -6.99,
+      "mean_20": 6.021,
+      "std_20": 0.185,
+      "upper_band": 6.392,
+      "lower_band": 5.65,
+      "vol_ratio": 0.82,
+      "atr_pct": 2.96,
+      "debt_ratio": "48.61%",
+      "debt_ratio_val": 48.61,
+      "roe": "3.84%",
+      "net_profit": "1.22亿",
+      "revenue": "23.36亿",
+      "revenue_yoy": "-16.29%",
+      "profit_yoy": "-42.79%",
+      "eps": "0.2086",
+      "book_value": "5.51",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：养鸡概念涨1.30% 主力资金净流入这些股 | 猪肉概念涨1.30%，主力资金净流入21股 | 食品饮料行业资金流出榜：东鹏饮料等6股净流出资金超3000万。财务：资产负债率48.61%，ROE3.84%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "养鸡概念涨1.30% 主力资金净流入这些股"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "猪肉概念涨1.30%，主力资金净流入21股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "食品饮料行业资金流出榜：东鹏饮料等6股净流出资金超3000万元"
+        },
+        {
+          "date": "2026-03-16",
+          "title": "【盘中播报】45只个股突破年线"
+        },
+        {
+          "date": "2026-03-12",
+          "title": "【盘中播报】38只个股突破年线"
+        }
+      ],
+      "return_60d": -7.13
+    },
+    {
+      "rank": 95,
+      "code": "300046",
+      "name": "台基股份",
+      "price": 29.43,
+      "pct_change": -1.769,
+      "zscore": -2.054,
+      "pct_from_mean": -16.46,
+      "mean_20": 35.227,
+      "std_20": 2.823,
+      "upper_band": 40.872,
+      "lower_band": 29.581,
+      "vol_ratio": 0.43,
+      "atr_pct": 4.4,
+      "debt_ratio": "8.76%",
+      "debt_ratio_val": 8.76,
+      "roe": "4.32%",
+      "net_profit": "4909.40万",
+      "revenue": "3.59亿",
+      "revenue_yoy": "1.26%",
+      "profit_yoy": "94.10%",
+      "eps": "0.2076",
+      "book_value": "4.80",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：台基股份拟每10股派发现金股利1.5元，分红率72.27% | 台基股份：金升哲接任财务总监 | 上市公司2025年度分红方案一览。财务：资产负债率8.76%，ROE4.32%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-02",
+          "title": "台基股份拟每10股派发现金股利1.5元，分红率72.27%"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "台基股份：金升哲接任财务总监"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "上市公司2025年度分红方案一览"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "台基股份再延期：高功率半导体项目延至2027年底，投资进度仅51%"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "台基股份：2025年净利润同比增长94.1% 拟10派1.5元"
+        }
+      ],
+      "return_60d": -16.56
+    },
+    {
+      "rank": 96,
+      "code": "301195",
+      "name": "北路智控",
+      "price": 29.91,
+      "pct_change": -1.9344,
+      "zscore": -2.425,
+      "pct_from_mean": -13.7,
+      "mean_20": 34.659,
+      "std_20": 1.958,
+      "upper_band": 38.576,
+      "lower_band": 30.742,
+      "vol_ratio": 0.479,
+      "atr_pct": 4.18,
+      "debt_ratio": "14.48%",
+      "debt_ratio_val": 14.48,
+      "roe": "8.46%",
+      "net_profit": "2.01亿",
+      "revenue": "11.29亿",
+      "revenue_yoy": "12.05%",
+      "profit_yoy": "-10.56%",
+      "eps": "1.5400",
+      "book_value": "18.02",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：今日14只股长线走稳 站上年线 | 【盘中播报】15只个股突破年线 | 今日盘中突破年线个股。财务：资产负债率14.48%，ROE8.46%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-19",
+          "title": "今日14只股长线走稳 站上年线"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "【盘中播报】15只个股突破年线"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "今日盘中突破年线个股"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "【盘中播报】13只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-19",
+          "title": "221只股短线走稳 站上五日均线"
+        }
+      ],
+      "return_60d": -10.21
+    },
+    {
+      "rank": 97,
+      "code": "301212",
+      "name": "联盛化学",
+      "price": 25.95,
+      "pct_change": -2.809,
+      "zscore": -2.163,
+      "pct_from_mean": -13.97,
+      "mean_20": 30.162,
+      "std_20": 1.948,
+      "upper_band": 34.057,
+      "lower_band": 26.267,
+      "vol_ratio": 0.454,
+      "atr_pct": 5.36,
+      "debt_ratio": "18.78%",
+      "debt_ratio_val": 18.78,
+      "roe": "1.29%",
+      "net_profit": "1725.89万",
+      "revenue": "6.32亿",
+      "revenue_yoy": "-4.47%",
+      "profit_yoy": "-75.73%",
+      "eps": "0.1600",
+      "book_value": "12.41",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：联盛化学：公司与欧洲、大洋洲、亚洲等多个国家和地区建立了稳定 | 创业板两融余额减少7.77亿元 | 314只股中线走稳 站上半年线。财务：资产负债率18.78%，ROE1.29%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-20",
+          "title": "联盛化学：公司与欧洲、大洋洲、亚洲等多个国家和地区建立了稳定的业务关系"
+        },
+        {
+          "date": "2026-03-20",
+          "title": "创业板两融余额减少7.77亿元"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "314只股中线走稳 站上半年线"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "今日339只个股突破半年线"
+        },
+        {
+          "date": "2026-03-06",
+          "title": "今日盘中突破半年线个股"
+        }
+      ],
+      "return_60d": -7.98
+    },
+    {
+      "rank": 98,
+      "code": "600085",
+      "name": "同仁堂",
+      "price": 27.83,
+      "pct_change": -1.382,
+      "zscore": -2.11,
+      "pct_from_mean": -8.49,
+      "mean_20": 30.411,
+      "std_20": 1.223,
+      "upper_band": 32.858,
+      "lower_band": 27.964,
+      "vol_ratio": 0.943,
+      "atr_pct": 2.05,
+      "debt_ratio": "30.18%",
+      "debt_ratio_val": 30.18,
+      "roe": "8.71%",
+      "net_profit": "11.89亿",
+      "revenue": "172.56亿",
+      "revenue_yoy": "-7.21%",
+      "profit_yoy": "-22.07%",
+      "eps": "0.8670",
+      "book_value": "9.96",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：同仁堂拟每股派发现金红利0.5元 分红率57.66% | 同仁堂：2025年净利润同比下降22.07% 拟10派5元 | 同仁堂：2025年营收净利润双降毛利率微降 但经营性现金流大。财务：资产负债率30.18%，ROE8.71%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-03-30",
+          "title": "同仁堂拟每股派发现金红利0.5元 分红率57.66%"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "同仁堂：2025年净利润同比下降22.07% 拟10派5元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "同仁堂：2025年营收净利润双降毛利率微降 但经营性现金流大增253.87%"
+        },
+        {
+          "date": "2026-03-30",
+          "title": "同仁堂2025年归母净利润同比降22.1%至11.9亿元"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "885家公司公布年度分红方案"
+        }
+      ],
+      "return_60d": -13.89
+    },
+    {
+      "rank": 99,
+      "code": "600782",
+      "name": "新钢股份",
+      "price": 3.5,
+      "pct_change": -1.4085,
+      "zscore": -2.122,
+      "pct_from_mean": -10.67,
+      "mean_20": 3.918,
+      "std_20": 0.197,
+      "upper_band": 4.312,
+      "lower_band": 3.524,
+      "vol_ratio": 0.538,
+      "atr_pct": 3.49,
+      "debt_ratio": "49.02%",
+      "debt_ratio_val": 49.02,
+      "roe": "0.13%",
+      "net_profit": "3278.07万",
+      "revenue": "418.04亿",
+      "revenue_yoy": "-41.24%",
+      "profit_yoy": "-93.41%",
+      "eps": "0.0100",
+      "book_value": "8.31",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2024",
+      "news_summary": "近期动态：新钢股份：公司将于2026年4月21日披露2025年年度报告 | 28只股中线走稳 站上半年线 | 【盘中播报】44只个股突破半年线。财务：资产负债率49.02%，ROE0.13%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
       "risk": "无特别风险提示",
       "news_list": [
         {
           "date": "2026-03-31",
-          "title": "东风股份获1亿元政府补助"
+          "title": "新钢股份：公司将于2026年4月21日披露2025年年度报告"
         },
         {
-          "date": "2026-03-29",
-          "title": "现场拿下128辆订单 东风乾坤油电双线并举发力绿通、冷链市场"
+          "date": "2026-03-17",
+          "title": "28只股中线走稳 站上半年线"
         },
         {
-          "date": "2026-03-06",
-          "title": "东风股份：2026年前两月销量同比下降0.87%"
+          "date": "2026-03-17",
+          "title": "【盘中播报】44只个股突破半年线"
         },
         {
-          "date": "2026-02-06",
-          "title": "东风股份1月汽车销量增31.61% 发动机产、销量双增"
+          "date": "2026-03-17",
+          "title": "今日49只个股突破年线"
         },
         {
-          "date": "2026-01-23",
-          "title": "产品销售承压，整体毛利率下滑，东风股份2025年最高预亏4.8亿元，全年销量目标完成64%"
+          "date": "2026-03-17",
+          "title": "69只股中线走稳 站上半年线"
         }
-      ]
+      ],
+      "return_60d": -10.03
+    },
+    {
+      "rank": 100,
+      "code": "688569",
+      "name": "铁科轨道",
+      "price": 19.8,
+      "pct_change": -2.7505,
+      "zscore": -2.079,
+      "pct_from_mean": -7.31,
+      "mean_20": 21.36,
+      "std_20": 0.751,
+      "upper_band": 22.862,
+      "lower_band": 19.859,
+      "vol_ratio": 2.497,
+      "atr_pct": 4.18,
+      "debt_ratio": "14.35%",
+      "debt_ratio_val": 14.35,
+      "roe": "5.81%",
+      "net_profit": "1.71亿",
+      "revenue": "12.75亿",
+      "revenue_yoy": "-9.53%",
+      "profit_yoy": "-20.09%",
+      "eps": "0.8100",
+      "book_value": "13.99",
+      "total_mv": null,
+      "float_mv": null,
+      "industry": "未知",
+      "report_period": "2025",
+      "news_summary": "近期动态：社保基金现身13只科创板股前十大流通股东榜 | 社保基金去年四季度持有科创板股名单（附股） | 今日盘中突破年线个股。财务：资产负债率14.35%，ROE5.81%。",
+      "news_score": 16,
+      "tech_score": 33,
+      "finance_score": 35,
+      "buy_score": 84,
+      "score_detail": "技术33分+财务35分+消息16分 | 资产负债率健康(+5); ROE为正(+5)",
+      "risk": "无特别风险提示",
+      "news_list": [
+        {
+          "date": "2026-04-07",
+          "title": "社保基金现身13只科创板股前十大流通股东榜"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "社保基金去年四季度持有科创板股名单（附股）"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "今日盘中突破年线个股"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "今日56只个股跨越牛熊分界线"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "今日34只个股突破年线"
+        }
+      ],
+      "return_60d": -8.92
     }
   ]
 }

@@ -5,13 +5,23 @@ import akshare as ak
 import pandas as pd
 import numpy as np
 import json
+import sqlite3
 import time
 import random
+import re
+import requests
+import threading
 import warnings
 import sys
 import os
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from akshare.stock.cons import (
+    zh_sina_a_stock_count_url,
+    zh_sina_a_stock_payload,
+    zh_sina_a_stock_url,
+)
+from akshare.utils import demjson
 
 warnings.filterwarnings('ignore')
 
@@ -28,42 +38,42 @@ class SmartRateLimiter:
         self.batch_pause = batch_pause     # 批次暂停时长（秒）
         self.last_request_time = None
         self.request_count = 0
+        self._lock = threading.Lock()
 
     def wait(self):
         """请求前调用，自动等待到合法时间窗口"""
-        self.request_count += 1
+        with self._lock:
+            self.request_count += 1
 
-        # 每 batch_size 次请求后大暂停
-        if self.request_count > 1 and self.request_count % self.batch_size == 0:
-            print(f"    [限流] 已请求 {self.request_count} 次，暂停 {self.batch_pause}s...")
-            time.sleep(self.batch_pause)
+            if self.request_count > 1 and self.request_count % self.batch_size == 0:
+                print(f"    [限流] 已请求 {self.request_count} 次，暂停 {self.batch_pause}s...")
+                time.sleep(self.batch_pause)
 
-        # 保证最小间隔
-        if self.last_request_time is not None:
-            elapsed = (datetime.now() - self.last_request_time).total_seconds()
-            if elapsed < self.min_interval:
-                wait_sec = self.min_interval - elapsed + random.uniform(0.1, 0.5)
-                time.sleep(wait_sec)
+            if self.last_request_time is not None:
+                elapsed = (datetime.now() - self.last_request_time).total_seconds()
+                if elapsed < self.min_interval:
+                    wait_sec = self.min_interval - elapsed + random.uniform(0.05, 0.2)
+                    time.sleep(wait_sec)
 
-        self.last_request_time = datetime.now()
-
-
-# 全局限流器实例
-# 东财封IP期间走腾讯降级，腾讯接口稳定，min_interval 调低到 0.5s
-# 东财恢复后可调回 min_interval=3.0, batch_pause=15.0
-_rate_limiter = SmartRateLimiter(min_interval=0.5, batch_size=20, batch_pause=5.0)
+            self.last_request_time = datetime.now()
 
 
-def fetch_with_retry(fn, *args, max_retries=3, **kwargs):
-    """带重试的东财接口调用包装器"""
+# 分源限流器：东财更保守，腾讯更激进
+_em_rate_limiter = SmartRateLimiter(min_interval=1.2, batch_size=20, batch_pause=6.0)
+_tx_rate_limiter = SmartRateLimiter(min_interval=0.08, batch_size=100, batch_pause=1.5)
+
+
+def fetch_with_retry(fn, *args, max_retries=3, rate_limiter=None, **kwargs):
+    """带重试的接口调用包装器"""
     for attempt in range(max_retries):
         try:
-            _rate_limiter.wait()
+            if rate_limiter is not None:
+                rate_limiter.wait()
             return fn(*args, **kwargs)
         except Exception as e:
             err_str = str(e)
             if attempt < max_retries - 1:
-                wait_sec = random.uniform(3, 6) * (attempt + 1)
+                wait_sec = random.uniform(1.5, 3.0) * (attempt + 1)
                 print(f"    [重试 {attempt+1}/{max_retries}] {err_str[:60]}，等待 {wait_sec:.1f}s...")
                 time.sleep(wait_sec)
             else:
@@ -82,13 +92,16 @@ CONFIG = {
     # True: 优先使用东财接口，失败后降级到腾讯
     # False: 直接使用腾讯接口（跳过东财）
     "use_em": False,
+    "use_local_db": True,  # 优先使用本地 SQLite 日线库
+    "daily_db_path": "/Users/burtyu/Work/python/cron/stock_data/stock_daily.db",
+    "prefer_sina_spot": True,  # 东财不可用时优先用新浪全量快照，避免腾讯逐股拼快照
 
     # ---- 布林带参数 ----
-    "bb_window": 20,        # 布林带窗口（日），默认20日
+    "bb_window": 60,        # 布林带窗口（日），默认20日
     "bb_std": 2.0,          # 布林带标准差倍数，默认2倍
 
     # ---- 历史回看区间 ----
-    "lookback_months": 24,  # 历史回看区间（月），用于获取日线数据，默认24（约2年）
+    "lookback_months": 60,  # 历史回看区间（月），用于获取日线数据，默认24（约2年）
 
     # ---- Z-Score 筛选条件 ----
     "zscore_min": -999,    # Z-Score 下限阈值：仅保留 Z-Score >= 此值的股票，-999 表示关闭下限
@@ -97,7 +110,7 @@ CONFIG = {
                            #   筛选超买（价格严重高于均线）：zscore_min = 2.5,  zscore_max = 999
                            #   宽松双向筛选：              zscore_min = -3.0, zscore_max = 3.0
 
-    "zscore_max": 0.0,    # Z-Score 上限阈值：仅保留 Z-Score <= 此值的股票，999 表示关闭上限
+    "zscore_max": -2.0,    # Z-Score 上限阈值：仅保留 Z-Score <= 此值的股票，999 表示关闭上限
                            # 默认 -2.5：筛选出 Z-Score ≤ -2.5 的超跌股
 
     # ---- 排序与数量 ----
@@ -106,7 +119,7 @@ CONFIG = {
                              #   按 zscore    升序(True)  → 超跌最深的排前面（推荐）
                              #   按 buy_score 升序(True)  → ⚠️ 低分排前，若想高分排前请改为 False
                              #   按 buy_score 降序(False) → 综合评分最高的排前面（推荐）✅ 当前配置
-    "top_n": 50,             # 最多返回N条，默认50
+    "top_n": 100,            # 最多返回N条，默认500
 
     # ---- 基础过滤 ----
     "min_price": 1.0,       # 最低股价过滤（元），默认1.0
@@ -118,7 +131,7 @@ CONFIG = {
     # ---- 候选股初筛 ----
     "prefilter_return_days": 60,       # 初筛使用多少日的涨跌幅，默认60日
     "prefilter_return_pct": -5,       # 初筛：N日涨跌幅阈值，默认-5%（超跌方向）
-    "max_candidates": 20,           # 最大候选股数量，防止运行时间过长（正式运行设为5000）
+    "max_candidates": 5400,           # 最大候选股数量，防止运行时间过长（正式运行设为5000）
 
     # ---- 新闻数量 ----
     "news_count": 5,        # 每只股票获取的新闻条数，默认5
@@ -130,8 +143,13 @@ CONFIG = {
     "watch_list": [],
 
     # ---- 并发控制 ----
+    "spot_concurrent_workers": 12,  # 新浪全量快照分页并发数
     # 腾讯日线拉取并发数，建议 3-6，太高可能触发限流
-    "tx_concurrent_workers": 3,
+    "tx_concurrent_workers": 6,
+    "scan_concurrent_workers": 6,  # 扫描候选股时的并发数
+
+    # ---- 性能/功能开关 ----
+    "load_industry_map": False,  # 获取全量行业映射非常慢，默认关闭
 }
 
 
@@ -198,10 +216,257 @@ def _build_all_a_codes():
     return sh_main + sh_star + sz_main + sz_cyb
 
 
+def _cache_path(prefix):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    today_str = datetime.now().strftime("%Y%m%d")
+    return os.path.join(script_dir, f"{prefix}_{today_str}.json")
+
+
+def _get_db_connection():
+    db_path = CONFIG.get('daily_db_path')
+    if not db_path:
+        raise ValueError("CONFIG['daily_db_path'] 未配置")
+    return sqlite3.connect(f"file:{db_path}?mode=ro", uri=True, timeout=30)
+
+
+def _get_db_latest_trade_date():
+    with _get_db_connection() as conn:
+        row = conn.execute("SELECT MAX(date) FROM stock_daily").fetchone()
+    return row[0] if row else None
+
+
+def ensure_db_indexes():
+    db_path = CONFIG.get('daily_db_path')
+    if not db_path:
+        return
+
+    try:
+        conn = sqlite3.connect(db_path, timeout=30)
+        conn.execute("PRAGMA busy_timeout = 30000")
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_stock_daily_date_code ON stock_daily(date, code)"
+        )
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print(f"  [WARN] 创建本地数据库索引失败: {e}")
+
+
+def _get_db_stock_list(codes=None, return_days=None):
+    latest_date = _get_db_latest_trade_date()
+    if not latest_date:
+        return pd.DataFrame()
+
+    return_days = int(return_days or CONFIG.get('prefilter_return_days', 60))
+    return_days = max(1, return_days)
+    ret_col = f"return_{return_days}d"
+    offset = return_days - 1
+
+    query = """
+    SELECT
+        s.code AS code,
+        s.name AS name,
+        s.close AS price,
+        s.change_pct AS pct_change,
+        CASE
+            WHEN h.close IS NOT NULL AND h.close != 0
+            THEN ROUND((s.close / h.close - 1) * 100, 2)
+            ELSE NULL
+        END AS {ret_col},
+        s.date AS trade_date,
+        s.amount AS amount,
+        s.volume AS volume
+    FROM stock_daily s
+    """.format(ret_col=ret_col)
+
+    params = []
+    if codes:
+        placeholders = ",".join(["?"] * len(codes))
+        query += f"""
+        INNER JOIN (
+            SELECT code, MAX(date) AS max_date
+            FROM stock_daily
+            WHERE code IN ({placeholders})
+            GROUP BY code
+        ) latest
+        ON s.code = latest.code AND s.date = latest.max_date
+        LEFT JOIN stock_daily h
+        ON h.code = s.code
+        AND h.date = (
+            SELECT d.date
+            FROM stock_daily d
+            WHERE d.code = s.code AND d.date < s.date
+            ORDER BY d.date DESC
+            LIMIT 1 OFFSET {offset}
+        )
+        """
+        params.extend([str(c).zfill(6) for c in codes])
+    else:
+        query += f"""
+        LEFT JOIN stock_daily h
+        ON h.code = s.code
+        AND h.date = (
+            SELECT d.date
+            FROM stock_daily d
+            WHERE d.code = s.code AND d.date < s.date
+            ORDER BY d.date DESC
+            LIMIT 1 OFFSET {offset}
+        )
+        WHERE s.date = ?
+        """
+        params.append(latest_date)
+
+    with _get_db_connection() as conn:
+        spot_df = pd.read_sql_query(query, conn, params=params)
+
+    if len(spot_df) == 0:
+        return spot_df
+
+    print(f"  ✅ 从本地数据库读取股票池: {len(spot_df)} 只（最新交易日 {latest_date}）")
+    spot_df['total_mv'] = None
+    spot_df['float_mv'] = None
+    return spot_df
+
+
+def _read_daily_cache(cache_path):
+    if not os.path.exists(cache_path):
+        return None, None
+
+    cache_time = datetime.fromtimestamp(os.path.getmtime(cache_path))
+    if cache_time.strftime("%Y%m%d") != datetime.now().strftime("%Y%m%d"):
+        return None, cache_time
+
+    try:
+        with open(cache_path, 'r', encoding='utf-8') as f:
+            return pd.DataFrame(json.load(f)), cache_time
+    except Exception:
+        return None, cache_time
+
+
+def _write_daily_cache(df, cache_path, label):
+    if df is None or len(df) == 0:
+        return
+    try:
+        with open(cache_path, 'w', encoding='utf-8') as f:
+            json.dump(df.to_dict(orient='records'), f, ensure_ascii=False, indent=None)
+        print(f"  💾 {label}已缓存: {cache_path}")
+    except Exception as e:
+        print(f"  [WARN] {label}缓存写入失败: {e}")
+
+
+def _get_sina_page_count():
+    response = requests.get(zh_sina_a_stock_count_url, timeout=15)
+    count = int(re.findall(r"\d+", response.text)[0])
+    return max(1, (count + 79) // 80)
+
+
+def _fetch_one_sina_spot_page(page):
+    payload = zh_sina_a_stock_payload.copy()
+    payload.update({"page": str(page)})
+    response = requests.get(zh_sina_a_stock_url, params=payload, timeout=20)
+    rows = demjson.decode(response.text) or []
+    if not rows:
+        return pd.DataFrame()
+
+    df = pd.DataFrame(rows)
+    rename_map = {
+        'code': 'code',
+        'name': 'name',
+        'trade': 'price',
+        'changepercent': 'pct_change',
+        'mktcap': 'total_mv',
+        'nmc': 'float_mv',
+    }
+    df = df.rename(columns=rename_map)
+    keep_cols = ['code', 'name', 'price', 'pct_change', 'total_mv', 'float_mv']
+    for col in keep_cols:
+        if col not in df.columns:
+            df[col] = None
+    return df[keep_cols]
+
+
+def _get_sina_stock_list():
+    cache_path = _cache_path("sina_spot_cache")
+    cached_df, cache_time = _read_daily_cache(cache_path)
+    if cached_df is not None and len(cached_df) > 0:
+        print(f"  ✅ 读取新浪快照缓存: {len(cached_df)} 只（{cache_time.strftime('%H:%M')}）")
+        return cached_df
+
+    page_count = _get_sina_page_count()
+    workers = min(CONFIG.get('spot_concurrent_workers', 12), page_count)
+    print(f"  调用新浪全量快照，共 {page_count} 页，使用 {workers} 线程并发抓取...")
+
+    frames = []
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(_fetch_one_sina_spot_page, page): page
+            for page in range(1, page_count + 1)
+        }
+        for i, future in enumerate(as_completed(futures), 1):
+            page = futures[future]
+            try:
+                frame = future.result()
+                if frame is not None and len(frame) > 0:
+                    frames.append(frame)
+            except Exception as e:
+                print(f"  [WARN] 新浪快照第 {page} 页失败: {e}")
+            if i % 10 == 0 or i == page_count:
+                print(f"    新浪快照进度: {i}/{page_count}")
+
+    if not frames:
+        return pd.DataFrame()
+
+    spot_df = pd.concat(frames, ignore_index=True)
+    for col in ['price', 'pct_change', 'total_mv', 'float_mv']:
+        spot_df[col] = pd.to_numeric(spot_df[col], errors='coerce')
+    spot_df['return_60d'] = None
+    spot_df = spot_df.drop_duplicates(subset=['code']).reset_index(drop=True)
+    _write_daily_cache(spot_df, cache_path, "新浪快照")
+    return spot_df
+
+
+def _get_em_stock_list():
+    cache_path = _cache_path("spot_cache")
+    cached_df, cache_time = _read_daily_cache(cache_path)
+    if cached_df is not None and len(cached_df) > 0:
+        print(f"  ✅ 读取东财快照缓存: {len(cached_df)} 只（{cache_time.strftime('%H:%M')}）")
+        return cached_df
+
+    print("  调用东财 stock_zh_a_spot_em 获取全量快照...")
+    spot_df = fetch_with_retry(
+        ak.stock_zh_a_spot_em,
+        max_retries=1,
+        rate_limiter=_em_rate_limiter,
+    )
+    _write_daily_cache(spot_df, cache_path, "东财快照")
+    return spot_df
+
+
+def _standardize_spot_df(spot_df):
+    if spot_df is None or len(spot_df) == 0:
+        return pd.DataFrame()
+
+    col_map = {
+        '代码': 'code', '名称': 'name', '最新价': 'price',
+        '涨跌幅': 'pct_change', '60日涨跌幅': 'return_60d',
+        '总市值': 'total_mv', '流通市值': 'float_mv',
+        '行业': 'industry', '行业板块': 'industry',
+    }
+    existing = {k: v for k, v in col_map.items() if k in spot_df.columns}
+    spot_df = spot_df.rename(columns=existing)
+
+    for col in ['code', 'name', 'price', 'pct_change', 'return_60d', 'total_mv', 'float_mv', 'industry']:
+        if col not in spot_df.columns:
+            spot_df[col] = None
+
+    spot_df['code'] = spot_df['code'].astype(str).str.extract(r'(\d{6})', expand=False).fillna(spot_df['code'])
+    return spot_df
+
+
 def _fetch_one_tx_hist(code, start_date, end_date):
     """单只股票腾讯日线拉取（用于并发）"""
     try:
-        _rate_limiter.wait()
+        _tx_rate_limiter.wait()
         prefix = 'sh' if str(code).startswith('6') else 'sz'
         tx_code = f"{prefix}{code}"
         df = ak.stock_zh_a_hist_tx(symbol=tx_code, start_date=start_date, end_date=end_date)
@@ -224,10 +489,7 @@ def _fallback_stock_list(codes=None):
     # ── 检查腾讯降级缓存 ──
     script_dir = os.path.dirname(os.path.abspath(__file__))
     today_str = datetime.now().strftime("%Y%m%d")
-    cache_key = "_tx_fallback" if codes is None else f"_tx_fallback_{'_'.join(sorted(codes))}"
     cache_path = os.path.join(script_dir, f"tx_spot_cache_{today_str}.json")
-
-    now = datetime.now()
 
     # 删除前一天的缓存
     yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
@@ -283,9 +545,6 @@ def _fallback_stock_list(codes=None):
     else:
         all_codes = _build_all_a_codes()
         # 受 max_candidates 限制
-        max_p = CONFIG['max_candidates']
-        if max_p and max_p < len(all_codes):
-            all_codes = all_codes[:max_p]
         print(f"  [降级] 全量模式，构造静态A股代码列表，共尝试 {len(all_codes)} 只...")
 
     rows = [{'code': c, 'name': c, 'price': None,
@@ -373,8 +632,18 @@ def get_stock_list(market="A"):
     """
     watch_list = CONFIG.get('watch_list', [])
     use_em = CONFIG.get('use_em', True)
+    use_local_db = CONFIG.get('use_local_db', False)
+    return_days = CONFIG.get('prefilter_return_days', 60)
 
     # ── 0. watch_list 快速路径 ──────────────────────────────────
+    if watch_list and use_local_db:
+        print(f"  🎯 watch_list 模式：只扫 {watch_list}")
+        spot_df = _get_db_stock_list(codes=watch_list, return_days=return_days)
+        spot_df = _standardize_spot_df(spot_df)
+        spot_df['code'] = spot_df['code'].astype(str).str.zfill(6)
+        print(f"  股票总数（watch_list）: {len(spot_df)} 只")
+        return spot_df
+
     if watch_list:
         print(f"  🎯 watch_list 模式：只扫 {watch_list}")
         spot_df = _fallback_stock_list(codes=watch_list)
@@ -383,85 +652,68 @@ def get_stock_list(market="A"):
         print(f"  股票总数（watch_list）: {len(spot_df)} 只")
         return spot_df
 
+    if use_local_db:
+        print("  ⚡ use_local_db=True，优先使用本地 SQLite 股票日线库...")
+        spot_df = _get_db_stock_list(return_days=return_days)
+        if spot_df is None or len(spot_df) == 0:
+            print("  [WARN] 本地数据库未返回股票池，回退到原有网络数据源...")
+        else:
+            spot_df = _standardize_spot_df(spot_df)
+            print(f"  股票总数: {len(spot_df)} 只")
+
     # ── 0.5. 东财开关判断 ──────────────────────────────────────
-    if not use_em:
-        print("  ⚡ use_em=False，直接使用腾讯日线降级策略...")
-        spot_df = _fallback_stock_list(codes=None)
+    if not use_local_db and not use_em:
+        print("  ⚡ use_em=False，跳过东财接口...")
+        spot_df = pd.DataFrame()
+        if CONFIG.get('prefer_sina_spot', True):
+            try:
+                spot_df = _get_sina_stock_list()
+            except Exception as e:
+                print(f"  [WARN] 新浪快照失败: {e}")
+                spot_df = pd.DataFrame()
+        if spot_df is None or len(spot_df) == 0:
+            print("  ⚠️  新浪快照不可用，降级为腾讯逐股历史拼快照...")
+            spot_df = _fallback_stock_list(codes=None)
         if spot_df is not None and len(spot_df) > 0:
+            spot_df = _standardize_spot_df(spot_df)
             spot_df['code'] = spot_df['code'].astype(str).str.zfill(6)
             print(f"  股票总数: {len(spot_df)} 只")
-            return spot_df
         else:
-            print("  [ERROR] 腾讯降级失败，无法获取股票列表")
+            print("  [ERROR] 非东财模式下无法获取股票列表")
             return pd.DataFrame()
-
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    today_str = datetime.now().strftime("%Y%m%d")
-    cache_path = os.path.join(script_dir, f"spot_cache_{today_str}.json")
-
-    spot_df = None
-
-    # ── 删除前一天缓存 ─────────────────────────────────────────
-    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
-    yesterday_cache = os.path.join(script_dir, f"spot_cache_{yesterday}.json")
-    if os.path.exists(yesterday_cache):
+    elif not use_local_db:
+        spot_df = None
         try:
-            os.remove(yesterday_cache)
-            print(f"  🗑️  已删除昨日缓存: {yesterday_cache}")
-        except Exception as e:
-            print(f"  [WARN] 删除昨日缓存失败: {e}")
-
-    # ── 1. 尝试读当日磁盘缓存 ──────────────────────────────────
-    if os.path.exists(cache_path):
-        # 检查缓存是否是当天的（跨天自动失效）
-        cache_time = datetime.fromtimestamp(os.path.getmtime(cache_path))
-        cache_date = cache_time.strftime("%Y%m%d")
-
-        # 当天缓存都有效（不区分15点前后）
-        if cache_date == today_str:
-            try:
-                with open(cache_path, 'r', encoding='utf-8') as f:
-                    cached = json.load(f)
-                spot_df = pd.DataFrame(cached)
-                print(f"  ✅ 读取当日快照缓存: {cache_path}（{len(spot_df)} 只，{cache_time.strftime('%H:%M')}）")
-            except Exception as e:
-                print(f"  [WARN] 缓存读取失败: {e}，重新拉取...")
-                spot_df = None
-
-    # ── 2. 缓存未命中 → 调用东财快照接口 ──────────────────────
-    if spot_df is None:
-        print("  调用东财 stock_zh_a_spot_em 获取全量快照...")
-        try:
-            spot_df = fetch_with_retry(ak.stock_zh_a_spot_em, max_retries=1)
+            spot_df = _get_em_stock_list()
             print(f"  ✅ 东财快照成功: {len(spot_df)} 只")
-
-            # 写磁盘缓存
-            try:
-                spot_df.to_json(cache_path, orient='records', force_ascii=False)
-                print(f"  💾 快照已缓存: {cache_path}")
-            except Exception as e:
-                print(f"  [WARN] 缓存写入失败: {e}")
-
         except Exception as e:
             print(f"  [ERROR] 东财快照失败: {e}")
-            print("  ⚠️  降级策略：腾讯日线拉全量股票数据...")
-            spot_df = _fallback_stock_list(codes=None)
+            if CONFIG.get('prefer_sina_spot', True):
+                try:
+                    print("  ⚠️  改用新浪全量快照...")
+                    spot_df = _get_sina_stock_list()
+                except Exception as sina_error:
+                    print(f"  [WARN] 新浪快照失败: {sina_error}")
+                    spot_df = None
+            if spot_df is None or len(spot_df) == 0:
+                print("  ⚠️  最终降级：腾讯日线拉全量股票数据...")
+                spot_df = _fallback_stock_list(codes=None)
+
+        if spot_df is None or len(spot_df) == 0:
+            print("  [ERROR] 无法获取股票列表")
+            return pd.DataFrame()
+
+        spot_df = _standardize_spot_df(spot_df)
 
     if spot_df is None or len(spot_df) == 0:
         print("  [ERROR] 无法获取股票列表")
         return pd.DataFrame()
 
     # ── 3. 标准化列名 ──────────────────────────────────────────
-    col_map = {
-        '代码': 'code', '名称': 'name', '最新价': 'price',
-        '涨跌幅': 'pct_change', '60日涨跌幅': 'return_60d',
-        '总市值': 'total_mv', '流通市值': 'float_mv',
-    }
-    existing = {k: v for k, v in col_map.items() if k in spot_df.columns}
-    spot_df = spot_df.rename(columns=existing)
+    spot_df = _standardize_spot_df(spot_df)
 
     # 补充缺失列
-    for col in ['code', 'name', 'price', 'pct_change', 'return_60d', 'total_mv', 'float_mv']:
+    for col in ['code', 'name', 'price', 'pct_change', 'return_60d', 'total_mv', 'float_mv', 'industry']:
         if col not in spot_df.columns:
             spot_df[col] = None
 
@@ -508,6 +760,77 @@ def get_industry_map():
     return industry_map
 
 
+def _scan_candidate(row, zscore_min, zscore_max, prefilter_days, prefilter_return_pct, industry_map=None):
+    code = row['code']
+    name = row['name']
+    price = row['price']
+    pct_change = row['pct_change']
+
+    zdata = calc_zscore(code, price)
+    if not zdata:
+        return None
+
+    if zdata['return_Nd'] > prefilter_return_pct:
+        return None
+
+    zscore = zdata['zscore']
+    if not (zscore_min <= zscore <= zscore_max):
+        return None
+
+    financial = get_financial_data(code)
+    debt_ratio_val = financial['debt_ratio_val']
+    news_list = get_news(code)
+
+    tech_score = calc_tech_score(zscore)
+    finance_score = calc_finance_score(debt_ratio_val, financial['roe'])
+    news_score, news_detail = calc_news_score(news_list, zscore, debt_ratio_val, financial['roe'])
+    buy_score = tech_score + finance_score + news_score
+
+    if buy_score < CONFIG['score_min']:
+        return None
+
+    industry = row.get('industry') or (industry_map or {}).get(code, '未知')
+    risk = build_risk_note(code, name, debt_ratio_val, financial['roe'], zscore, industry)
+    news_summary = build_news_summary(code, name, news_list, financial)
+
+    return {
+        'code': code,
+        'name': name,
+        'price': price,
+        'pct_change': pct_change,
+        'zscore': zscore,
+        'pct_from_mean': zdata['pct_from_mean'],
+        'mean_20': zdata['mean_20'],
+        'std_20': zdata['std_20'],
+        'upper_band': zdata['upper_band'],
+        'lower_band': zdata['lower_band'],
+        f'return_{prefilter_days}d': zdata['return_Nd'],
+        'vol_ratio': zdata['vol_ratio'],
+        'atr_pct': zdata['atr_pct'],
+        'debt_ratio': financial['debt_ratio'],
+        'debt_ratio_val': debt_ratio_val,
+        'roe': financial['roe'],
+        'net_profit': financial['net_profit'],
+        'revenue': financial['revenue'],
+        'revenue_yoy': financial['revenue_yoy'],
+        'profit_yoy': financial['profit_yoy'],
+        'eps': financial['eps'],
+        'book_value': financial['book_value'],
+        'total_mv': row.get('total_mv', 'N/A'),
+        'float_mv': row.get('float_mv', 'N/A'),
+        'industry': industry,
+        'report_period': financial['report_period'],
+        'news_summary': news_summary,
+        'news_score': news_score,
+        'tech_score': tech_score,
+        'finance_score': finance_score,
+        'buy_score': buy_score,
+        'score_detail': f"技术{tech_score}分+财务{finance_score}分+消息{news_score}分 | {news_detail}",
+        'risk': risk,
+        'news_list': news_list,
+    }
+
+
 def _normalize_hist_df(df):
     """统一历史日线 DataFrame 列名为东财格式（中文）
     
@@ -528,11 +851,52 @@ def _normalize_hist_df(df):
     existing = {k: v for k, v in col_map.items() if k in df.columns}
     if existing:
         df = df.rename(columns=existing)
+    if '股票代码' in df.columns:
+        df['股票代码'] = df['股票代码'].astype(str).str.extract(r'(\d+)', expand=False).fillna(df['股票代码'])
+        df['股票代码'] = df['股票代码'].str.zfill(6)
+    if '日期' in df.columns:
+        df['日期'] = pd.to_datetime(df['日期'], errors='coerce').dt.strftime('%Y-%m-%d')
     return df
 
 
 def _get_hist_df(code):
     """获取单只股票历史日线（优先内存缓存 → 磁盘缓存 → 东财接口 → 腾讯降级）"""
+    lookback_days = CONFIG['lookback_months'] * 35
+    start = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y%m%d")
+    end = datetime.now().strftime("%Y%m%d")
+
+    df = None
+    use_local_db = CONFIG.get('use_local_db', False)
+    use_em = CONFIG.get('use_em', True)
+
+    if use_local_db:
+        start_sql = datetime.strptime(start, "%Y%m%d").strftime("%Y-%m-%d")
+        end_sql = datetime.strptime(end, "%Y%m%d").strftime("%Y-%m-%d")
+        query = """
+        SELECT
+            date AS 日期,
+            open AS 开盘,
+            close AS 收盘,
+            high AS 最高,
+            low AS 最低,
+            volume AS 成交量,
+            amount AS 成交额,
+            amplitude AS 振幅,
+            change_pct AS 涨跌幅,
+            (close - pre_close) AS 涨跌额,
+            NULL AS 换手率,
+            CAST(code AS TEXT) AS 股票代码
+        FROM stock_daily
+        WHERE code = ? AND date BETWEEN ? AND ?
+        ORDER BY date ASC
+        """
+        try:
+            with _get_db_connection() as conn:
+                df = pd.read_sql_query(query, conn, params=[str(code).zfill(6), start_sql, end_sql])
+        except Exception:
+            df = None
+        return _normalize_hist_df(df) if df is not None and len(df) >= 2 else None
+
     # ── 内存缓存（本次运行已拉取过）──
     mem_cache = CONFIG.get('_hist_cache', {})
     if code in mem_cache:
@@ -555,30 +919,19 @@ def _get_hist_df(code):
             pass  # 删除失败不影响主流程
 
     if os.path.exists(disk_path):
-        # 检查缓存是否是当天的（跨天自动失效）
         cache_time = datetime.fromtimestamp(os.path.getmtime(disk_path))
         cache_date = cache_time.strftime("%Y%m%d")
 
-        # 当天缓存都有效（不区分15点前后）
         if cache_date == today_str:
             try:
                 df = pd.read_csv(disk_path, encoding='utf-8-sig')
                 df = _normalize_hist_df(df)
-                # 写入内存缓存
                 if '_hist_cache' not in CONFIG:
                     CONFIG['_hist_cache'] = {}
                 CONFIG['_hist_cache'][code] = df
                 return df
             except Exception:
-                pass  # 缓存损坏，重新拉取
-
-    # ── 东财接口（仅当 use_em=True 时尝试）──
-    lookback_days = CONFIG['lookback_months'] * 35
-    start = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y%m%d")
-    end = datetime.now().strftime("%Y%m%d")
-
-    df = None
-    use_em = CONFIG.get('use_em', True)
+                pass
 
     if use_em:
         try:
@@ -586,19 +939,21 @@ def _get_hist_df(code):
                 ak.stock_zh_a_hist,
                 symbol=code, period="daily",
                 start_date=start, end_date=end, adjust="qfq",
+                rate_limiter=_em_rate_limiter,
                 max_retries=1   # IP 被封时直接失败，避免每只多等 15s
             )
         except Exception:
             df = None
 
     # ── 东财失败或跳过东财 → 腾讯降级 ──
-    if df is None or len(df) < 2:
+    if (not use_local_db) and (df is None or len(df) < 2):
         try:
             prefix = 'sh' if str(code).startswith('6') else 'sz'
             tx_code = f"{prefix}{code}"
             df = fetch_with_retry(
                 ak.stock_zh_a_hist_tx,
                 symbol=tx_code, start_date=start, end_date=end,
+                rate_limiter=_tx_rate_limiter,
                 max_retries=2
             )
         except Exception:
@@ -959,6 +1314,10 @@ def main():
     zscore_max = cfg['zscore_max']
     lookback = cfg['lookback_months']
     prefilter_days = cfg['prefilter_return_days']
+    ret_col = f'return_{prefilter_days}d'
+
+    if cfg.get('use_local_db', False):
+        ensure_db_indexes()
 
     end_date = datetime.now().strftime("%Y-%m-%d")
     print(f"[{end_date}] 开始扫描...")
@@ -969,18 +1328,23 @@ def main():
     print(f"  股票总数: {len(spot_df)}")
 
     # 2. 初筛候选股（利用东财快照中的 return_60d 过滤超跌股）
-    print(f"\n>>> Step 2: 候选股预筛（60日涨跌幅 ≤ {cfg['prefilter_return_pct']}%）...")
+    print(f"\n>>> Step 2: 候选股预筛（{prefilter_days}日涨跌幅 ≤ {cfg['prefilter_return_pct']}%）...")
     candidates = spot_df.copy()
 
-    # 用 return_60d 初筛（超跌方向）
-    if 'return_60d' in candidates.columns:
-        candidates['return_60d'] = pd.to_numeric(candidates['return_60d'], errors='coerce')
+    # 用 return_Nd 初筛（超跌方向）
+    if ret_col in candidates.columns:
+        candidates[ret_col] = pd.to_numeric(candidates[ret_col], errors='coerce')
         pre_len = len(candidates)
         candidates = candidates[
-            candidates['return_60d'].isna() |
-            (candidates['return_60d'] <= cfg['prefilter_return_pct'])
+            candidates[ret_col].isna() |
+            (candidates[ret_col] <= cfg['prefilter_return_pct'])
         ]
         print(f"  涨跌幅预筛: {pre_len} → {len(candidates)} 只（{prefilter_days}日涨跌幅 ≤ {cfg['prefilter_return_pct']}%）")
+
+    if (ret_col not in candidates.columns) or candidates[ret_col].notna().sum() == 0:
+        candidates['pct_change'] = pd.to_numeric(candidates['pct_change'], errors='coerce')
+        candidates = candidates.sort_values(['pct_change', 'price'], ascending=[True, True], na_position='last')
+        print(f"  [提示] 当前快照不含 {prefilter_days} 日涨跌幅，先按当日涨跌幅从低到高优先扫描")
 
     if len(candidates) > cfg['max_candidates']:
         candidates = candidates.head(cfg['max_candidates'])
@@ -988,107 +1352,51 @@ def main():
     print(f"  候选股数量: {len(candidates)}")
 
     # 3. 获取行业映射
-    print("\n>>> Step 3: 获取行业板块...")
-    industry_map = get_industry_map()
-    print(f"  已映射: {len(industry_map)} 只股票")
+    industry_map = {}
+    if cfg.get('load_industry_map', False):
+        print("\n>>> Step 3: 获取行业板块...")
+        industry_map = get_industry_map()
+        print(f"  已映射: {len(industry_map)} 只股票")
+    else:
+        print("\n>>> Step 3: 跳过全量行业映射（默认关闭以提升性能）...")
 
     # 4. 批量计算 Z-Score
     print(f"\n>>> Step 4: 精确计算布林带 Z-Score...")
     print(f"  布林带窗口: {bb_window}日 | 历史回看: {lookback}月")
     print(f"  筛选条件: {zscore_min} ≤ Z-Score ≤ {zscore_max}")
     print(f"  排序: {cfg['sort_by']} ({'升序' if cfg['ascending'] else '降序'})")
+    print(f"  并发扫描: {cfg.get('scan_concurrent_workers', 6)} 线程")
 
     results = []
     total = len(candidates)
+    candidate_rows = candidates.to_dict(orient='records')
+    workers = min(cfg.get('scan_concurrent_workers', 6), max(1, total))
 
-    for i, (_, row) in enumerate(candidates.iterrows()):
-        code = row['code']
-        name = row['name']
-        price = row['price']
-        pct_change = row['pct_change']
-
-        if i % 100 == 0:
-            found = len(results)
-            print(f"  进度: {i}/{total} ({i/total*100:.1f}%) | 已找到: {found}")
-
-        # 计算 Z-Score
-        zdata = calc_zscore(code, price)
-        if not zdata:
-            time.sleep(0.05)
-            continue
-
-        zscore = zdata['zscore']
-
-        # Z-Score 筛选
-        if not (zscore_min <= zscore <= zscore_max):
-            time.sleep(0.05)
-            continue
-
-        # 获取财务数据
-        financial = get_financial_data(code)
-        debt_ratio_val = financial['debt_ratio_val']
-
-        # 获取新闻
-        news_list = get_news(code)
-
-        # 评分
-        tech_score = calc_tech_score(zscore)
-        finance_score = calc_finance_score(debt_ratio_val, financial['roe'])
-        news_score, news_detail = calc_news_score(news_list, zscore, debt_ratio_val, financial['roe'])
-        buy_score = tech_score + finance_score + news_score
-
-        # 过滤低分
-        if buy_score < cfg['score_min']:
-            time.sleep(0.05)
-            continue
-
-        # 行业
-        industry = industry_map.get(code, '未知')
-
-        # 风险提示
-        risk = build_risk_note(code, name, debt_ratio_val, financial['roe'], zscore, industry)
-
-        # 消息摘要
-        news_summary = build_news_summary(code, name, news_list, financial)
-
-        results.append({
-            'code':          code,
-            'name':          name,
-            'price':         price,
-            'pct_change':    pct_change,
-            'zscore':        zscore,
-            'pct_from_mean': zdata['pct_from_mean'],
-            'mean_20':       zdata['mean_20'],
-            'std_20':        zdata['std_20'],
-            'upper_band':    zdata['upper_band'],
-            'lower_band':    zdata['lower_band'],
-            f'return_{prefilter_days}d': zdata['return_Nd'],
-            'vol_ratio':     zdata['vol_ratio'],
-            'atr_pct':       zdata['atr_pct'],
-            'debt_ratio':    financial['debt_ratio'],
-            'debt_ratio_val':debt_ratio_val,
-            'roe':           financial['roe'],
-            'net_profit':    financial['net_profit'],
-            'revenue':       financial['revenue'],
-            'revenue_yoy':   financial['revenue_yoy'],
-            'profit_yoy':    financial['profit_yoy'],
-            'eps':           financial['eps'],
-            'book_value':    financial['book_value'],
-            'total_mv':      row.get('total_mv', 'N/A'),
-            'float_mv':      row.get('float_mv', 'N/A'),
-            'industry':      industry,
-            'report_period': financial['report_period'],
-            'news_summary':  news_summary,
-            'news_score':    news_score,
-            'tech_score':    tech_score,
-            'finance_score': finance_score,
-            'buy_score':     buy_score,
-            'score_detail':  f"技术{tech_score}分+财务{finance_score}分+消息{news_score}分 | {news_detail}",
-            'risk':          risk,
-            'news_list':     news_list,
-        })
-
-        time.sleep(0.06)
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(
+                _scan_candidate,
+                row,
+                zscore_min,
+                zscore_max,
+                prefilter_days,
+                cfg['prefilter_return_pct'],
+                industry_map,
+            ): row['code']
+            for row in candidate_rows
+        }
+        for i, future in enumerate(as_completed(futures), 1):
+            if i % 200 == 0 or i == total:
+                found = len(results)
+                print(f"  进度: {i}/{total} ({i/total*100:.1f}%) | 已找到: {found}")
+            try:
+                result = future.result()
+            except Exception as e:
+                code = futures[future]
+                print(f"  [WARN] {code} 扫描失败: {e}")
+                continue
+            if result:
+                results.append(result)
 
     print(f"\n  ✅ 扫描完成！共找到 {len(results)} 只满足条件的股票")
 
@@ -1101,7 +1409,6 @@ def main():
     df = pd.DataFrame(results)
 
     # 动态重命名字段（return_Nd）
-    ret_col = f'return_{prefilter_days}d'
     if sort_key not in df.columns and sort_key == 'return_60d':
         sort_key = ret_col
 
@@ -1127,9 +1434,13 @@ def main():
     if ret_col in df_json.columns:
         df_json = df_json.rename(columns={ret_col: f'return_{prefilter_days}d'})
 
+    field_names = dict(FIELD_NAMES)
+    field_names.pop('return_60d', None)
+    field_names[ret_col] = f'{prefilter_days}日涨跌幅({ret_col})'
+
     # fields：{中文名: 英文key}
     fields = {}
-    for eng_key, cn_label in FIELD_NAMES.items():
+    for eng_key, cn_label in field_names.items():
         # cn_label 格式："中文名(eng_key)"，提取中文名部分
         cn_name = cn_label.split('(')[0]
         fields[cn_name] = eng_key
@@ -1138,7 +1449,7 @@ def main():
     json_records = []
     for _, row in df_json.iterrows():
         record = {}
-        for eng_key in FIELD_NAMES.keys():
+        for eng_key in field_names.keys():
             val = row.get(eng_key, None)
             if eng_key == 'news_list':
                 val = row.get('news_list', [])
